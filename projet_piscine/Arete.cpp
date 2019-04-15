@@ -8,7 +8,7 @@
 
 // CRÉATION
 Arete::Arete(std::string id, Sommet* sommetD, Sommet* sommetA) :
-    m_id{id}, m_sommetD{sommetD}, m_sommetA{sommetD} {
+    m_id{id}, m_sommetD{sommetD}, m_sommetA{sommetA} {
 
 }
 
