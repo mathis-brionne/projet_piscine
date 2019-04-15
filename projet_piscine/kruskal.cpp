@@ -24,46 +24,55 @@
 //! \date 15 avril 2019
 //! \return
 
+//on recupere dans la class graphe les sommets et aretes
+
 std::vector<std::pair<Arete*,bool>> kruskal(int num_pond) //non pondéré
 {
-    //on recupere dans la class graphe les sommets et aretes
-
     /*declaration et initialisation*/
     // tableau d'aretes template
     std::vector<std::pair<Arete*,bool>> temp_liens;
     for(size_t i=0;i<m_aretes.size();i++)
-        temp_liens.pushback({m_aretes[i],true})
+        temp_liens.pushback({m_aretes[i],false})
 
     std::unordered_map<Sommet* , int> sommet_connexe; //first sommet //second numero connexe
     for(size_t i=0;i<m_sommets.size();i++)//initialisation
         sommet_connexe.pushback({m_sommets[i],i});
 
     /* algo kruskal */
-
     //on trie les aretes par ordre du poids (en fonction d'une unique pondération
     std::sort(temp_liens.begin(), temp_liens.end(),[](Arete* a1,Arete* a2){ return a1.getPond(num_pond)<a2.getPond(num_pond);})
 
-    //on regarde chaque aretes jusque connexe
 
     //on compte le nombre de composante connexe répertorié
     std::unordered_set<int> temp_connexe;
     int nb_connexe_estimation= sommet_connexe.size();
-
-    int n_aretes =0;
-    while(nb_connexe_estimation>1)
+    int num_aretes =0;
+    while(nb_connexe_estimation>1)//tant que c'est pas connexe (car obligatoirement connexe) on regarde chaque aretes next
     {
         //on prend l'arete n
-        //!  if((sommet_connexe.find(temp_liens[n_aretes].getSommetD())).second==(sommet_connexe.find(temp_liens[n_aretes].getSommetA())).second)
+        //tant qu'elle relie 2 sommets connexe on avance num_aretes de 1
+        /*
+         * while((sommet_connexe.find(temp_liens[num_aretes].getSommetD())).second==(sommet_connexe.find(temp_liens[num_aretes].getSommetA())).second)
+         *  {
+         *      num_aretes++;
+         *  }
+        */
+        // !!!!   si il n'y en a plus BUG car pas normal    !!!!
 
-        //tant qu'elle relie 2 sommets connexe on met le bool à 0
-        //si il n'y en a plus BUG car pas normal
 
-        //a ce moment on a une arete qui relie 2 connexes differentes
+        // a ce moment on a une arete qui relie 2 connexes differentes
         // on le met à 1 et on met à jour le numero connexe correspondant
+        /*
+         *
+         * if(
+         */
 
 
-        /* on refait beaucoup de fois ca alors que si on à 3 connexe et qu'on à rétablie un seul lien on aura pas tout de connexe*/
-        if(nb_connexe_estimation==2)//si on pense que c'est fini on fait une mise à jour exacte du nombre de compossante connexe
+
+        /* Afin d'éviter de refaire à chaque fois le calcul de composante connexe,
+         * On ne le refait que si on avait une estimation de 2 et que l'on a ajouté une arete ( possiblement supprimer une compossante)
+         * après cet algo l'estimation est mise à jour au nombre réel de Composantes connexe*/
+        if(nb_connexe_estimation==2)
         {temp_connexe.clear();
             for(size_t i=0;i<sommet_connexe.size();i++)
             {
@@ -71,10 +80,9 @@ std::vector<std::pair<Arete*,bool>> kruskal(int num_pond) //non pondéré
                     temp_connexe.insert(sommet_connexe[i].second);
             }
         }
-         else
+         else//si on est sur que notre nombre connexe n'est pas de 1
              nb_connexe_estimation--;
     }
-
     return temp_liens; //passage en copie de poids important
 }
 
