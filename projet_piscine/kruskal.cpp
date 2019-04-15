@@ -86,10 +86,19 @@ std::vector<std::pair<Arete*,bool>> kruskal(int num_pond) //non pondéré
 //! \date 15 avril 2019
 //! \return 1 si le graphe partiel est connexe, 0 sinon
 
-/*methode de la class graphe*/
-
+/* methode de la class graphe*/
+/*
 bool connexite(std::vector<std::pair<Arete*,bool>> liens )
 {
+    //on recupere une copie de liens donc on erase les liens =0
+    for(size_t i=0;i<liens.size();i++)
+    {
+        if(liens[i].second==false)
+        {
+            liens[i].erase();
+            i--;
+        }
+    }
     bool connexe=false;
 
     int nb_aretes =0;
@@ -106,10 +115,29 @@ bool connexite(std::vector<std::pair<Arete*,bool>> liens )
     std::queue<Sommet*> file;
     file.push(m_sommets[0]);
 
-
-
-
-
-
+    for(int i=0;file.size()!=0;i++)
+    {
+        Sommet* temp =file.front();
+        file.pop();
+        temp->
+    }
+*/
+    /* debut BFS*/
+/*    for( auto it: )
+    {
+        std::string nom=it->getID();
+        if(relation.find(nom)==relation.end()&& nom!=id)
+        {
+            //si il n'est pas dans la liste
+            //alors on l'ajoute à relation et file
+            //std::cout<<m_id<<"  "<<nom << std::endl;
+            file.push(it);
+            relation.insert({nom,m_id});
+        }
+    }
+*/
+    /* fin BFS*/
+/*
     return true;
 }
+*/
