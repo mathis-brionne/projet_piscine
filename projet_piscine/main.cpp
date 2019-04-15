@@ -9,7 +9,7 @@ int main() {
     Graph graph("files/broadway.txt","files/broadway_weights_0.txt");
 
     std::cout << std::endl
-              << "TEST LECTURE DE FICHIERS" << std::endl
+              << "TEST LECTURE DE FICHIERS" << std::endl << std::endl
               << "Données du graph" << std::endl
               << "Sommets :" << std::endl;
               for(size_t i=0; i < (graph.getSommets()).size(); i++)
