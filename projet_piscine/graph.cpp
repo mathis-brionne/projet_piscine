@@ -126,6 +126,14 @@ Graph::Graph(std::string& fichierGraph, std::string& fichierPoidsGraph) {
 
 
 // DESSIN
-void Graph::dessiner() const {
+void Graph::dessiner(Svgfile &s) const {
+
+    for (auto sta : m_aretes) {
+        sta->dessiner(s);
+    }
+    for (auto sta : m_sommets) {
+        sta->dessiner(s);
+    }
+
 
 }

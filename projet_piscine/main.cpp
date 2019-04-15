@@ -13,6 +13,7 @@
 int main();
 
 int main() {
+    Svgfile Svg;
     std::cout << "Projet PISCINE" << std::endl
     << "BRIONNE Mathis   MARTIN Willy   SIROT Charlotte  -  TD07"
     << std::endl << std::endl;
@@ -37,7 +38,7 @@ int main() {
 
     std::cout << std::endl
               << "TEST LECTURE DE FICHIERS" << std::endl << std::endl
-              << "Donnees du graph" << std::endl
+              << "Données du graph" << std::endl
               << "Sommets :" << std::endl;
               for(size_t i=0; i < (graph.getSommets()).size(); i++)
               {
@@ -49,7 +50,6 @@ int main() {
 
     std::cout << std::endl
               << "Aretes :" << std::endl;
-
     for(size_t i=0; i < (graph.getAretes()).size(); i++)
     {
         std::cout << "  id : " << graph.getAretes()[i]->getID() << std::endl
@@ -65,6 +65,6 @@ int main() {
                   << std::endl;
 
     }
-
+    graph.dessiner(Svg);
     return 0;
 }

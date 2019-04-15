@@ -6,6 +6,7 @@
 #define PROJET_PISCINE_ARETE_H
 #include <string>
 #include <vector>
+#include "Svgfile.h"
 
 class Sommet;
 
@@ -21,6 +22,7 @@ public:
     Arete(std::string& id, Sommet* sommetD, Sommet* sommetA,std::vector<float> ponderations) :
             m_id{id}, m_sommetD{sommetD}, m_sommetA{sommetA},m_ponderations{ponderations} { }
 
+
     ~Arete() = default;
 
     //getter
@@ -29,9 +31,8 @@ public:
     Sommet* getSommetA() const{ return m_sommetA;}
     float getPond(int num) const{ return m_ponderations[num];};
     //methodes
-    void dessiner() const;
 
-
+    void dessiner(Svgfile &s) const;
 };
 
 

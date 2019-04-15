@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include "Coords.h"
+#include "Svgfile.h"
 
 class Arete;
 
@@ -21,7 +22,7 @@ public:
     std::string getID() const;
     Coords getCoords() const;
 
-    void dessiner() const;
+    void dessiner(Svgfile &s) ;
 
     ~Sommet() = default;
 };

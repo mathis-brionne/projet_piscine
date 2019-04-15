@@ -3,7 +3,7 @@
 //
 
 #include "Sommet.h"
-
+#include "Arete.h"
 // CRÉATION
 Sommet::Sommet(std::string id, Coords coords) :
     m_id{id}, m_coords{coords} {
@@ -22,6 +22,7 @@ Coords Sommet::getCoords() const {
 
 
 // DESSIN
-void Sommet::dessiner() const {
-
+void Sommet::dessiner(Svgfile &s)  {
+    s.addDisk(m_coords.getX(), m_coords.getY(), "blue");
+    s.addText(m_coords.getX(),m_coords.getY(),m_id,"black");
 }

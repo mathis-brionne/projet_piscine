@@ -22,7 +22,6 @@ public:
     ~Graph() = default;
 
     //méthodes
-    void dessiner() const;
     std::vector<std::pair<Arete*,bool>> kruskal(int num_pond);
 
     //getter
@@ -30,6 +29,8 @@ public:
     std::vector<Arete*> getAretes() const{ return m_aretes;}
 
 
+
+    void dessiner(Svgfile &s) const;
 };
 
 
