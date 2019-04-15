@@ -3,8 +3,6 @@
 
 CMakeFiles/projet_piscine.dir/Arete.cpp.o: ../Arete.cpp
 CMakeFiles/projet_piscine.dir/Arete.cpp.o: ../Arete.h
-CMakeFiles/projet_piscine.dir/Arete.cpp.o: ../Coords.h
-CMakeFiles/projet_piscine.dir/Arete.cpp.o: ../Sommet.h
 
 CMakeFiles/projet_piscine.dir/Coords.cpp.o: ../Coords.cpp
 CMakeFiles/projet_piscine.dir/Coords.cpp.o: ../Coords.h

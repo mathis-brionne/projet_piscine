@@ -6,7 +6,6 @@
 #define PROJET_PISCINE_SOMMET_H
 #include <string>
 #include <vector>
-//#include "Arete.h"
 #include "Coords.h"
 
 class Arete;
