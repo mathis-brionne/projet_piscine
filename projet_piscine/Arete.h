@@ -12,7 +12,7 @@ class Sommet;
 class Arete {
 private:
     std::string m_id;
-    Sommet* m_sommetD; // sommet de départ
+    Sommet* m_sommetD; // sommet de depart
     Sommet* m_sommetA; // sommet d'arrivée
     std::vector<float> m_ponderations;
 
