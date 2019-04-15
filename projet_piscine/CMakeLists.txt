@@ -3,4 +3,4 @@ project(projet_piscine)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(projet_piscine main.cpp)
+add_executable(projet_piscine main.cpp kruskal.cpp)
