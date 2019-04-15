@@ -100,6 +100,12 @@
 		<Unit filename="C:/Users/willy/Documents/1. informatique/projet_piscine/Sommet.h">
 			<Option target="projet_piscine"/>
 		</Unit>
+		<Unit filename="C:/Users/willy/Documents/1. informatique/projet_piscine/Svgfile.cpp">
+			<Option target="projet_piscine"/>
+		</Unit>
+		<Unit filename="C:/Users/willy/Documents/1. informatique/projet_piscine/Svgfile.h">
+			<Option target="projet_piscine"/>
+		</Unit>
 		<Unit filename="C:/Users/willy/Documents/1. informatique/projet_piscine/graph.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>

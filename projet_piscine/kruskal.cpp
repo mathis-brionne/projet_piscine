@@ -50,18 +50,23 @@ std::vector<std::pair<Arete*,bool>> Graph::kruskal(int num_pond) //non pondéré
     std::unordered_set<int> temp_connexe;
     int nb_connexe_estimation= sommet_connexe.size();
     int num_aretes =0;
-    while(nb_connexe_estimation>1)//tant que c'est pas connexe (car obligatoirement connexe) on regarde chaque aretes next
+
+    //tant que c'est pas connexe (car obligatoirement connexe) on regarde chaque aretes next
+    //si le numero d'aretes est supèrieur à la taille du tableau
+    while(nb_connexe_estimation>1)
     {
         //on prend l'arete n
         //tant qu'elle relie 2 sommets connexe on avance num_aretes de 1
           while((sommet_connexe.find((temp_liens[num_aretes].first)->getSommetD()))->second ==
-                (sommet_connexe.find((temp_liens[num_aretes].first)->getSommetA()))->second)
-               num_aretes++;
-        // !!!!   si il n'y en a plus BUG car pas normal    !!!!
+                (sommet_connexe.find((temp_liens[num_aretes].first)->getSommetA()))->second
+                &&num_aretes<temp_liens.size())
+              num_aretes++;
+          if(num_aretes==temp_liens.size())// !!!! si il n'y en a plus BUG car pas normal !!!!
+              throw std::runtime_error("Erreur kruskal");
 
 
         // a ce moment on a une arete qui relie 2 connexes differentes
-        // on le met à 1 et on met à jour le numero connexe correspondant
+        // on la met à 1 et on met à jour le numero connexe correspondant
         temp_liens[num_aretes].second=true;
 
         int temp_num_connexe_A=(sommet_connexe.find(temp_liens[num_aretes].first->getSommetA())->second);

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Graph.h"
 
+
 //!
 //! \file main.c
 //! \brief
@@ -18,8 +19,8 @@ int main() {
     << "BRIONNE Mathis   MARTIN Willy   SIROT Charlotte  -  TD07"
     << std::endl << std::endl;
 
-    std::string file1="files/broadway.txt";
-    std::string file2="files/broadway_weights_0.txt";
+    std::string file1="files/manhattan.txt";
+    std::string file2="files/manhattan_weights_0.txt";
     Graph graph(file1,file2);
 
     std::cout<<"recherche kruskal"<<std::endl;

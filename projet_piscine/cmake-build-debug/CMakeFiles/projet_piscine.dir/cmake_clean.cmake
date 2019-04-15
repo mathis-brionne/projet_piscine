@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/projet_piscine.dir/Arete.cpp.obj"
   "CMakeFiles/projet_piscine.dir/Coords.cpp.obj"
   "CMakeFiles/projet_piscine.dir/kruskal.cpp.obj"
+  "CMakeFiles/projet_piscine.dir/Svgfile.cpp.obj"
   "projet_piscine.pdb"
   "projet_piscine.exe"
   "projet_piscine.exe.manifest"

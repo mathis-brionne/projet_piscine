@@ -203,6 +203,33 @@ Sommet.cpp.s:
 	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Sommet.cpp.s
 .PHONY : Sommet.cpp.s
 
+Svgfile.obj: Svgfile.cpp.obj
+
+.PHONY : Svgfile.obj
+
+# target to build an object file
+Svgfile.cpp.obj:
+	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Svgfile.cpp.obj
+.PHONY : Svgfile.cpp.obj
+
+Svgfile.i: Svgfile.cpp.i
+
+.PHONY : Svgfile.i
+
+# target to preprocess a source file
+Svgfile.cpp.i:
+	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Svgfile.cpp.i
+.PHONY : Svgfile.cpp.i
+
+Svgfile.s: Svgfile.cpp.s
+
+.PHONY : Svgfile.s
+
+# target to generate assembly for a file
+Svgfile.cpp.s:
+	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Svgfile.cpp.s
+.PHONY : Svgfile.cpp.s
+
 graph.obj: graph.cpp.obj
 
 .PHONY : graph.obj
@@ -302,6 +329,9 @@ help:
 	@echo ... Sommet.obj
 	@echo ... Sommet.i
 	@echo ... Sommet.s
+	@echo ... Svgfile.obj
+	@echo ... Svgfile.i
+	@echo ... Svgfile.s
 	@echo ... graph.obj
 	@echo ... graph.i
 	@echo ... graph.s
