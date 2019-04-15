@@ -20,5 +20,21 @@ int main() {
                             << std::endl;
               }
 
+    std::cout << std::endl
+              << "Aretes :" << std::endl;
+    for(size_t i=0; i < (graph.getAretes()).size(); i++)
+    {
+        std::cout << "  id : " << graph.getAretes()[i]->getID() << std::endl
+                  << "  Sommet depart : " << std::endl
+                  << "    id : " << graph.getAretes()[i]->getSommetD()->getID() << std::endl
+                  << "    x : " << graph.getAretes()[i]->getSommetD()->getCoords().getX() << std::endl
+                  << "    y : " << graph.getAretes()[i]->getSommetD()->getCoords().getY() << std::endl
+                  << "  Sommet arrivee : " << std::endl
+                  << "    id : " << graph.getAretes()[i]->getSommetA()->getID() << std::endl
+                  << "    x : " << graph.getAretes()[i]->getSommetA()->getCoords().getX() << std::endl
+                  << "    y : " << graph.getAretes()[i]->getSommetA()->getCoords().getY() << std::endl
+                  << std::endl;
+    }
+
     return 0;
 }

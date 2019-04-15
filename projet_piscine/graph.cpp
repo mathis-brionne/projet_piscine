@@ -26,17 +26,20 @@ Graph::Graph(std::string fichierGraph, std::string fichierPoidsGraph) {
     int x, y;
 
     // Récupération des sommets
-    for(size_t i; i < ordreGraph; i++)
+    for(size_t i=0; i < ordreGraph; i++)
     {
         donneesGraph >> id_sommet;
+        std::cout << id_sommet << std::endl;
         if(donneesGraph.fail())
             throw std::runtime_error("Probleme lors de la lecture de l id du sommet");
 
         donneesGraph >> x;
+        std::cout << x << std::endl;
         if(donneesGraph.fail())
             throw std::runtime_error("Probleme lors de la lecture de la coordonnée en x du sommet");
 
         donneesGraph >> y;
+        std::cout << y << std::endl;
         if(donneesGraph.fail())
             throw std::runtime_error("Probleme lors de la lecture de la coordonnée en y du sommet");
 
@@ -62,7 +65,7 @@ Graph::Graph(std::string fichierGraph, std::string fichierPoidsGraph) {
     int nbr_ponderations=0;
 
     // Récupération des aretes
-    for(size_t i; i < tailleGraph; i++)
+    for(size_t i=0; i < tailleGraph; i++)
     {
         donneesPoidsGraph >> nbr_ponderations;
 
