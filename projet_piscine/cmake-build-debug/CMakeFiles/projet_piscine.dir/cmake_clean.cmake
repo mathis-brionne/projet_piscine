@@ -1,5 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/projet_piscine.dir/main.cpp.o"
+  "CMakeFiles/projet_piscine.dir/Graph.cpp.o"
+  "CMakeFiles/projet_piscine.dir/Sommet.cpp.o"
+  "CMakeFiles/projet_piscine.dir/Arete.cpp.o"
+  "CMakeFiles/projet_piscine.dir/Coords.cpp.o"
   "projet_piscine.pdb"
   "projet_piscine"
 )

@@ -123,6 +123,114 @@ projet_piscine/fast:
 	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/build
 .PHONY : projet_piscine/fast
 
+Arete.o: Arete.cpp.o
+
+.PHONY : Arete.o
+
+# target to build an object file
+Arete.cpp.o:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Arete.cpp.o
+.PHONY : Arete.cpp.o
+
+Arete.i: Arete.cpp.i
+
+.PHONY : Arete.i
+
+# target to preprocess a source file
+Arete.cpp.i:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Arete.cpp.i
+.PHONY : Arete.cpp.i
+
+Arete.s: Arete.cpp.s
+
+.PHONY : Arete.s
+
+# target to generate assembly for a file
+Arete.cpp.s:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Arete.cpp.s
+.PHONY : Arete.cpp.s
+
+Coords.o: Coords.cpp.o
+
+.PHONY : Coords.o
+
+# target to build an object file
+Coords.cpp.o:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Coords.cpp.o
+.PHONY : Coords.cpp.o
+
+Coords.i: Coords.cpp.i
+
+.PHONY : Coords.i
+
+# target to preprocess a source file
+Coords.cpp.i:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Coords.cpp.i
+.PHONY : Coords.cpp.i
+
+Coords.s: Coords.cpp.s
+
+.PHONY : Coords.s
+
+# target to generate assembly for a file
+Coords.cpp.s:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Coords.cpp.s
+.PHONY : Coords.cpp.s
+
+Graph.o: Graph.cpp.o
+
+.PHONY : Graph.o
+
+# target to build an object file
+Graph.cpp.o:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Graph.cpp.o
+.PHONY : Graph.cpp.o
+
+Graph.i: Graph.cpp.i
+
+.PHONY : Graph.i
+
+# target to preprocess a source file
+Graph.cpp.i:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Graph.cpp.i
+.PHONY : Graph.cpp.i
+
+Graph.s: Graph.cpp.s
+
+.PHONY : Graph.s
+
+# target to generate assembly for a file
+Graph.cpp.s:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Graph.cpp.s
+.PHONY : Graph.cpp.s
+
+Sommet.o: Sommet.cpp.o
+
+.PHONY : Sommet.o
+
+# target to build an object file
+Sommet.cpp.o:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Sommet.cpp.o
+.PHONY : Sommet.cpp.o
+
+Sommet.i: Sommet.cpp.i
+
+.PHONY : Sommet.i
+
+# target to preprocess a source file
+Sommet.cpp.i:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Sommet.cpp.i
+.PHONY : Sommet.cpp.i
+
+Sommet.s: Sommet.cpp.s
+
+.PHONY : Sommet.s
+
+# target to generate assembly for a file
+Sommet.cpp.s:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Sommet.cpp.s
+.PHONY : Sommet.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +267,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... projet_piscine"
+	@echo "... Arete.o"
+	@echo "... Arete.i"
+	@echo "... Arete.s"
+	@echo "... Coords.o"
+	@echo "... Coords.i"
+	@echo "... Coords.s"
+	@echo "... Graph.o"
+	@echo "... Graph.i"
+	@echo "... Graph.s"
+	@echo "... Sommet.o"
+	@echo "... Sommet.i"
+	@echo "... Sommet.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
