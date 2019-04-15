@@ -12,13 +12,19 @@ private:
     int m_y;
 
 public:
-    Coords(int x, int y);
-    int getX();
-    int getY();
-
+    //constructeur destructeur
+    Coords(int x, int y) :m_x{x}, m_y{y} {}
     ~Coords() = default;
 
+    //getter
+    int getX(){ return m_x;}
+    int getY(){ return m_y;}
+
+
+
 };
+
+
 
 
 #endif //PROJET_PISCINE_COORDS_H

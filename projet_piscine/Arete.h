@@ -17,18 +17,21 @@ private:
     std::vector<float> m_ponderations;
 
 public:
-    Arete(std::string id, Sommet* sommetD, Sommet* sommetA);
-
-    void setPonderations(std::vector<float> ponderations);
-
-    std::string getID() const;
-    Sommet* getSommetD() const;
-    Sommet* getSommetA() const;
-    float getPond(int num) const;
-
-    void dessiner() const;
+    //constructeur detructeur
+    Arete(std::string& id, Sommet* sommetD, Sommet* sommetA,std::vector<float> ponderations) :
+            m_id{id}, m_sommetD{sommetD}, m_sommetA{sommetA},m_ponderations{ponderations} { }
 
     ~Arete() = default;
+
+    //getter
+    std::string getID() const{ return m_id;}
+    Sommet* getSommetD() const{ return m_sommetD;}
+    Sommet* getSommetA() const{ return m_sommetA;}
+    float getPond(int num) const{ return m_ponderations[num];};
+    //methodes
+    void dessiner() const;
+
+
 };
 
 

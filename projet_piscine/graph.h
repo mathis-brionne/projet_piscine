@@ -17,13 +17,19 @@ private:
     std::vector<Arete*> m_aretes;
 
 public:
-    Graph(std::string fichierGraph, std::string fichierPoidsGraph);
-    void dessiner() const;
-
-    std::vector<Sommet*> getSommets() const;
-    std::vector<Arete*> getAretes() const;
-
+    //constructeur destructeur
+    Graph(std::string& fichierGraph, std::string& fichierPoidsGraph);
     ~Graph() = default;
+
+    //méthodes
+    void dessiner() const;
+    std::vector<std::pair<Arete*,bool>> kruskal(int num_pond);
+
+    //getter
+    std::vector<Sommet*> getSommets() const{ return m_sommets;}
+    std::vector<Arete*> getAretes() const{ return m_aretes;}
+
+
 };
 
 

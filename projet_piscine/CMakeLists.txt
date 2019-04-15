@@ -3,5 +3,4 @@ project(projet_piscine)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(projet_piscine main.cpp Graph.cpp Graph.h Sommet.cpp Sommet.h Arete.cpp Arete.h Coords.cpp Coords.h)
-add_executable(projet_piscine kruskal.cpp)
+add_executable(projet_piscine main.cpp Graph.cpp Graph.h Sommet.cpp Sommet.h Arete.cpp Arete.h Coords.cpp Coords.h kruskal.cpp)
