@@ -6,7 +6,9 @@
 #define PROJET_PISCINE_ARETE_H
 #include <string>
 #include <vector>
-#include "Sommet.h"
+//#include "Sommet.h"
+
+class Sommet;
 
 class Arete {
 private:

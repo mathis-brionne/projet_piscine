@@ -11,12 +11,6 @@ Sommet::Sommet(std::string id, Coords coords) :
 }
 
 
-//SET
-std::vector<Arete*> Sommet::setAretesAdj() const {
-
-}
-
-
 // GET
 std::string Sommet::getID() const {
     return m_id;
@@ -24,10 +18,6 @@ std::string Sommet::getID() const {
 
 Coords Sommet::getCoords() const {
     return m_coords;
-}
-
-std::vector<Arete*> Sommet::getAretesAdj() const {
-    return m_aretesAdj;
 }
 
 
