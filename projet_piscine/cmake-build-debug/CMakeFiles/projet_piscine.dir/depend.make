@@ -11,12 +11,12 @@ CMakeFiles/projet_piscine.dir/Arete.cpp.o: ../Svgfile.h
 CMakeFiles/projet_piscine.dir/Coords.cpp.o: ../Coords.cpp
 CMakeFiles/projet_piscine.dir/Coords.cpp.o: ../Coords.h
 
-CMakeFiles/projet_piscine.dir/Graph.cpp.o: ../Arete.h
-CMakeFiles/projet_piscine.dir/Graph.cpp.o: ../Coords.h
-CMakeFiles/projet_piscine.dir/Graph.cpp.o: ../Graph.cpp
-CMakeFiles/projet_piscine.dir/Graph.cpp.o: ../Graph.h
-CMakeFiles/projet_piscine.dir/Graph.cpp.o: ../Sommet.h
-CMakeFiles/projet_piscine.dir/Graph.cpp.o: ../Svgfile.h
+CMakeFiles/projet_piscine.dir/Graphe.cpp.o: ../Arete.h
+CMakeFiles/projet_piscine.dir/Graphe.cpp.o: ../Coords.h
+CMakeFiles/projet_piscine.dir/Graphe.cpp.o: ../Graphe.cpp
+CMakeFiles/projet_piscine.dir/Graphe.cpp.o: ../Graphe.h
+CMakeFiles/projet_piscine.dir/Graphe.cpp.o: ../Sommet.h
+CMakeFiles/projet_piscine.dir/Graphe.cpp.o: ../Svgfile.h
 
 CMakeFiles/projet_piscine.dir/Sommet.cpp.o: ../Arete.h
 CMakeFiles/projet_piscine.dir/Sommet.cpp.o: ../Coords.h
@@ -29,14 +29,14 @@ CMakeFiles/projet_piscine.dir/Svgfile.cpp.o: ../Svgfile.h
 
 CMakeFiles/projet_piscine.dir/kruskal.cpp.o: ../Arete.h
 CMakeFiles/projet_piscine.dir/kruskal.cpp.o: ../Coords.h
-CMakeFiles/projet_piscine.dir/kruskal.cpp.o: ../Graph.h
+CMakeFiles/projet_piscine.dir/kruskal.cpp.o: ../Graphe.h
 CMakeFiles/projet_piscine.dir/kruskal.cpp.o: ../Sommet.h
 CMakeFiles/projet_piscine.dir/kruskal.cpp.o: ../Svgfile.h
 CMakeFiles/projet_piscine.dir/kruskal.cpp.o: ../kruskal.cpp
 
 CMakeFiles/projet_piscine.dir/main.cpp.o: ../Arete.h
 CMakeFiles/projet_piscine.dir/main.cpp.o: ../Coords.h
-CMakeFiles/projet_piscine.dir/main.cpp.o: ../Graph.h
+CMakeFiles/projet_piscine.dir/main.cpp.o: ../Graphe.h
 CMakeFiles/projet_piscine.dir/main.cpp.o: ../Sommet.h
 CMakeFiles/projet_piscine.dir/main.cpp.o: ../Svgfile.h
 CMakeFiles/projet_piscine.dir/main.cpp.o: ../main.cpp

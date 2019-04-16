@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <unordered_set>
 #include <unordered_map>
-#include "Graph.h"
+#include "Graphe.h"
 
 
 //!
@@ -28,7 +28,7 @@
 
 //on recupere dans la class graphe les sommets et aretes
 
-std::vector<std::pair<Arete*,bool>> Graph::kruskal(int num_pond) //non pondéré
+std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondéré
 {
     ///declaration et initialisation
     // tableau d'aretes template

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Graph.h"
+#include "Graphe.h"
 
 
 //!
@@ -27,7 +27,7 @@ int main() {
 
     std::string file1=fichiers.first;
     std::string file2=fichiers.second;
-    Graph graph(file1,file2);
+    Graphe graph(file1,file2);
 
     int algo = 0;
     algo = choix_algo();

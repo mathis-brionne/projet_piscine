@@ -176,14 +176,41 @@ Coords.cpp.s:
 	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Coords.cpp.s
 .PHONY : Coords.cpp.s
 
-Sommet.obj: Sommet.cpp.obj
+Graphe.o: Graphe.cpp.o
 
-.PHONY : Sommet.obj
+.PHONY : Graphe.o
 
 # target to build an object file
-Sommet.cpp.obj:
-	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Sommet.cpp.obj
-.PHONY : Sommet.cpp.obj
+Graphe.cpp.o:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Graphe.cpp.o
+.PHONY : Graphe.cpp.o
+
+Graphe.i: Graphe.cpp.i
+
+.PHONY : Graphe.i
+
+# target to preprocess a source file
+Graphe.cpp.i:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Graphe.cpp.i
+.PHONY : Graphe.cpp.i
+
+Graphe.s: Graphe.cpp.s
+
+.PHONY : Graphe.s
+
+# target to generate assembly for a file
+Graphe.cpp.s:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Graphe.cpp.s
+.PHONY : Graphe.cpp.s
+
+Sommet.o: Sommet.cpp.o
+
+.PHONY : Sommet.o
+
+# target to build an object file
+Sommet.cpp.o:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Sommet.cpp.o
+.PHONY : Sommet.cpp.o
 
 Sommet.i: Sommet.cpp.i
 
@@ -381,9 +408,9 @@ help:
 	@echo "... Coords.o"
 	@echo "... Coords.i"
 	@echo "... Coords.s"
-	@echo "... Graph.o"
-	@echo "... Graph.i"
-	@echo "... Graph.s"
+	@echo "... Graphe.o"
+	@echo "... Graphe.i"
+	@echo "... Graphe.s"
 	@echo "... Sommet.o"
 	@echo "... Sommet.i"
 	@echo "... Sommet.s"
