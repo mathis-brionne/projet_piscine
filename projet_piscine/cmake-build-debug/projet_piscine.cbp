@@ -92,10 +92,10 @@
 		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Coords.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Graph.cpp">
+		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Graphe.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Graph.h">
+		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Graphe.h">
 			<Option target="projet_piscine"/>
 		</Unit>
 		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Sommet.cpp">

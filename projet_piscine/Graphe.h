@@ -20,15 +20,15 @@
 #include "Arete.h"
 #include "Svgfile.h"
 
-class Graph {
+class Graphe {
 private:
     std::vector<Sommet*> m_sommets;
     std::vector<Arete*> m_aretes;
 
 public:
     //constructeur destructeur
-    Graph(std::string& fichierGraph, std::string& fichierPoidsGraph);
-    ~Graph() = default;
+    Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph);
+    ~Graphe() = default;
     //getter
     std::vector<Sommet*> getSommets() const{ return m_sommets;}
     std::vector<Arete*> getAretes() const{ return m_aretes;}

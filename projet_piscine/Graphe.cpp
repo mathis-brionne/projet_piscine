@@ -10,10 +10,10 @@
 //! \date 15 avril 2019
 //! \return
 
-#include "Graph.h"
+#include "Graphe.h"
 
 // CRÉATION
-Graph::Graph(std::string& fichierGraph, std::string& fichierPoidsGraph) {
+Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
     std::ifstream donneesGraph(fichierGraph);
     std::ifstream donneesPoidsGraph(fichierPoidsGraph);
 
@@ -134,7 +134,7 @@ Graph::Graph(std::string& fichierGraph, std::string& fichierPoidsGraph) {
 
 
 // DESSIN
-void Graph::dessiner(Svgfile &s) const {
+void Graphe::dessiner(Svgfile &s) const {
 
     for (auto sta : m_aretes) {
         sta->dessiner(s, "blue");
@@ -144,8 +144,8 @@ void Graph::dessiner(Svgfile &s) const {
     }
 
 }
-void Graph::dessinerKruskal(Svgfile &s , std::vector<std::pair<Arete*,bool>> kk) const {
-s.transalte(400);
+void Graphe::dessinerKruskal(Svgfile &s , std::vector<std::pair<Arete*,bool>> kk) const {
+    s.transalte(400);
     for (auto i  : kk) {
         if (i.second) {
             i.first->dessiner(s, "green");
@@ -154,5 +154,5 @@ s.transalte(400);
     for (auto sta : m_sommets) {
         sta->dessiner(s);
     }
-s.finA();
+    s.finA();
 }
