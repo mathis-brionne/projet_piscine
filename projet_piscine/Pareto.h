@@ -30,10 +30,11 @@ public:
     void fn_somP();
 
 private:
+
     std::vector<Sommet*> m_sommets_tab;//liste de nos sommets repris de notre graphe
     std::vector<Arete*> m_aretes_tab;//liste de nos aretes repris de notre graphe
 
-    std::vector<std::pair<Arete*,std::vector<bool>>> m_tab;//liste de nos sous graphe partiel admissible
+    std::vector<std::vector<bool>> m_tab_bool;//liste de nos sous graphe partiel admissible
 
     std::vector<std::vector<float>> m_tab_somP;//liste de nos pondérations pour chaque sous graphe
 
