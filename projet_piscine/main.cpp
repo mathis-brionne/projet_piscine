@@ -27,6 +27,7 @@ int main() {
     std::vector<std::pair<Arete*,bool>> kk;
     kk=graph.kruskal(0);
 
+/*
     for(auto tp:kk)
     {
         std::cout<<"bool="<<tp.second
@@ -65,7 +66,8 @@ int main() {
                   << "    y : " << graph.getAretes()[i]->getSommetA()->getCoords().getY() << std::endl
                   << std::endl;
 
-    }
+    }*/
+
     graph.dessiner(Svg);
     return 0;
 }
