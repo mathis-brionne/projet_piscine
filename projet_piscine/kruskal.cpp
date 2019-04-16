@@ -19,7 +19,7 @@
 //! \return
 
 
-//! \fn std::vector<std::pair<Arete*,bool>> kruskal(int)
+//! \fn std::vector<std::pair<Arete*,bool>> Graph::kruskal(int)
 //! \brief
 //! \author MARTIN
 //! \version 0.5
@@ -121,6 +121,7 @@ std::vector<std::pair<Arete*,bool>> Graph::kruskal(int num_pond) //non pondéré
 }
 
 
+
 //! \fn bool connexite(std::vector<std::pair<Arete*,bool>> liens )
 //! \brief permet de determiner la connexité d'un graphe
 //! \author MARTIN
@@ -128,14 +129,15 @@ std::vector<std::pair<Arete*,bool>> Graph::kruskal(int num_pond) //non pondéré
 //! \date 15 avril 2019
 //! \return 1 si le graphe partiel est connexe, 0 sinon
 
-/* methode de la class graphe*/
-/*
-bool connexite(std::vector<std::pair<Arete*,bool>> liens )
+bool Graph::connexite(std::vector<std::pair<Arete*,bool>> liens )
 {
-    //on recupere une copie de liens donc on erase les liens =0
+    ///déclaration et initialisation
+
+    ///algorithme
+    //on recupere une copie de liens, puis on erase les liens =0
     for(size_t i=0;i<liens.size();i++)
     {
-        if(liens[i].second==false)
+        if(!liens[i].second)
         {
             liens[i].erase();
             i--;
@@ -163,9 +165,9 @@ bool connexite(std::vector<std::pair<Arete*,bool>> liens )
         file.pop();
         temp->
     }
-*/
-    /* debut BFS*/
-/*    for( auto it: )
+
+    /// debut BFS
+    for( auto it: )
     {
         std::string nom=it->getID();
         if(relation.find(nom)==relation.end()&& nom!=id)
@@ -177,9 +179,8 @@ bool connexite(std::vector<std::pair<Arete*,bool>> liens )
             relation.insert({nom,m_id});
         }
     }
-*/
-    /* fin BFS*/
-/*
+
+    /// fin BFS
+
     return true;
 }
-*/
