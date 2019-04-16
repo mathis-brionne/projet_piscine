@@ -2,6 +2,14 @@
 // Created by Charlotte Sirot on 2019-04-15.
 //
 
+//!
+//! \file Graph.cpp
+//! \brief
+//! \authors BRIONNE,MARTIN,SIROT
+//! \version 0.02
+//! \date 15 avril 2019
+//! \return
+
 #include "Graph.h"
 
 // CRÉATION
@@ -57,7 +65,7 @@ Graph::Graph(std::string& fichierGraph, std::string& fichierPoidsGraph) {
     if (donneesPoidsGraph.fail())
         throw std::runtime_error("Erreur lors de la lecture de la taille du graphe fichier 2");
 
-    if(tailleGraph!=tailleGraph2)
+    if(tailleGraph != tailleGraph2)
         throw std::runtime_error("Erreur de compatibilité");
 
 
@@ -72,6 +80,8 @@ Graph::Graph(std::string& fichierGraph, std::string& fichierPoidsGraph) {
     std::string id_sommetA;
     float pond;
     std::vector<float> ponderations;
+
+    int poubelle;
 
     // Récupération des aretes
     for(size_t i=0; i < tailleGraph; i++)
@@ -91,15 +101,15 @@ Graph::Graph(std::string& fichierGraph, std::string& fichierPoidsGraph) {
 
         ponderations.clear();
         //lecture inutile de l'id aretes car même ordre d'organisation de l'id on ne considère que l'id du fichier 1
-        donneesPoidsGraph>>pond;
+        donneesPoidsGraph>>poubelle;
         if(donneesPoidsGraph.fail())
-            throw std::runtime_error("Probleme lors de la lecture de l'id de l'arete");
+            throw std::runtime_error("Probleme lors de la lecture de l id de l arete");
 
         for (int j = 0; j < nbr_ponderations; ++j)
         {
             donneesPoidsGraph >> pond;
             if(donneesPoidsGraph.fail())
-                throw std::runtime_error("Probleme lors de la lecture de la pondération de l'arete");
+                throw std::runtime_error("Probleme lors de la lecture de la ponderation de l arete");
             ponderations.push_back(pond);
         }
         // on met les données dans la cl&ss

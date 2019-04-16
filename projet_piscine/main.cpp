@@ -12,19 +12,29 @@
 
 
 int main();
+std::pair<std::string,std::string> menu();
+
 int main() {
     Svgfile Svg;
     std::cout << "Projet PISCINE" << std::endl
     << "BRIONNE Mathis   MARTIN Willy   SIROT Charlotte  -  TD07"
     << std::endl << std::endl;
 
-    std::string file1="files/manhattan.txt";
-    std::string file2="files/manhattan_weights_0.txt";
+    std::pair<std::string,std::string> fichiers;
+    fichiers = menu();
+
+    std::string file1=fichiers.first;
+    std::string file2=fichiers.second;
     Graph graph(file1,file2);
 
     std::cout<<"recherche kruskal"<<std::endl;
     std::vector<std::pair<Arete*,bool>> kk;
     kk=graph.kruskal(0);
+
+    /*std::vector<float> sommes_pond;
+
+    for(size_t i=0; i){}*/
+
 
 
     for(auto tp:kk)
