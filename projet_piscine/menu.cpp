@@ -13,7 +13,7 @@
 #include <iostream>
 #include <vector>
 
-std::pair<std::string,std::string> menu()
+std::pair<std::string,std::string> choix_graph()
 {
     std::cout << "MENU" << std::endl << std::endl
               << "Choix du graph :" << std::endl;
@@ -40,6 +40,7 @@ std::pair<std::string,std::string> menu()
                   << "  >> 41. Poids 1" << std::endl << std::endl;
 
         std::cin >> choix;
+        std::cout << std::endl;
 
         switch(choix)
         {
@@ -67,4 +68,28 @@ std::pair<std::string,std::string> menu()
         }
     }
 
+}
+
+int choix_algo()
+{
+    int choix=0;
+
+    //while(choix != 1 && choix != 2)
+    while(choix != 1)
+    {
+        std::cout << "Que voulez-vous afficher ?" << std::endl
+                  << "  >> 1. Solution selon Kruskal" << std::endl;
+        // << "  >> 2. Toutes les solutions de Pareto" << std::endl;
+
+        std::cin >> choix;
+
+        switch (choix)
+        {
+            case 1 :
+                return 1;
+            /*case 2 :
+                return 2;*/
+        }
+
+    }
 }

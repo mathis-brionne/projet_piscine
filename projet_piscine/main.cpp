@@ -12,7 +12,8 @@
 
 
 int main();
-std::pair<std::string,std::string> menu();
+std::pair<std::string,std::string> choix_graph();
+int choix_algo();
 
 int main() {
     Svgfile Svg;
@@ -21,35 +22,40 @@ int main() {
     << std::endl << std::endl;
 
     std::pair<std::string,std::string> fichiers;
-    fichiers = menu();
+    fichiers = choix_graph();
 
     std::string file1=fichiers.first;
     std::string file2=fichiers.second;
     Graph graph(file1,file2);
 
-    std::cout<<"recherche kruskal"<<std::endl;
+    int algo = 0;
+    algo = choix_algo();
+
     std::vector<std::pair<Arete*,bool>> kk;
-    kk=graph.kruskal(0);
-
-    /*std::vector<float> sommes_pond;
-
-    for(size_t i=0; i){}*/
-
-
-
-    for(auto tp:kk)
+    if(algo == 1)
     {
-        std::cout<<"bool="<<tp.second
-                <<" id="<<tp.first->getID()
-                <<" S1="<<tp.first->getSommetD()->getID()
-                <<" S2="<<tp.first->getSommetA()->getID()
-                <<" pond="<<tp.first->getPond(0)<<std::endl;
+        std::cout<<"recherche kruskal"<<std::endl;
 
+        kk=graph.kruskal(0);
+
+        for(auto tp:kk)
+        {
+            std::cout<<"bool="<<tp.second
+                     <<" id="<<tp.first->getID()
+                     <<" S1="<<tp.first->getSommetD()->getID()
+                     <<" S2="<<tp.first->getSommetA()->getID()
+                     <<" pond="<<tp.first->getPond(0)<<std::endl;
+
+        }
     }
+
+    /*if(algo==2)
+    {}*/
+
 
     std::cout << std::endl
               << "TEST LECTURE DE FICHIERS" << std::endl << std::endl
-              << "Données du graph" << std::endl
+              << "Donnees du graphe" << std::endl
               << "Sommets :" << std::endl;
               for(size_t i=0; i < (graph.getSommets()).size(); i++)
               {
@@ -77,7 +83,46 @@ int main() {
 
     }
 
+    /*
+    std::vector<float> sommes_pond;
+    graph.totalPond(kk) = sommes_pond;
+
+    for(size_t i=0; i<graph.getAretes().size(); ++i)
+    {
+        std::cout << <<
+        for(size_t j=0; j<sommes_pond.size(); j++)
+        {
+            std::cout << sommes_pond[j] << "  " << std::endl;
+        }
+    }*/
+
+
     graph.dessiner(Svg);
-    graph.dessinerKruskal(Svg ,kk);
+
+    if(algo == 1)
+        graph.dessinerKruskal(Svg ,kk);
+
+    //place la a l'arrache...
+    /*int choix;
+
+    while(choix != 1 && choix != 2)
+    {
+        std::cout << "Voulez-vous afficher un autre graphe ?" << std::endl
+                  << "  1. Oui" << std::endl
+                  << "  2. Non" << std::endl << std::endl;
+        std::cin >> choix;
+        std::cout << std::endl;
+
+        switch(choix)
+        {
+            case 1 :
+                main();
+                break;
+            case 2:
+                return 0;
+        }
+    }*/
+
+
     return 0;
 }

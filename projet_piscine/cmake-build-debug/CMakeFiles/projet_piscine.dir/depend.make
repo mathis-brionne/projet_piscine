@@ -40,3 +40,5 @@ CMakeFiles/projet_piscine.dir/main.cpp.o: ../Sommet.h
 CMakeFiles/projet_piscine.dir/main.cpp.o: ../Svgfile.h
 CMakeFiles/projet_piscine.dir/main.cpp.o: ../main.cpp
 
+CMakeFiles/projet_piscine.dir/menu.cpp.o: ../menu.cpp
+
