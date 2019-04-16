@@ -135,10 +135,11 @@ void Graph::dessiner(Svgfile &s) const {
         sta->dessiner(s);
     }
 
-
 }
+
+
 void Graph::dessinerKruskal(Svgfile &s , std::vector<std::pair<Arete*,bool>> kk) const {
-s.transalte(200);
+s.transalte(400);
     for (auto i  : kk) {
         if (i.second) {
             i.first->dessiner(s, "green");

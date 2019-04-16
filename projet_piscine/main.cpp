@@ -22,10 +22,13 @@ int main() {
     std::string file2="files/manhattan_weights_0.txt";
     Graph graph(file1,file2);
 
-    std::cout<<"recherche kruskal"<<std::endl;
+    std::cout<<"recherche kruskal: ";
     std::vector<std::pair<Arete*,bool>> kk;
     kk=graph.kruskal(0);
+    std::cout<<"OK"<<std::endl;
 
+    //connexité
+    std::cout<<"connexe ? "<<graph.connexite(kk);
 /*
     for(auto tp:kk)
     {
