@@ -10,6 +10,7 @@
 #include <iostream>
 #include "Sommet.h"
 #include "Arete.h"
+#include "Svgfile.h"
 
 class Graph {
 private:
@@ -31,6 +32,7 @@ public:
 
 
     void dessiner(Svgfile &s) const;
+    void dessinerKruskal(Svgfile &s, std::vector<std::pair<Arete*,bool>> kk) const;
 };
 
 
