@@ -14,6 +14,7 @@
 int main();
 std::pair<std::string,std::string> choix_graph();
 int choix_algo();
+std::vector<float> totalPond(std::vector<std::pair<Arete*,bool>> kk);
 
 int main() {
     Svgfile Svg;
@@ -83,27 +84,26 @@ int main() {
 
     }
 
-    /*
-    std::vector<float> sommes_pond;
-    graph.totalPond(kk) = sommes_pond;
-
-    for(size_t i=0; i<graph.getAretes().size(); ++i)
+    std::vector<float> totalPondGraph;
+    totalPondGraph = totalPond(kk);
+    std::cout << "Total des ponderations du graphe :" << std::endl
+              << " (";
+    for(size_t i=0; i<totalPondGraph.size(); i++)
     {
-        std::cout << <<
-        for(size_t j=0; j<sommes_pond.size(); j++)
-        {
-            std::cout << sommes_pond[j] << "  " << std::endl;
-        }
-    }*/
+        std::cout << totalPondGraph[i];
+        if(i < totalPondGraph.size()-1)
+            std::cout << ";";
+    }
+    std::cout << ")" << std::endl << std::endl;
 
-
+    //DESSIN
     graph.dessiner(Svg);
 
     if(algo == 1)
         graph.dessinerKruskal(Svg ,kk);
 
-    //place la a l'arrache...
-    /*int choix;
+    /*
+    int choix;
 
     while(choix != 1 && choix != 2)
     {
@@ -116,13 +116,13 @@ int main() {
         switch(choix)
         {
             case 1 :
+
                 main();
                 break;
             case 2:
                 return 0;
         }
     }*/
-
 
     return 0;
 }

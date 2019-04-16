@@ -131,23 +131,6 @@ Graph::Graph(std::string& fichierGraph, std::string& fichierPoidsGraph) {
         m_aretes.push_back(arete);
     }
 }
-/*
-std::vector<float> Graph::totalPond(std::vector<std::pair<Arete*,bool>> kk)
-{
-    std::vector<float> sommes_pond;
-    for(size_t i=0; i < m_aretes.size(); i++)
-    {
-        // valable pour 2 pondérations
-        for(size_t j=0; j < 2; j++)
-        {
-            // si l'arete est à 1 --> l'arete est existante
-            if(kk[i].second == 1)
-                sommes_pond[j] = sommes_pond[j] + m_aretes[i]->getPond();
-        }
-    }
-
-    return sommes_pond;
-}*/
 
 
 // DESSIN

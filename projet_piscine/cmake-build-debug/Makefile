@@ -339,6 +339,33 @@ menu.cpp.s:
 	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/menu.cpp.s
 .PHONY : menu.cpp.s
 
+sommes_pond.o: sommes_pond.cpp.o
+
+.PHONY : sommes_pond.o
+
+# target to build an object file
+sommes_pond.cpp.o:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o
+.PHONY : sommes_pond.cpp.o
+
+sommes_pond.i: sommes_pond.cpp.i
+
+.PHONY : sommes_pond.i
+
+# target to preprocess a source file
+sommes_pond.cpp.i:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/sommes_pond.cpp.i
+.PHONY : sommes_pond.cpp.i
+
+sommes_pond.s: sommes_pond.cpp.s
+
+.PHONY : sommes_pond.s
+
+# target to generate assembly for a file
+sommes_pond.cpp.s:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/sommes_pond.cpp.s
+.PHONY : sommes_pond.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -372,6 +399,9 @@ help:
 	@echo "... menu.o"
 	@echo "... menu.i"
 	@echo "... menu.s"
+	@echo "... sommes_pond.o"
+	@echo "... sommes_pond.i"
+	@echo "... sommes_pond.s"
 .PHONY : help
 
 
