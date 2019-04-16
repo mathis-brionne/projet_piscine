@@ -2,6 +2,14 @@
 // Created by Charlotte Sirot on 2019-04-15.
 //
 
+//!
+//! \file Graph.h
+//! \brief
+//! \authors BRIONNE,MARTIN,SIROT
+//! \version 0.02
+//! \date 15 avril 2019
+//! \return
+
 #ifndef PROJET_PISCINE_GRAPH_H
 #define PROJET_PISCINE_GRAPH_H
 #include <string>
@@ -29,6 +37,9 @@ public:
     //méthodes
     std::vector<std::pair<Arete*,bool>> kruskal(int num_pond);
     bool connexite(std::vector<std::pair<Arete*,bool>> liens );
+    //std::vector<float> totalPond(std::vector<std::pair<Arete*,bool>> kk);
+
+
 
     void dessiner(Svgfile &s) const;
     void dessinerKruskal(Svgfile &s, std::vector<std::pair<Arete*,bool>> kk) const;
