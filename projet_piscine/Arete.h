@@ -2,6 +2,14 @@
 // Created by Charlotte Sirot on 2019-04-15.
 //
 
+//!
+//! \file Arete.h
+//! \brief
+//! \authors BRIONNE,MARTIN,SIROT
+//! \version 0.02
+//! \date 15 avril 2019
+//! \return
+
 #ifndef PROJET_PISCINE_ARETE_H
 #define PROJET_PISCINE_ARETE_H
 #include <string>
@@ -22,7 +30,7 @@ private:
 public:
     //constructeur detructeur
     Arete(std::string& id, Sommet* sommetD, Sommet* sommetA,std::vector<float> ponderations) :
-            m_id{id}, m_sommetD{sommetD}, m_sommetA{sommetA},m_ponderations{ponderations} { }
+        m_id{id}, m_sommetD{sommetD}, m_sommetA{sommetA},m_ponderations{ponderations} { }
 
 
     ~Arete() = default;

@@ -2,6 +2,14 @@
 // Created by Charlotte Sirot on 2019-04-15.
 //
 
+//!
+//! \file Graph.h
+//! \brief
+//! \authors BRIONNE,MARTIN,SIROT
+//! \version 0.02
+//! \date 15 avril 2019
+//! \return
+
 #ifndef PROJET_PISCINE_GRAPH_H
 #define PROJET_PISCINE_GRAPH_H
 #include <string>

@@ -3,7 +3,7 @@
 
 
 //!
-//! \file main.c
+//! \file main.cpp
 //! \brief
 //! \authors BRIONNE,MARTIN,SIROT
 //! \version 0.02
@@ -26,7 +26,7 @@ int main() {
     std::vector<std::pair<Arete*,bool>> kk;
     kk=graph.kruskal(0);
 
-/*
+
     for(auto tp:kk)
     {
         std::cout<<"bool="<<tp.second
@@ -54,8 +54,8 @@ int main() {
     for(size_t i=0; i < (graph.getAretes()).size(); i++)
     {
         std::cout << "  id : " << graph.getAretes()[i]->getID() << std::endl
-                  <<" ponderation : "<<graph.getAretes()[i]->getPond(0)<<" "<<graph.getAretes()[i]->getPond(1)<<std::endl
-                 << "  Sommet depart : " << std::endl
+                  << "  ponderation : "<<graph.getAretes()[i]->getPond(0)<<" "<<graph.getAretes()[i]->getPond(1)<<std::endl
+                  << "  Sommet depart : " << std::endl
                   << "    id : " << graph.getAretes()[i]->getSommetD()->getID() << std::endl
                   << "    x : " << graph.getAretes()[i]->getSommetD()->getCoords().getX() << std::endl
                   << "    y : " << graph.getAretes()[i]->getSommetD()->getCoords().getY() << std::endl
@@ -65,7 +65,7 @@ int main() {
                   << "    y : " << graph.getAretes()[i]->getSommetA()->getCoords().getY() << std::endl
                   << std::endl;
 
-    }*/
+    }
 
     graph.dessiner(Svg);
     graph.dessinerKruskal(Svg ,kk);

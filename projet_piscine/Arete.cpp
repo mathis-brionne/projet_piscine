@@ -2,13 +2,20 @@
 // Created by Charlotte Sirot on 2019-04-15.
 //
 
+//!
+//! \file Arete.cpp
+//! \brief
+//! \authors BRIONNE,MARTIN,SIROT
+//! \version 0.02
+//! \date 15 avril 2019
+//! \return
+
 #include <fstream>
 #include <ostream>
 #include <sstream>
 #include "Arete.h"
-
-#include "Svgfile.h"
 #include "Sommet.h"
+#include "Svgfile.h"
 
 // DESSIN
 void Arete::dessiner(Svgfile &s, std::string color) const {

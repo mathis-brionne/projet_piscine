@@ -2,25 +2,17 @@
 // Created by Charlotte Sirot on 2019-04-15.
 //
 
+//!
+//! \file Sommet.cpp
+//! \brief
+//! \authors BRIONNE,MARTIN,SIROT
+//! \version 0.02
+//! \date 15 avril 2019
+//! \return
+
 #include "Sommet.h"
 #include "Arete.h"
 #include "Svgfile.h"
-// CRÉATION
-Sommet::Sommet(std::string id, Coords coords) :
-    m_id{id}, m_coords{coords} {
-
-}
-
-
-// GET
-std::string Sommet::getID() const {
-    return m_id;
-}
-
-Coords Sommet::getCoords() const {
-    return m_coords;
-}
-
 
 // DESSIN
 void Sommet::dessiner(Svgfile &s )  {
