@@ -2,7 +2,7 @@
 // Created by Charlotte Sirot on 2019-04-15.
 //
 
-#include "Graph.h"
+#include "Graphe.h"
 
 // CRÉATION
 Graph::Graph(std::string& fichierGraph, std::string& fichierPoidsGraph) {
