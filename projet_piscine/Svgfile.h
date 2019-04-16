@@ -53,13 +53,25 @@ public:
 
     void endli();
 
-    void transalte(int scale);
+    void transalte(int scaleX ,int scaleY);
 
     void finG();
 
     void addG();
 
+    void addA();
+
     void finA();
+
+    void addLine(double x1, double y1, double x2, double y2, std::string color ,std::string clas);
+
+    void addText(double x, double y, std::string text,int nbcarac, std::string color, std::string clas);
+
+    void addDisk(double x, double y, std::string color, std::string clas);
+
+    void addText(double x, double y, double val, std::string color, std::string clas);
+
+    void addText(double x, double y, std::string text, std::string color, std::string clas);
 };
 
 std::string makeRGB(int r, int g, int b);

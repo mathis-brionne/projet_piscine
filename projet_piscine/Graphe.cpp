@@ -137,22 +137,22 @@ Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
 void Graphe::dessiner(Svgfile &s) const {
 
     for (auto sta : m_aretes) {
-        sta->dessiner(s, "blue");
+        sta->dessiner(s,0,0,"lightgrey");
     }
     for (auto sta : m_sommets) {
-        sta->dessiner(s);
+        sta->dessiner(s,0,0);
     }
 
 }
 void Graphe::dessinerKruskal(Svgfile &s , std::vector<std::pair<Arete*,bool>> kk) const {
-    s.transalte(400);
+
     for (auto i  : kk) {
         if (i.second) {
-            i.first->dessiner(s, "green");
+            i.first->dessiner(s, 500 ,0, "green");
         }
     }
     for (auto sta : m_sommets) {
-        sta->dessiner(s);
+    sta->dessiner(s, 500 ,0 );
     }
-    s.finA();
+
 }

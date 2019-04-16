@@ -43,7 +43,7 @@ public:
     std::vector<float> getPonderations() const { return m_ponderations;}
 
     //methodes
-    void dessiner(Svgfile &s, std::string color = defcolor  ) const;
+    void dessiner(Svgfile &s,int scaleX,int scaleY, std::string color = defcolor  ) const;
 };
 
 

@@ -3,7 +3,7 @@
 #include <sstream>
 
 const std::string svgHeader =
-        "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<li>\n"
+        "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
         "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\"  xmlns:xlink=\"http://www.w3.org/1999/xlink\" ";
 
 /// Effets "Boule en relief", voir données à la fin de ce fichier
@@ -134,6 +134,16 @@ void Svgfile::addDisk(double x, double y,std::string color) {
             << attrib("class","circle")
             << "/>\n";
 }
+void Svgfile::addDisk(double x, double y,std::string color,std::string clas) {
+    m_ostrm << "<line "
+            << attrib("x1", x)
+            << attrib("y1", y)
+            << attrib("x2", x)
+            << attrib("y2", y)
+            << attrib("stroke", color)
+            << attrib("class",clas)
+            << "/>\n";
+}
 
 void Svgfile::addlegende(double x1, double x2, double y1, double y2, std::string color, std::string text) {
     m_ostrm << "<line "
@@ -175,6 +185,16 @@ void Svgfile::addLine(double x1, double y1, double x2, double y2, std::string co
             << attrib("stroke", color)
             << "/>\n";
 }
+void Svgfile::addLine(double x1, double y1, double x2, double y2, std::string color ,std::string clas) {
+    m_ostrm << "<line "
+            << attrib("x1", x1)
+            << attrib("y1", y1)
+            << attrib("x2", x2)
+            << attrib("y2", y2)
+            << attrib("class", clas)
+            << attrib("stroke", color)
+            << "/>\n";
+}
 
 void Svgfile::addCross(double x, double y, double span, std::string color) {
     addLine(x - span, y - span, x + span, y + span, color);
@@ -192,11 +212,48 @@ void Svgfile::addText(double x, double y, std::string text, std::string color) {
             << "transform=\"translate(" << -5 << "," << 5 << ")\""
             << ">" << text << "</text>\n";
 }
+void Svgfile::addText(double x, double y, std::string text,int nb ,std::string color ,std::string clas) {
+    /// <text x="180" y="60">Un texte</text>
+    int nbcarac;
+    if (nb < 10)
+    {
+        nbcarac =1;
+    }
+    else
+    {
+        nbcarac=2;
+    }
+    m_ostrm << "<text "
+            << attrib("class", clas)
+            << attrib("x", x)
+            << attrib("y", y)
+            << attrib("opacity","0")
+            << attrib("fill", color)
+            << "transform=\"translate(" << -5*nbcarac -2<< "," << 8 << ")\""
+            << ">" << text << "</text>\n";
+}
+void Svgfile::addText(double x, double y, std::string text,std::string color ,std::string clas) {
+    /// <text x="180" y="60">Un texte</text>
+    m_ostrm << "<text "
+            << attrib("class", clas)
+            << attrib("x", x)
+            << attrib("y", y)
+            << attrib("opacity","0")
+            << attrib("fill", color)
+            << "transform=\"translate(" << -5 << "," << 5 << ")\""
+            << ">" << text << "</text>\n";
+}
 
 void Svgfile::addText(double x, double y, double val,std::string color) {
     std::ostringstream oss;
     oss << val;
     addText(x, y, oss.str(), color);
+}
+
+void Svgfile::addText(double x, double y, double val,std::string color ,std::string clas) {
+    std::ostringstream oss;
+    oss << val;
+    addText(x, y, oss.str(), color ,clas );
 }
 
 void Svgfile::addGrid(double span, bool numbering, std::string color) {
@@ -227,9 +284,13 @@ std::string fillBallColor(std::string col) {
 
     return col;
 }
-void Svgfile::transalte(int scale)
+void Svgfile::transalte(int scaleX ,int scaleY)
 {
-    m_ostrm << "<a transform=\"translate("<<scale<<",0)\" > \n";
+    m_ostrm << "<g transform=\"translate("<<scaleX<<","<<scaleY<<")\" > \n";
+}
+void Svgfile::addA()
+{
+    m_ostrm << "<a>\n";
 }
 void Svgfile::finG()
 {
@@ -296,8 +357,24 @@ extern const std::string svgBallGradients =
         "    </radialGradient>\n"
         "  </defs>\n"
         " </svg>"
-        "</li>"
         "<style> \n"
+        ".point{\n"
+        " stroke-width: 10;\n"
+        "stroke-linecap: round;\n"
+        "stroke-color : red; \n"
+        "transition: .2s;\n"
+        "cursor: crosshair;\n"
+        "stroke-opacity : 1; \n"
+        " \n"
+        " }\n"
+        "g:hover .point{\n"
+        " stroke-width: 10;\n"
+        "stroke-linecap: round;\n"
+        "stroke-color : red; \n"
+        "transition: .2s;\n"
+        "cursor: crosshair;\n"
+        " \n"
+        " }\n"
         ".arete{\n"
         "stroke-width: 2;\n"
         "        stroke-linecap: round;\n"
@@ -305,29 +382,83 @@ extern const std::string svgBallGradients =
         "cursor: crosshair;\n"
         " \n"
         " }\n"
-        "g:hover .arete{\n"
+        " .areteV{\n"
+        "stroke-width: 2;\n"
+        "        stroke-linecap: round;\n"
+        "transition: .2s;\n"
+        "cursor: crosshair;\n"
+        " \n"
+        " }\n"
+        " g:hover areteV:hover{\n"
         "stroke-width: 5;\n"
         "        stroke-linecap: round;\n"
         "transition: .2s;\n"
         "cursor: crosshair;\n"
         " \n"
-        " }"
-        ".circle {\n"
+        " }\n"
+        "g:hover  .areteV{\n"
+        "stroke-width: 5;\n"
+        "        stroke-linecap: round;\n"
+        "transition: .2s;\n"
+        "cursor: crosshair;\n"
+        " \n"
+        " }\n"
+        " .circleV {\n"
         "        stroke-width: 30;\n"
         "        stroke-linecap: round;\n"
         "transition: .2s;\n"
         "cursor: crosshair;\n"
         "    }\n"
-        "g:hover .circle {\n"
-        "stroke-width: 90;\n"
+        ".circle {\n"
+        "        stroke-width: 30;\n"
+        "        stroke-linecap: round;\n"
+        "transition: .2s;\n"
+        "cursor: crosshair;\n"
+        "stroke-opacity : 0; \n"
+        "    }\n"
+        "a:hover .circle {\n"
+        "stroke-width: 40;\n"
         "stroke-opacity : 0.4; \n"
         "cursor: crosshair;\n"
         "    }\n"
-        "g:hover .effet {\n"
+        "    g:hover .circleV {\n"
+        "stroke-width: 40;\n"
+        "stroke-opacity : 0.4; \n"
+        "cursor: crosshair;\n"
+        "    }\n"
+        ".effetV{\n"
         "opacity: 1; \n"
-        "stroke-color : black; "
-        "cursor: crosshair;"
+        "font-size :25px;\n"
+        "stroke-color : black; cursor: crosshair;\n"
         "}\n"
+        ".effet{\n"
+        "opacity: 0; \n"
+        "font-size :25px;\n"
+        "stroke-color : black; cursor: crosshair;\n"
+        "}\n"
+        "a:hover .effet{\n"
+        "opacity: 1; \n"
+        "transition: .2s;\n"
+        "font-size :25px;\n"
+        "stroke-color : black; cursor: crosshair;\n"
+        "}\n"
+        "g:hover .effetV{\n"
+        "opacity: 1; \n"
+        "transition: .2s;\n"
+        "font-size :25px;\n"
+        "stroke-color : red; cursor: crosshair;\n"
+        "}\n"
+        ".arete{\n"
+        "stroke-width: 2;\n"
+        "stroke-linecap: round;\n"
+        "transition: .2s;\n"
+        "cursor: crosshair;\n"
+        "stroke-opacity : 0; \n"
+        " \n"
+        " }\n"
+        "a:hover  .arete{\n"
+        " stroke-opacity : 1; \n"
+        " }"
         "<style>\n";
 
 

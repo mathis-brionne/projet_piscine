@@ -18,14 +18,16 @@
 #include "Svgfile.h"
 
 // DESSIN
-void Arete::dessiner(Svgfile &s, std::string color) const {
+void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY , std::string color ) const {
     std::ostringstream oss117   ;
-    for (auto i : m_ponderations) {
-       oss117<< i <<";";
+    for (size_t i=0 ;i<m_ponderations.size();i++) {
+        oss117 << m_ponderations[i];
+        if (i <m_ponderations.size()-1)
+            oss117<<";";
     }
-    s.addG();
-    s.addLine(getSommetD()->getCoords().getX(),getSommetD()->getCoords().getY(),getSommetA()->getCoords().getX(), getSommetA()->getCoords().getY(), color);
-    s.addText((getSommetD()->getCoords().getX() + getSommetA()->getCoords().getX())/2, (getSommetD()->getCoords().getY() + getSommetA()->getCoords().getY())/2,oss117.str(),"black");
+    s.transalte(scaleX ,scaleY);
+    s.addLine(getSommetD()->getCoords().getX(),getSommetD()->getCoords().getY(),getSommetA()->getCoords().getX(), getSommetA()->getCoords().getY(), color , "areteV");
+    s.addText((getSommetD()->getCoords().getX() + getSommetA()->getCoords().getX())/2, (getSommetD()->getCoords().getY() + getSommetA()->getCoords().getY())/2,oss117.str(), std::stoi(m_id),"black","effetV");
     s.finG();
 
 }
