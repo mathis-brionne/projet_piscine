@@ -1,15 +1,13 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/projet_piscine.dir/main.cpp.obj"
-  "CMakeFiles/projet_piscine.dir/graph.cpp.obj"
-  "CMakeFiles/projet_piscine.dir/Sommet.cpp.obj"
-  "CMakeFiles/projet_piscine.dir/Arete.cpp.obj"
-  "CMakeFiles/projet_piscine.dir/kruskal.cpp.obj"
-  "CMakeFiles/projet_piscine.dir/Svgfile.cpp.obj"
-  "CMakeFiles/projet_piscine.dir/outil.cpp.obj"
+  "CMakeFiles/projet_piscine.dir/main.cpp.o"
+  "CMakeFiles/projet_piscine.dir/Graph.cpp.o"
+  "CMakeFiles/projet_piscine.dir/Sommet.cpp.o"
+  "CMakeFiles/projet_piscine.dir/Arete.cpp.o"
+  "CMakeFiles/projet_piscine.dir/kruskal.cpp.o"
+  "CMakeFiles/projet_piscine.dir/Svgfile.cpp.o"
+  "CMakeFiles/projet_piscine.dir/outil.cpp.o"
   "projet_piscine.pdb"
-  "projet_piscine.exe"
-  "projet_piscine.exe.manifest"
-  "libprojet_piscine.dll.a"
+  "projet_piscine"
 )
 
 # Per-language clean rules from dependency scanning.

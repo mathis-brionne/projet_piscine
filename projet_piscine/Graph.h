@@ -28,6 +28,7 @@ public:
 
     //méthodes
     std::vector<std::pair<Arete*,bool>> kruskal(int num_pond);
+    bool connexite(std::vector<std::pair<Arete*,bool>> liens );
 
     void dessiner(Svgfile &s) const;
     void dessinerKruskal(Svgfile &s, std::vector<std::pair<Arete*,bool>> kk) const;
