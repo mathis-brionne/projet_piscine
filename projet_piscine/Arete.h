@@ -39,9 +39,10 @@ public:
     std::string getID() const{ return m_id;}
     Sommet* getSommetD() const{ return m_sommetD;}
     Sommet* getSommetA() const{ return m_sommetA;}
-    float getPond(int num) const{ return m_ponderations[num];};
-    //methodes
+    float getPond(int num) const{ return m_ponderations[num];}
+    std::vector<float> getPonderations() const { return m_ponderations;}
 
+    //methodes
     void dessiner(Svgfile &s, std::string color = defcolor  ) const;
 };
 

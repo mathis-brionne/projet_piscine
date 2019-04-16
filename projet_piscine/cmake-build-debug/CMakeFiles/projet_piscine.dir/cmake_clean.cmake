@@ -1,12 +1,15 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/projet_piscine.dir/main.cpp.obj"
-  "CMakeFiles/projet_piscine.dir/graph.cpp.obj"
-  "CMakeFiles/projet_piscine.dir/Sommet.cpp.obj"
-  "CMakeFiles/projet_piscine.dir/Arete.cpp.obj"
-  "CMakeFiles/projet_piscine.dir/Coords.cpp.obj"
-  "CMakeFiles/projet_piscine.dir/kruskal.cpp.obj"
-  "CMakeFiles/projet_piscine.dir/Svgfile.cpp.obj"
-  "CMakeFiles/projet_piscine.dir/menu.cpp.obj"
+
+  "CMakeFiles/projet_piscine.dir/main.cpp.o"
+  "CMakeFiles/projet_piscine.dir/Graph.cpp.o"
+  "CMakeFiles/projet_piscine.dir/Sommet.cpp.o"
+  "CMakeFiles/projet_piscine.dir/Arete.cpp.o"
+  "CMakeFiles/projet_piscine.dir/Coords.cpp.o"
+  "CMakeFiles/projet_piscine.dir/kruskal.cpp.o"
+  "CMakeFiles/projet_piscine.dir/Svgfile.cpp.o"
+  "CMakeFiles/projet_piscine.dir/menu.cpp.o"
+  "CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o"
+
   "projet_piscine.pdb"
   "projet_piscine.exe"
   "projet_piscine.exe.manifest"

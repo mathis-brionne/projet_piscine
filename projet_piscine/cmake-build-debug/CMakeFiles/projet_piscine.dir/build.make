@@ -160,34 +160,51 @@ CMakeFiles/projet_piscine.dir/menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projet_piscine.dir/menu.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\willy\Documents\1. informatique\projet_piscine\menu.cpp" -o CMakeFiles\projet_piscine.dir\menu.cpp.s
 
+CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o: CMakeFiles/projet_piscine.dir/flags.make
+CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o: ../sommes_pond.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o -c "/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/sommes_pond.cpp"
+
+CMakeFiles/projet_piscine.dir/sommes_pond.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projet_piscine.dir/sommes_pond.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/sommes_pond.cpp" > CMakeFiles/projet_piscine.dir/sommes_pond.cpp.i
+
+CMakeFiles/projet_piscine.dir/sommes_pond.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projet_piscine.dir/sommes_pond.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/sommes_pond.cpp" -o CMakeFiles/projet_piscine.dir/sommes_pond.cpp.s
+
 # Object files for target projet_piscine
 projet_piscine_OBJECTS = \
-"CMakeFiles/projet_piscine.dir/main.cpp.obj" \
-"CMakeFiles/projet_piscine.dir/graph.cpp.obj" \
-"CMakeFiles/projet_piscine.dir/Sommet.cpp.obj" \
-"CMakeFiles/projet_piscine.dir/Arete.cpp.obj" \
-"CMakeFiles/projet_piscine.dir/Coords.cpp.obj" \
-"CMakeFiles/projet_piscine.dir/kruskal.cpp.obj" \
-"CMakeFiles/projet_piscine.dir/Svgfile.cpp.obj" \
-"CMakeFiles/projet_piscine.dir/menu.cpp.obj"
+
+"CMakeFiles/projet_piscine.dir/main.cpp.o" \
+"CMakeFiles/projet_piscine.dir/Graph.cpp.o" \
+"CMakeFiles/projet_piscine.dir/Sommet.cpp.o" \
+"CMakeFiles/projet_piscine.dir/Arete.cpp.o" \
+"CMakeFiles/projet_piscine.dir/Coords.cpp.o" \
+"CMakeFiles/projet_piscine.dir/kruskal.cpp.o" \
+"CMakeFiles/projet_piscine.dir/Svgfile.cpp.o" \
+"CMakeFiles/projet_piscine.dir/menu.cpp.o" \
+"CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o"
+
 
 # External object files for target projet_piscine
 projet_piscine_EXTERNAL_OBJECTS =
 
-projet_piscine.exe: CMakeFiles/projet_piscine.dir/main.cpp.obj
-projet_piscine.exe: CMakeFiles/projet_piscine.dir/graph.cpp.obj
-projet_piscine.exe: CMakeFiles/projet_piscine.dir/Sommet.cpp.obj
-projet_piscine.exe: CMakeFiles/projet_piscine.dir/Arete.cpp.obj
-projet_piscine.exe: CMakeFiles/projet_piscine.dir/Coords.cpp.obj
-projet_piscine.exe: CMakeFiles/projet_piscine.dir/kruskal.cpp.obj
-projet_piscine.exe: CMakeFiles/projet_piscine.dir/Svgfile.cpp.obj
-projet_piscine.exe: CMakeFiles/projet_piscine.dir/menu.cpp.obj
-projet_piscine.exe: CMakeFiles/projet_piscine.dir/build.make
-projet_piscine.exe: CMakeFiles/projet_piscine.dir/linklibs.rsp
-projet_piscine.exe: CMakeFiles/projet_piscine.dir/objects1.rsp
-projet_piscine.exe: CMakeFiles/projet_piscine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\willy\Documents\1. informatique\projet_piscine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable projet_piscine.exe"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\projet_piscine.dir\link.txt --verbose=$(VERBOSE)
+
+projet_piscine: CMakeFiles/projet_piscine.dir/main.cpp.o
+projet_piscine: CMakeFiles/projet_piscine.dir/Graph.cpp.o
+projet_piscine: CMakeFiles/projet_piscine.dir/Sommet.cpp.o
+projet_piscine: CMakeFiles/projet_piscine.dir/Arete.cpp.o
+projet_piscine: CMakeFiles/projet_piscine.dir/Coords.cpp.o
+projet_piscine: CMakeFiles/projet_piscine.dir/kruskal.cpp.o
+projet_piscine: CMakeFiles/projet_piscine.dir/Svgfile.cpp.o
+projet_piscine: CMakeFiles/projet_piscine.dir/menu.cpp.o
+projet_piscine: CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o
+projet_piscine: CMakeFiles/projet_piscine.dir/build.make
+projet_piscine: CMakeFiles/projet_piscine.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable projet_piscine"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/projet_piscine.dir/link.txt --verbose=$(VERBOSE)
+
 
 # Rule to build all files generated by this target.
 CMakeFiles/projet_piscine.dir/build: projet_piscine.exe

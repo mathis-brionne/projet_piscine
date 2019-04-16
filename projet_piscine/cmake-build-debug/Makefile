@@ -338,39 +338,71 @@ menu.cpp.s:
 	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/menu.cpp.s
 .PHONY : menu.cpp.s
 
+sommes_pond.o: sommes_pond.cpp.o
+
+.PHONY : sommes_pond.o
+
+# target to build an object file
+sommes_pond.cpp.o:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o
+.PHONY : sommes_pond.cpp.o
+
+sommes_pond.i: sommes_pond.cpp.i
+
+.PHONY : sommes_pond.i
+
+# target to preprocess a source file
+sommes_pond.cpp.i:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/sommes_pond.cpp.i
+.PHONY : sommes_pond.cpp.i
+
+sommes_pond.s: sommes_pond.cpp.s
+
+.PHONY : sommes_pond.s
+
+# target to generate assembly for a file
+sommes_pond.cpp.s:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/sommes_pond.cpp.s
+.PHONY : sommes_pond.cpp.s
+
 # Help Target
 help:
-	@echo The following are some of the valid targets for this Makefile:
-	@echo ... all (the default if no target is provided)
-	@echo ... clean
-	@echo ... depend
-	@echo ... rebuild_cache
-	@echo ... projet_piscine
-	@echo ... edit_cache
-	@echo ... Arete.obj
-	@echo ... Arete.i
-	@echo ... Arete.s
-	@echo ... Coords.obj
-	@echo ... Coords.i
-	@echo ... Coords.s
-	@echo ... Sommet.obj
-	@echo ... Sommet.i
-	@echo ... Sommet.s
-	@echo ... Svgfile.obj
-	@echo ... Svgfile.i
-	@echo ... Svgfile.s
-	@echo ... graph.obj
-	@echo ... graph.i
-	@echo ... graph.s
-	@echo ... kruskal.obj
-	@echo ... kruskal.i
-	@echo ... kruskal.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
-	@echo ... menu.obj
-	@echo ... menu.i
-	@echo ... menu.s
+
+	@echo "The following are some of the valid targets for this Makefile:"
+	@echo "... all (the default if no target is provided)"
+	@echo "... clean"
+	@echo "... depend"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... projet_piscine"
+	@echo "... Arete.o"
+	@echo "... Arete.i"
+	@echo "... Arete.s"
+	@echo "... Coords.o"
+	@echo "... Coords.i"
+	@echo "... Coords.s"
+	@echo "... Graph.o"
+	@echo "... Graph.i"
+	@echo "... Graph.s"
+	@echo "... Sommet.o"
+	@echo "... Sommet.i"
+	@echo "... Sommet.s"
+	@echo "... Svgfile.o"
+	@echo "... Svgfile.i"
+	@echo "... Svgfile.s"
+	@echo "... kruskal.o"
+	@echo "... kruskal.i"
+	@echo "... kruskal.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... menu.o"
+	@echo "... menu.i"
+	@echo "... menu.s"
+	@echo "... sommes_pond.o"
+	@echo "... sommes_pond.i"
+	@echo "... sommes_pond.s"
+
 .PHONY : help
 
 
