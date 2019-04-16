@@ -129,11 +129,23 @@ Graph::Graph(std::string& fichierGraph, std::string& fichierPoidsGraph) {
 void Graph::dessiner(Svgfile &s) const {
 
     for (auto sta : m_aretes) {
-        sta->dessiner(s);
+        sta->dessiner(s, "blue");
     }
     for (auto sta : m_sommets) {
         sta->dessiner(s);
     }
 
 
+}
+void Graph::dessinerKruskal(Svgfile &s , std::vector<std::pair<Arete*,bool>> kk) const {
+s.transalte(200);
+    for (auto i  : kk) {
+        if (i.second) {
+            i.first->dessiner(s, "green");
+        }
+    }
+    for (auto sta : m_sommets) {
+        sta->dessiner(s);
+    }
+s.finA();
 }

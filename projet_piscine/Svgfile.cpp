@@ -187,6 +187,7 @@ void Svgfile::addText(double x, double y, std::string text, std::string color) {
             << attrib("class", "effet ")
             << attrib("x", x)
             << attrib("y", y)
+            << attrib("opacity","0")
             << attrib("fill", color)
             << "transform=\"translate(" << -5 << "," << 5 << ")\""
             << ">" << text << "</text>\n";
@@ -226,7 +227,22 @@ std::string fillBallColor(std::string col) {
 
     return col;
 }
-
+void Svgfile::transalte(int scale)
+{
+    m_ostrm << "<a transform=\"translate("<<scale<<",0)\" > \n";
+}
+void Svgfile::finG()
+{
+    m_ostrm << "</g>\n";
+}
+void Svgfile::finA()
+{
+    m_ostrm << "</a>\n";
+}
+void Svgfile::addG()
+{
+    m_ostrm << "<g>";
+}
 
 
 /// Effets "Boule en relief"
@@ -289,9 +305,8 @@ extern const std::string svgBallGradients =
         "cursor: crosshair;\n"
         " \n"
         " }\n"
-        " .arete:hover{\n"
+        "g:hover .arete{\n"
         "stroke-width: 5;\n"
-        "        stroke : blue ;\n"
         "        stroke-linecap: round;\n"
         "transition: .2s;\n"
         "cursor: crosshair;\n"
@@ -303,12 +318,12 @@ extern const std::string svgBallGradients =
         "transition: .2s;\n"
         "cursor: crosshair;\n"
         "    }\n"
-        ".circle:hover {\n"
+        "g:hover .circle {\n"
         "stroke-width: 90;\n"
         "stroke-opacity : 0.4; \n"
         "cursor: crosshair;\n"
         "    }\n"
-        ".effet {\n"
+        "g:hover .effet {\n"
         "opacity: 1; \n"
         "stroke-color : black; "
         "cursor: crosshair;"

@@ -11,7 +11,6 @@
 
 
 int main();
-
 int main() {
     Svgfile Svg;
     std::cout << "Projet PISCINE" << std::endl
@@ -66,5 +65,6 @@ int main() {
 
     }
     graph.dessiner(Svg);
+    graph.dessinerKruskal(Svg ,kk);
     return 0;
 }

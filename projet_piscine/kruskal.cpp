@@ -43,7 +43,7 @@ std::vector<std::pair<Arete*,bool>> Graph::kruskal(int num_pond) //non pondéré
     /* algo kruskal */
     //on trie les aretes par ordre du poids (en fonction d'une unique pondération
     std::sort(temp_liens.begin(), temp_liens.end(),[](std::pair<Arete*,bool> a1,std::pair<Arete*,bool> a2)
-         {return (a1.first)->getPond(1)<(a2.first)->getPond(1);} );
+    {return (a1.first)->getPond(1)<(a2.first)->getPond(1);} );
 
 
     //on compte le nombre de composante connexe répertorié
@@ -54,9 +54,9 @@ std::vector<std::pair<Arete*,bool>> Graph::kruskal(int num_pond) //non pondéré
     {
         //on prend l'arete n
         //tant qu'elle relie 2 sommets connexe on avance num_aretes de 1
-          while((sommet_connexe.find((temp_liens[num_aretes].first)->getSommetD()))->second ==
-                (sommet_connexe.find((temp_liens[num_aretes].first)->getSommetA()))->second)
-               num_aretes++;
+        while((sommet_connexe.find((temp_liens[num_aretes].first)->getSommetD()))->second ==
+              (sommet_connexe.find((temp_liens[num_aretes].first)->getSommetA()))->second)
+            num_aretes++;
         // !!!!   si il n'y en a plus BUG car pas normal    !!!!
 
 
@@ -88,7 +88,7 @@ std::vector<std::pair<Arete*,bool>> Graph::kruskal(int num_pond) //non pondéré
             nb_connexe_estimation=temp_connexe.size();
         }
         else//si on est sur que notre nombre connexe n'est pas de 1
-             nb_connexe_estimation--;
+            nb_connexe_estimation--;
     }
 
 
@@ -117,7 +117,6 @@ bool connexite(std::vector<std::pair<Arete*,bool>> liens )
         }
     }
     bool connexe=false;
-
     int nb_aretes =0;
     for(size_t i=0;i<liens.size();i++)
     {
@@ -126,12 +125,9 @@ bool connexite(std::vector<std::pair<Arete*,bool>> liens )
     }
     if(m_sommets.size()-1>nb_aretes)
         return false;
-
     std::unordered_set<Sommet*> cc;
-
     std::queue<Sommet*> file;
     file.push(m_sommets[0]);
-
     for(int i=0;file.size()!=0;i++)
     {
         Sommet* temp =file.front();
@@ -139,7 +135,7 @@ bool connexite(std::vector<std::pair<Arete*,bool>> liens )
         temp->
     }
 */
-    /* debut BFS*/
+/* debut BFS*/
 /*    for( auto it: )
     {
         std::string nom=it->getID();
@@ -153,7 +149,7 @@ bool connexite(std::vector<std::pair<Arete*,bool>> liens )
         }
     }
 */
-    /* fin BFS*/
+/* fin BFS*/
 /*
     return true;
 }
