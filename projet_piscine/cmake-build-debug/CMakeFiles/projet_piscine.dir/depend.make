@@ -4,8 +4,8 @@
 CMakeFiles/projet_piscine.dir/Arete.cpp.obj: ../Arete.cpp
 CMakeFiles/projet_piscine.dir/Arete.cpp.obj: ../Arete.h
 CMakeFiles/projet_piscine.dir/Arete.cpp.obj: ../Coords.h
+CMakeFiles/projet_piscine.dir/Arete.cpp.obj: ../Sommet.h
 CMakeFiles/projet_piscine.dir/Arete.cpp.obj: ../Svgfile.h
-CMakeFiles/projet_piscine.dir/Arete.cpp.obj: ../sommet.h
 
 CMakeFiles/projet_piscine.dir/Coords.cpp.obj: ../Coords.cpp
 CMakeFiles/projet_piscine.dir/Coords.cpp.obj: ../Coords.h

@@ -128,7 +128,7 @@ std::vector<std::pair<Arete*,bool>> Graph::kruskal(int num_pond) //non pondéré
 //! \version 0.1
 //! \date 15 avril 2019
 //! \return 1 si le graphe partiel est connexe, 0 sinon
-
+/*
 bool Graph::connexite(std::vector<std::pair<Arete*,bool>> liens )
 {
     ///déclaration et initialisation
@@ -184,3 +184,4 @@ bool Graph::connexite(std::vector<std::pair<Arete*,bool>> liens )
 
     return true;
 }
+*/
