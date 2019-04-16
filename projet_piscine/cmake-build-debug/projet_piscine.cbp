@@ -88,9 +88,6 @@
 		<Unit filename="C:/Users/willy/Documents/1. informatique/projet_piscine/Arete.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet_piscine/Coords.cpp">
-			<Option target="projet_piscine"/>
-		</Unit>
 		<Unit filename="C:/Users/willy/Documents/1. informatique/projet_piscine/Coords.h">
 			<Option target="projet_piscine"/>
 		</Unit>
@@ -116,6 +113,12 @@
 			<Option target="projet_piscine"/>
 		</Unit>
 		<Unit filename="C:/Users/willy/Documents/1. informatique/projet_piscine/main.cpp">
+			<Option target="projet_piscine"/>
+		</Unit>
+		<Unit filename="C:/Users/willy/Documents/1. informatique/projet_piscine/outil.cpp">
+			<Option target="projet_piscine"/>
+		</Unit>
+		<Unit filename="C:/Users/willy/Documents/1. informatique/projet_piscine/outil.h">
 			<Option target="projet_piscine"/>
 		</Unit>
 		<Unit filename="C:/Users/willy/Documents/1. informatique/projet_piscine/CMakeLists.txt">

@@ -149,33 +149,6 @@ Arete.cpp.s:
 	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Arete.cpp.s
 .PHONY : Arete.cpp.s
 
-Coords.obj: Coords.cpp.obj
-
-.PHONY : Coords.obj
-
-# target to build an object file
-Coords.cpp.obj:
-	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Coords.cpp.obj
-.PHONY : Coords.cpp.obj
-
-Coords.i: Coords.cpp.i
-
-.PHONY : Coords.i
-
-# target to preprocess a source file
-Coords.cpp.i:
-	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Coords.cpp.i
-.PHONY : Coords.cpp.i
-
-Coords.s: Coords.cpp.s
-
-.PHONY : Coords.s
-
-# target to generate assembly for a file
-Coords.cpp.s:
-	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Coords.cpp.s
-.PHONY : Coords.cpp.s
-
 Sommet.obj: Sommet.cpp.obj
 
 .PHONY : Sommet.obj
@@ -311,6 +284,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+outil.obj: outil.cpp.obj
+
+.PHONY : outil.obj
+
+# target to build an object file
+outil.cpp.obj:
+	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/outil.cpp.obj
+.PHONY : outil.cpp.obj
+
+outil.i: outil.cpp.i
+
+.PHONY : outil.i
+
+# target to preprocess a source file
+outil.cpp.i:
+	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/outil.cpp.i
+.PHONY : outil.cpp.i
+
+outil.s: outil.cpp.s
+
+.PHONY : outil.s
+
+# target to generate assembly for a file
+outil.cpp.s:
+	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/outil.cpp.s
+.PHONY : outil.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -323,9 +323,6 @@ help:
 	@echo ... Arete.obj
 	@echo ... Arete.i
 	@echo ... Arete.s
-	@echo ... Coords.obj
-	@echo ... Coords.i
-	@echo ... Coords.s
 	@echo ... Sommet.obj
 	@echo ... Sommet.i
 	@echo ... Sommet.s
@@ -341,6 +338,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... outil.obj
+	@echo ... outil.i
+	@echo ... outil.s
 .PHONY : help
 
 

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Graph.h"
+#include "outil.h"
 
 
 //!
@@ -9,6 +10,7 @@
 //! \version 0.02
 //! \date 15 avril 2019
 //! \return
+
 
 
 int main();
@@ -28,7 +30,7 @@ int main() {
     std::cout<<"OK"<<std::endl;
 
     //connexité
-    std::cout<<"connexe ? "<<graph.connexite(kk);
+    std::cout<<"connexe ? "<<connexite(kk,graph.getSommets());
 /*
     for(auto tp:kk)
     {

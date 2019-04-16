@@ -108,22 +108,9 @@ CMakeFiles/projet_piscine.dir/Arete.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projet_piscine.dir/Arete.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\willy\Documents\1. informatique\projet_piscine\Arete.cpp" -o CMakeFiles\projet_piscine.dir\Arete.cpp.s
 
-CMakeFiles/projet_piscine.dir/Coords.cpp.obj: CMakeFiles/projet_piscine.dir/flags.make
-CMakeFiles/projet_piscine.dir/Coords.cpp.obj: ../Coords.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\willy\Documents\1. informatique\projet_piscine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/projet_piscine.dir/Coords.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projet_piscine.dir\Coords.cpp.obj -c "C:\Users\willy\Documents\1. informatique\projet_piscine\Coords.cpp"
-
-CMakeFiles/projet_piscine.dir/Coords.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projet_piscine.dir/Coords.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\willy\Documents\1. informatique\projet_piscine\Coords.cpp" > CMakeFiles\projet_piscine.dir\Coords.cpp.i
-
-CMakeFiles/projet_piscine.dir/Coords.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projet_piscine.dir/Coords.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\willy\Documents\1. informatique\projet_piscine\Coords.cpp" -o CMakeFiles\projet_piscine.dir\Coords.cpp.s
-
 CMakeFiles/projet_piscine.dir/kruskal.cpp.obj: CMakeFiles/projet_piscine.dir/flags.make
 CMakeFiles/projet_piscine.dir/kruskal.cpp.obj: ../kruskal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\willy\Documents\1. informatique\projet_piscine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/projet_piscine.dir/kruskal.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\willy\Documents\1. informatique\projet_piscine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/projet_piscine.dir/kruskal.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projet_piscine.dir\kruskal.cpp.obj -c "C:\Users\willy\Documents\1. informatique\projet_piscine\kruskal.cpp"
 
 CMakeFiles/projet_piscine.dir/kruskal.cpp.i: cmake_force
@@ -136,7 +123,7 @@ CMakeFiles/projet_piscine.dir/kruskal.cpp.s: cmake_force
 
 CMakeFiles/projet_piscine.dir/Svgfile.cpp.obj: CMakeFiles/projet_piscine.dir/flags.make
 CMakeFiles/projet_piscine.dir/Svgfile.cpp.obj: ../Svgfile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\willy\Documents\1. informatique\projet_piscine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/projet_piscine.dir/Svgfile.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\willy\Documents\1. informatique\projet_piscine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/projet_piscine.dir/Svgfile.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projet_piscine.dir\Svgfile.cpp.obj -c "C:\Users\willy\Documents\1. informatique\projet_piscine\Svgfile.cpp"
 
 CMakeFiles/projet_piscine.dir/Svgfile.cpp.i: cmake_force
@@ -147,15 +134,28 @@ CMakeFiles/projet_piscine.dir/Svgfile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projet_piscine.dir/Svgfile.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\willy\Documents\1. informatique\projet_piscine\Svgfile.cpp" -o CMakeFiles\projet_piscine.dir\Svgfile.cpp.s
 
+CMakeFiles/projet_piscine.dir/outil.cpp.obj: CMakeFiles/projet_piscine.dir/flags.make
+CMakeFiles/projet_piscine.dir/outil.cpp.obj: ../outil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\willy\Documents\1. informatique\projet_piscine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/projet_piscine.dir/outil.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projet_piscine.dir\outil.cpp.obj -c "C:\Users\willy\Documents\1. informatique\projet_piscine\outil.cpp"
+
+CMakeFiles/projet_piscine.dir/outil.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projet_piscine.dir/outil.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\willy\Documents\1. informatique\projet_piscine\outil.cpp" > CMakeFiles\projet_piscine.dir\outil.cpp.i
+
+CMakeFiles/projet_piscine.dir/outil.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projet_piscine.dir/outil.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\willy\Documents\1. informatique\projet_piscine\outil.cpp" -o CMakeFiles\projet_piscine.dir\outil.cpp.s
+
 # Object files for target projet_piscine
 projet_piscine_OBJECTS = \
 "CMakeFiles/projet_piscine.dir/main.cpp.obj" \
 "CMakeFiles/projet_piscine.dir/graph.cpp.obj" \
 "CMakeFiles/projet_piscine.dir/Sommet.cpp.obj" \
 "CMakeFiles/projet_piscine.dir/Arete.cpp.obj" \
-"CMakeFiles/projet_piscine.dir/Coords.cpp.obj" \
 "CMakeFiles/projet_piscine.dir/kruskal.cpp.obj" \
-"CMakeFiles/projet_piscine.dir/Svgfile.cpp.obj"
+"CMakeFiles/projet_piscine.dir/Svgfile.cpp.obj" \
+"CMakeFiles/projet_piscine.dir/outil.cpp.obj"
 
 # External object files for target projet_piscine
 projet_piscine_EXTERNAL_OBJECTS =
@@ -164,9 +164,9 @@ projet_piscine.exe: CMakeFiles/projet_piscine.dir/main.cpp.obj
 projet_piscine.exe: CMakeFiles/projet_piscine.dir/graph.cpp.obj
 projet_piscine.exe: CMakeFiles/projet_piscine.dir/Sommet.cpp.obj
 projet_piscine.exe: CMakeFiles/projet_piscine.dir/Arete.cpp.obj
-projet_piscine.exe: CMakeFiles/projet_piscine.dir/Coords.cpp.obj
 projet_piscine.exe: CMakeFiles/projet_piscine.dir/kruskal.cpp.obj
 projet_piscine.exe: CMakeFiles/projet_piscine.dir/Svgfile.cpp.obj
+projet_piscine.exe: CMakeFiles/projet_piscine.dir/outil.cpp.obj
 projet_piscine.exe: CMakeFiles/projet_piscine.dir/build.make
 projet_piscine.exe: CMakeFiles/projet_piscine.dir/linklibs.rsp
 projet_piscine.exe: CMakeFiles/projet_piscine.dir/objects1.rsp
