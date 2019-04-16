@@ -1,9 +1,4 @@
-#include <iostream>
-#include "Graphe.h"
-#include "outils.h"
 
-
-//!
 //! \file main.cpp
 //! \brief
 //! \authors BRIONNE,MARTIN,SIROT
@@ -11,6 +6,9 @@
 //! \date 15 avril 2019
 //! \return
 
+#include <iostream>
+#include "Graphe.h"
+#include "outils.h"
 
 int main();
 std::pair<std::string,std::string> choix_graph();
@@ -36,13 +34,17 @@ int main() {
     std::vector<std::pair<Arete*,bool>> kk;
     if(algo == 1)
     {
-        std::cout<<"recherche kruskal"<<std::endl<<std::endl;
+        graph.initialiser_pareto();
 
+        std::cout<<"recherche kruskal en fonction de la pond 0";
         kk=graph.kruskal(0);
-
+        std:: cout<<" OK "<<std::endl<<std::endl;
+        /*
         std::cout << "Connexite :" << std::endl
                   << connexite(kk,graph.getSommets()) << std::endl << std::endl;
-
+        */
+        /*
+        //affichage de toutes les aretes de kruskal
         for(auto tp:kk)
         {
             std::cout<<"bool="<<tp.second
@@ -51,13 +53,13 @@ int main() {
                      <<" S2="<<tp.first->getSommetA()->getID()
                      <<" pond="<<tp.first->getPond(0)<<std::endl;
 
-        }
+        }*/
     }
 
     /*if(algo==2)
     {}*/
 
-
+/*
     std::cout << std::endl
               << "TEST LECTURE DE FICHIERS" << std::endl << std::endl
               << "Donnees du graphe" << std::endl
@@ -86,7 +88,7 @@ int main() {
                   << "    y : " << graph.getAretes()[i]->getSommetA()->getCoords().getY() << std::endl
                   << std::endl;
 
-    }
+    }*/
 
     std::vector<float> totalPondGraph;
     totalPondGraph = totalPond(kk);
