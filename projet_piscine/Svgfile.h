@@ -52,6 +52,14 @@ public:
     void addli();
 
     void endli();
+
+    void transalte(int scale);
+
+    void finG();
+
+    void addG();
+
+    void finA();
 };
 
 std::string makeRGB(int r, int g, int b);

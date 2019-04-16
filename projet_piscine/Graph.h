@@ -21,14 +21,15 @@ public:
     //constructeur destructeur
     Graph(std::string& fichierGraph, std::string& fichierPoidsGraph);
     ~Graph() = default;
+
+    //méthodes
+    std::vector<std::pair<Arete*,bool>> kruskal(int num_pond);
+
     //getter
     std::vector<Sommet*> getSommets() const{ return m_sommets;}
     std::vector<Arete*> getAretes() const{ return m_aretes;}
 
 
-    //méthodes
-    std::vector<std::pair<Arete*,bool>> kruskal(int num_pond);
-    bool connexite(std::vector<std::pair<Arete*,bool>> liens )
 
     void dessiner(Svgfile &s) const;
     void dessinerKruskal(Svgfile &s, std::vector<std::pair<Arete*,bool>> kk) const;

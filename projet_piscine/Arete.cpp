@@ -8,16 +8,18 @@
 #include "Arete.h"
 
 #include "Svgfile.h"
-#include "sommet.h"
+#include "Sommet.h"
 
 // DESSIN
-void Arete::dessiner(Svgfile &s) const {
+void Arete::dessiner(Svgfile &s, std::string color) const {
     std::ostringstream oss117   ;
     for (auto i : m_ponderations) {
        oss117<< i <<";";
     }
-    s.addLine(getSommetD()->getCoords().getX(),getSommetD()->getCoords().getY(),getSommetA()->getCoords().getX(), getSommetA()->getCoords().getY(), "black");
+    s.addG();
+    s.addLine(getSommetD()->getCoords().getX(),getSommetD()->getCoords().getY(),getSommetA()->getCoords().getX(), getSommetA()->getCoords().getY(), color);
     s.addText((getSommetD()->getCoords().getX() + getSommetA()->getCoords().getX())/2, (getSommetD()->getCoords().getY() + getSommetA()->getCoords().getY())/2,oss117.str(),"black");
+    s.finG();
 
 }
 

@@ -8,6 +8,8 @@
 #include <vector>
 #include "Svgfile.h"
 
+constexpr char defcolor[] = "black";
+
 class Sommet;
 
 class Arete {
@@ -32,7 +34,7 @@ public:
     float getPond(int num) const{ return m_ponderations[num];};
     //methodes
 
-    void dessiner(Svgfile &s) const;
+    void dessiner(Svgfile &s, std::string color = defcolor  ) const;
 };
 
 
