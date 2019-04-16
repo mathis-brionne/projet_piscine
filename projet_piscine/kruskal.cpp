@@ -11,7 +11,7 @@
 
 
 //!
-//! \file kruskal.c
+//! \file kruskal.cpp
 //! \brief
 //! \authors BRIONNE,MARTIN,SIROT
 //! \version 0.3
