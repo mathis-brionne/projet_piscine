@@ -28,7 +28,7 @@
 
 //on recupere dans la class graphe les sommets et aretes
 
-std::vector<std::pair<Arete*,bool>> Graph::kruskal(int num_pond) //non pondéré
+std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondéré
 {
     ///declaration et initialisation
     // tableau d'aretes template
@@ -76,8 +76,8 @@ std::vector<std::pair<Arete*,bool>> Graph::kruskal(int num_pond) //non pondéré
         //on prend l'arete n
         //tant qu'elle relie 2 sommets connexe on avance num_aretes de 1
         while((sommet_connexe.find((temp_liens[num_aretes].first)->getSommetD()))->second ==
-                (sommet_connexe.find((temp_liens[num_aretes].first)->getSommetA()))->second
-                &&num_aretes<temp_liens.size())
+              (sommet_connexe.find((temp_liens[num_aretes].first)->getSommetA()))->second
+              &&num_aretes<temp_liens.size())
             num_aretes++;
 
         if(num_aretes==temp_liens.size())// !!!! si on est or du tableau BUG car pas normal !!!!
@@ -112,7 +112,7 @@ std::vector<std::pair<Arete*,bool>> Graph::kruskal(int num_pond) //non pondéré
             nb_connexe_estimation=temp_connexe.size();
         }
         else//si on est sur que notre nombre connexe n'est pas de 1
-             nb_connexe_estimation--;
+            nb_connexe_estimation--;
     }
 
 // retourne l'ensemble du graphe ( pointeur sur aretes et booléen d'activation ou non des aretes
