@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Graphe.h"
+#include "outils.h"
 
 
 //!
@@ -35,9 +36,12 @@ int main() {
     std::vector<std::pair<Arete*,bool>> kk;
     if(algo == 1)
     {
-        std::cout<<"recherche kruskal"<<std::endl;
+        std::cout<<"recherche kruskal"<<std::endl<<std::endl;
 
         kk=graph.kruskal(0);
+
+        std::cout << "Connexite :" << std::endl
+                  << connexite(kk,graph.getSommets()) << std::endl << std::endl;
 
         for(auto tp:kk)
         {
