@@ -10,8 +10,7 @@
 //! \date 15 avril 2019
 //! \return
 
-#include <iostream>
-#include <vector>
+#include "menu.h"
 
 std::pair<std::string,std::string> choix_graph()
 {
@@ -74,22 +73,39 @@ int choix_algo()
 {
     int choix=0;
 
-    //while(choix != 1 && choix != 2)
-    while(choix != 1)
+    while(choix != 1 && choix != 2)
     {
         std::cout << "Que voulez-vous afficher ?" << std::endl
-                  << "  >> 1. Solution selon Kruskal" << std::endl;
-        // << "  >> 2. Toutes les solutions de Pareto" << std::endl;
+                  << "  >> 1. Solution selon Kruskal" << std::endl
+                  << "  >> 2. Toutes les solutions de Pareto" << std::endl;
 
         std::cin >> choix;
+        std::cout << std::endl;
 
         switch (choix)
         {
             case 1 :
                 return 1;
-            /*case 2 :
-                return 2;*/
+            case 2 :
+                return 2;
         }
 
+    }
+}
+
+int choix_ponderation(std::vector<float> pond)
+{
+
+    int choix=-1;
+
+    while(choix < 0 && choix > pond.size()-1)
+    {
+        std::cout << "Avec quelle ponderation voulez-vous appliquer Kruskal ?" << std::endl
+                  << "(0 --> 1ere pond / 1 --> 2e pond... etc)" << std::endl;
+
+        std::cin >> choix;
+        std::cout << std::endl;
+
+        return (int)choix;
     }
 }

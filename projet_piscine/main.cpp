@@ -9,11 +9,9 @@
 #include <iostream>
 #include "Graphe.h"
 #include "outils.h"
+#include "menu.h"
 
 int main();
-std::pair<std::string,std::string> choix_graph();
-int choix_algo();
-std::vector<float> totalPond(std::vector<std::pair<Arete*,bool>> kk);
 
 int main() {
     Svgfile Svg;
@@ -34,11 +32,12 @@ int main() {
     std::vector<std::pair<Arete*,bool>> kk;
     if(algo == 1)
     {
-        graph.initialiser_pareto();
+        int choix_pond;
+        choix_pond = choix_ponderation(graph.getAretes()[0]->getPonderations());
 
-        std::cout<<"recherche kruskal en fonction de la pond 0";
-        kk=graph.kruskal(0);
-        std:: cout<<" OK "<<std::endl<<std::endl;
+        std::cout<<"Recherche kruskal en fonction de la pond :";
+        kk=graph.kruskal(choix_pond);
+        std::cout<<" OK "<<std::endl<<std::endl;
         /*
         std::cout << "Connexite :" << std::endl
                   << connexite(kk,graph.getSommets()) << std::endl << std::endl;
@@ -54,6 +53,10 @@ int main() {
                      <<" pond="<<tp.first->getPond(0)<<std::endl;
 
         }*/
+    }
+    if(algo==2)
+    {
+        graph.initialiser_pareto();
     }
 
     /*if(algo==2)

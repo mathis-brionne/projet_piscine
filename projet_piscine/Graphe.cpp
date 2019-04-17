@@ -12,7 +12,7 @@
 Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
 
 //affichage
-    std::cout<<std::endl<<" Recupèration des données du graphe : ";
+    std::cout<<"Recupèration des données du graphe : ";
 
     //ouverture des fichier
     std::ifstream donneesGraph(fichierGraph);
@@ -128,7 +128,9 @@ Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
 
         // Remplissage du tableau contenant toutes les aretes
         m_aretes.push_back(arete);
+
     }
+    std::cout << " 0K " << std::endl << std::endl;
 }
 
 Graphe::~Graphe()
