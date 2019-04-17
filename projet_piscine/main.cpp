@@ -66,9 +66,7 @@ int main() {
     }
     if(algo==2)
     {
-        graph.dessiner(Svg);
         graph.initialiser_pareto();
-        //graph.dessinerPareto(Svg);
     }
 
     /*if(algo==2)
@@ -105,17 +103,7 @@ int main() {
 
     }*/
 
-    std::vector<float> totalPondGraph;
-    totalPondGraph = totalPond(kk);
-    std::cout << "Total des ponderations du graphe :" << std::endl
-              << " (";
-    for(size_t i=0; i<totalPondGraph.size(); i++)
-    {
-        std::cout << totalPondGraph[i];
-        if(i < totalPondGraph.size()-1)
-            std::cout << ";";
-    }
-    std::cout << ")" << std::endl << std::endl;
+
 
     //DESSIN
     graph.dessiner(Svg);

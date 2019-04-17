@@ -15,7 +15,7 @@
 #include "Svgfile.h"
 #include "Arete.h"
 
-class Arete;
+//class Arete;
 class Sommet;
 
 bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vector<Sommet*>& m_sommets );
@@ -31,6 +31,9 @@ public:
 
     void initialisation_q2(std::vector<Sommet*>&, std::vector<Arete*>&);
     void  dessiner(Svgfile &svg);
+    void totalPond();
+
+
     void fn_somP();
 
 private:
