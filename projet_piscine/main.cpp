@@ -38,6 +38,18 @@ int main() {
         std::cout<<"Recherche kruskal en fonction de la pond :";
         kk=graph.kruskal(choix_pond);
         std::cout<<" OK "<<std::endl<<std::endl;
+
+        std::vector<float> totalPondGraph;
+        totalPondGraph = totalPond(kk);
+        std::cout << "Total des ponderations du graphe :" << std::endl
+                  << " (";
+        for(size_t i=0; i<totalPondGraph.size(); i++)
+        {
+            std::cout << totalPondGraph[i];
+            if(i < totalPondGraph.size()-1)
+                std::cout << ";";
+        }
+        std::cout << ")" << std::endl << std::endl;
         /*
         std::cout << "Connexite :" << std::endl
                   << connexite(kk,graph.getSommets()) << std::endl << std::endl;
@@ -93,17 +105,7 @@ int main() {
 
     }*/
 
-    std::vector<float> totalPondGraph;
-    totalPondGraph = totalPond(kk);
-    std::cout << "Total des ponderations du graphe :" << std::endl
-              << " (";
-    for(size_t i=0; i<totalPondGraph.size(); i++)
-    {
-        std::cout << totalPondGraph[i];
-        if(i < totalPondGraph.size()-1)
-            std::cout << ";";
-    }
-    std::cout << ")" << std::endl << std::endl;
+
 
     //DESSIN
     graph.dessiner(Svg);

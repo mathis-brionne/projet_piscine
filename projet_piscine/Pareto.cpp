@@ -26,7 +26,7 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
     std::cout<<std::endl;
     clock_t start_t,end_t;
     start_t =clock();
-    std::cout<<" debut de pareto "<< start_t<<std::endl;
+    std::cout<<"debut de pareto "<< start_t<<std::endl;
 
     //initialisation des données
     m_sommets_tab =sommets;
@@ -74,7 +74,67 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
     }
 
     end_t=clock();
-    std::cout<<"fin de pareto "<<end_t;
+    std::cout<<"fin de la recherche des solutions admissible de pareto "<<end_t<<std::endl<<std::endl;
+
+    // initialisation de m_somP
+    size_t nbr_pond= m_aretes_tab[0]->getPonderations().size();
+    std::vector<float> ponds;
+    for(size_t j=0;j<nbr_pond;j++)
+        ponds.push_back(0);
+
+    size_t nbr_sol=m_tab_bool.size();
+    for(size_t i=0;i<nbr_sol;i++)
+         m_tab_somP.push_back(ponds);
+
+
+    // affichage de la somme des pondérations pour chaque sol
+    std::cout<<"Recherche total ponderations pour caque solutions de Pareto :"<<std::endl;
+    this->totalPond();
+    for (int k = 0; k < m_tab_bool.size(); ++k)
+    {
+        std::cout << "Solution n°" << k << " :" << std::endl
+                  << " (";
+        for(size_t i=0; i<m_aretes_tab[0]->getPonderations().size(); i++)
+        {
+            std::cout << m_tab_somP[k][i];
+            if(i < nbr_pond-1)
+                std::cout << ";";
+        }
+        std::cout << ")" << std::endl;
+    }
+    std::cout << std::endl;
+    std::cout<<" OK "<<std::endl<<std::endl;
+}
+
+void Pareto::totalPond()
+{
+    size_t nb_pond = m_aretes_tab[0]->getPonderations().size();
+    size_t nb_sol=m_tab_bool.size();
+
+    std::vector<float> temp_pond;
+
+    // j --> n° de l'arete
+    for(size_t j=0; j < m_aretes_tab.size(); j++)
+    {
+        temp_pond=m_aretes_tab[j]->getPonderations();
+
+        // i --> n° de la solution
+        for(size_t i=0; i < nb_sol; i++)
+        {
+            if(m_tab_bool[i][j] == true)
+            {
+                // k --> n° de la ponderation
+                for(size_t k=0; k < nb_pond; k++)
+                {
+                    //push back
+
+                    m_tab_somP[i][k] = m_tab_somP[i][k] + m_aretes_tab[j]->getPond(k);
+                    std::cout<<"test"<<std::endl;
+                }
+            }
+
+        }
+    }
 }
 
 void Pareto::fn_somP(){}
