@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-
   "CMakeFiles/projet_piscine.dir/main.cpp.o"
   "CMakeFiles/projet_piscine.dir/Sommet.cpp.o"
   "CMakeFiles/projet_piscine.dir/Arete.cpp.o"
@@ -9,11 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/projet_piscine.dir/menu.cpp.o"
   "CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o"
   "CMakeFiles/projet_piscine.dir/Graphe.cpp.o"
-
   "projet_piscine.pdb"
-  "projet_piscine.exe"
-  "projet_piscine.exe.manifest"
-  "libprojet_piscine.dll.a"
+  "projet_piscine"
 )
 
 # Per-language clean rules from dependency scanning.
