@@ -13,15 +13,13 @@
 #include <algorithm>
 #include <iostream>
 #include "Arete.h"
+#include "Sommet.h"
 
-#include "Arete.h"
-
-class Sommet;
+//class Sommet;
 
 
 bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vector<Sommet*>& m_sommets );
 bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::vector<Sommet*>& m_sommets );
-
 
 
 class Pareto
@@ -32,9 +30,6 @@ public:
 
     void initialisation_q2(std::vector<Sommet*>&, std::vector<Arete*>&);
     void totalPond();
-
-
-    void fn_somP();
 
     void calcul_front_pare();
 

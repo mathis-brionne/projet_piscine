@@ -12,7 +12,7 @@
 Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
 
 //affichage
-    std::cout<<"Recupèration des données du graphe : ";
+    std::cout<<"Recuperation des donnees du graphe : ";
 
     //ouverture des fichier
     std::ifstream donneesGraph(fichierGraph);

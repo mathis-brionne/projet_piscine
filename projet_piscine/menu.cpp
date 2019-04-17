@@ -15,7 +15,7 @@
 std::pair<std::string,std::string> choix_graph()
 {
     std::cout << "MENU" << std::endl << std::endl
-              << "Choix du graph :" << std::endl;
+              << "Choix du graphe :" << std::endl;
 
     int choix=0;
 
