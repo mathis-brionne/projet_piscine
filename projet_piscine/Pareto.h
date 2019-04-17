@@ -1,9 +1,9 @@
 
 //! \file Pareto.h
-//! \brief  non fonctionnel, l'initialisation n'est pas complete
+//! \brief
 //! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.1
-//! \date 17 avril 2019 15h20
+//! \version 0.2
+//! \date 17 avril 2019 19h20
 //! \return
 
 #ifndef PROJET_PISCINE_PARETO_H
@@ -15,9 +15,6 @@
 #include "Arete.h"
 #include "Sommet.h"
 
-//class Sommet;
-
-
 bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vector<Sommet*>& m_sommets );
 bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::vector<Sommet*>& m_sommets );
 
@@ -25,12 +22,19 @@ bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::
 class Pareto
 {
 public:
+    //constructeur destructeur
     Pareto();
     ~Pareto();
 
-    void initialisation_q2(std::vector<Sommet*>&, std::vector<Arete*>&);
-    void totalPond();
+    //Methodes
+    void initialisation_q2(std::vector<Sommet*>&, std::vector<Arete*>&);///DEPRECEATED
 
+    void init_and_search_admis_q2(std::vector<Sommet*>&, std::vector<Arete*>&);
+    void init_and_calcul_pond();
+    void show_solution_front_pare();
+
+    //PRIVER
+    void totalPond();
     void calcul_front_pare();
 
 
