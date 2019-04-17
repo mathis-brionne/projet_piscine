@@ -67,6 +67,7 @@ int main() {
     if(algo==2)
     {
         graph.initialiser_pareto();
+        graph.dessinerPareto(Svg);
     }
 
     /*if(algo==2)

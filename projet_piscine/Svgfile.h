@@ -72,6 +72,8 @@ public:
     void addText(double x, double y, double val, std::string color, std::string clas);
 
     void addText(double x, double y, std::string text, std::string color, std::string clas);
+
+    void addpoint(double x, double y, std::string color);
 };
 
 std::string makeRGB(int r, int g, int b);

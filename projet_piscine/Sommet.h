@@ -34,6 +34,8 @@ public:
     void dessiner(Svgfile &s ,int scaleX ,int scaleY);
 
     ~Sommet() = default;
+
+    void dessiner(Svgfile &s, int scaleX, int scaleY, std::string clas, std::string clas2);
 };
 
 

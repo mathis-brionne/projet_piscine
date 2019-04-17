@@ -14,6 +14,7 @@
 #include <iostream>
 #include "Svgfile.h"
 #include "Arete.h"
+#include "Sommet.h"
 
 //class Arete;
 class Sommet;

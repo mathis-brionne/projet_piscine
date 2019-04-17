@@ -141,12 +141,17 @@ void Pareto::fn_somP(){}
 
 void Pareto::dessiner(Svgfile &svg) {
 
-    for (auto VecB : m_tab_bool) {
+    for (size_t j =0 ; j < m_tab_bool.size() ; j++) {
         svg.addA();
         for (size_t i =0 ; i < m_aretes_tab.size() ; i++) {
-            if(VecB[i])
-                m_aretes_tab[i]->dessiner(svg,0,500,"red");
+            if( m_tab_bool[j][i])
+                m_aretes_tab[i]->dessiner(svg,0,500,"red","arete","effet");
         }
+        for (auto Som : m_sommets_tab)
+        {
+            Som->dessiner(svg,0 ,500,"circle","effet");
+        }
+        svg.addpoint(500+10*j, 100 , "green");
         svg.finA();
     }
 }

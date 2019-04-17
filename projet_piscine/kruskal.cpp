@@ -120,7 +120,7 @@ void Graphe::dessinerKruskal(Svgfile &s, std::vector<std::pair<Arete *, bool>> k
     {
         if (i.second)
         {
-            i.first->dessiner(s, 500 + 500*nb ,0, "green");
+            i.first->dessiner(s, 500 + 500*nb ,0,nb, "green");
         }
     }
     for (auto sta : m_sommets)

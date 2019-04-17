@@ -200,7 +200,17 @@ void Svgfile::addCross(double x, double y, double span, std::string color) {
     addLine(x - span, y - span, x + span, y + span, color);
     addLine(x - span, y + span, x + span, y - span, color);
 }
-
+void Svgfile::addpoint(double x, double y, std::string color ) {
+    m_ostrm << "<line "
+            << attrib("class", "point ")
+            << attrib("x1", x)
+            << attrib("y1", y)
+            << attrib("x2",x)
+            << attrib( "y2",y)
+            << attrib("stroke", color)
+            << attrib("class","point")
+            <<"/>\n";
+}
 void Svgfile::addText(double x, double y, std::string text, std::string color) {
     /// <text x="180" y="60">Un texte</text>
     m_ostrm << "<text "
@@ -312,50 +322,6 @@ void Svgfile::addG()
 /// soit générées dynamiquement en fonction des besoins (couleurs paramétrables...)
 /// On fera mieux l'an prochain !
 extern const std::string svgBallGradients =
-        "  \n\n<defs>\n"
-        "    <radialGradient id=\"redball\" cx=\"30%\" cy=\"30%\" r=\"100%\" fx=\"30%\" fy=\"30%\">\n"
-        "      <stop offset=\"0%\" style=\"stop-color:rgb(255,250,250)\" />\n"
-        "      <stop offset=\"3%\" style=\"stop-color:rgb(255,250,250)\" />\n"
-        "      <stop offset=\"7%\" style=\"stop-color:rgb(255,160,160)\" />\n"
-        "      <stop offset=\"70%\" style=\"stop-color:rgb(255,0,0)\" />\n"
-        "      <stop offset=\"100%\" style=\"stop-color:rgb(255,0,0)\" />\n"
-        "    </radialGradient>\n"
-        "    <radialGradient id=\"greenball\" cx=\"30%\" cy=\"30%\" r=\"100%\" fx=\"30%\" fy=\"30%\">\n"
-        "      <stop offset=\"0%\" style=\"stop-color:rgb(250,255,250)\" />\n"
-        "      <stop offset=\"3%\" style=\"stop-color:rgb(250,255,250)\" />\n"
-        "      <stop offset=\"7%\" style=\"stop-color:rgb(160,255,160)\" />\n"
-        "      <stop offset=\"70%\" style=\"stop-color:rgb(0,255,0)\" />\n"
-        "      <stop offset=\"100%\" style=\"stop-color:rgb(0,255,0)\" />\n"
-        "    </radialGradient>\n"
-        "    <radialGradient id=\"blueball\" cx=\"30%\" cy=\"30%\" r=\"100%\" fx=\"30%\" fy=\"30%\">\n"
-        "      <stop offset=\"0%\" style=\"stop-color:rgb(250,250,255)\" />\n"
-        "      <stop offset=\"3%\" style=\"stop-color:rgb(250,250,255)\" />\n"
-        "      <stop offset=\"7%\" style=\"stop-color:rgb(160,160,255)\" />\n"
-        "      <stop offset=\"70%\" style=\"stop-color:rgb(0,0,255)\" />\n"
-        "      <stop offset=\"100%\" style=\"stop-color:rgb(0,255,0)\" />\n"
-        "    </radialGradient>\n"
-        "    <radialGradient id=\"yellowball\" cx=\"30%\" cy=\"30%\" r=\"100%\" fx=\"30%\" fy=\"30%\">\n"
-        "      <stop offset=\"0%\" style=\"stop-color:rgb(255,255,250)\" />\n"
-        "      <stop offset=\"3%\" style=\"stop-color:rgb(255,255,250)\" />\n"
-        "      <stop offset=\"7%\" style=\"stop-color:rgb(255,255,160)\" />\n"
-        "      <stop offset=\"70%\" style=\"stop-color:rgb(255,255,0)\" />\n"
-        "      <stop offset=\"100%\" style=\"stop-color:rgb(255,255,0)\" />\n"
-        "    </radialGradient>\n"
-        "    <radialGradient id=\"greyball\" cx=\"30%\" cy=\"30%\" r=\"100%\" fx=\"30%\" fy=\"30%\">\n"
-        "      <stop offset=\"0%\" style=\"stop-color:rgb(250,250,250)\" />\n"
-        "      <stop offset=\"3%\" style=\"stop-color:rgb(250,250,250)\" />\n"
-        "      <stop offset=\"7%\" style=\"stop-color:rgb(160,160,160)\" />\n"
-        "      <stop offset=\"70%\" style=\"stop-color:rgb(100,100,100)\" />\n"
-        "      <stop offset=\"100%\" style=\"stop-color:rgb(100,100,100)\" />\n"
-        "    </radialGradient>\n"
-        "    <radialGradient id=\"brownball\" cx=\"30%\" cy=\"30%\" r=\"100%\" fx=\"30%\" fy=\"30%\">\n"
-        "      <stop offset=\"0%\" style=\"stop-color:rgb(255,250,250)\" />\n"
-        "      <stop offset=\"3%\" style=\"stop-color:rgb(255,250,250)\" />\n"
-        "      <stop offset=\"7%\" style=\"stop-color:rgb(255,160,100)\" />\n"
-        "      <stop offset=\"70%\" style=\"stop-color:rgb(190,100,80)\" />\n"
-        "      <stop offset=\"100%\" style=\"stop-color:rgb(167, 103, 38)\" />\n"
-        "    </radialGradient>\n"
-        "  </defs>\n"
         " </svg>"
         "<style> \n"
         ".point{\n"

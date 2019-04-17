@@ -16,7 +16,16 @@
 
 /// Methode
 // DESSIN
-void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY , std::string color ) const {
+void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY ,int nb, std::string color) const {
+    std::ostringstream oss117;
+    oss117 << m_ponderations[nb];
+    s.transalte(scaleX ,scaleY);
+    s.addLine(getSommetD()->getCoords().getX(),getSommetD()->getCoords().getY(),getSommetA()->getCoords().getX(), getSommetA()->getCoords().getY(), color , "areteV");
+    s.addText((getSommetD()->getCoords().getX() + getSommetA()->getCoords().getX())/2, (getSommetD()->getCoords().getY() + getSommetA()->getCoords().getY())/2,oss117.str(), std::stoi(m_id),"black","effetV");
+    s.finG();
+
+}
+void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY , std::string color) const {
     std::ostringstream oss117   ;
     for (size_t i=0 ;i<m_ponderations.size();i++) {
         oss117 << m_ponderations[i];
@@ -30,3 +39,17 @@ void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY , std::string color ) c
 
 }
 
+
+void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY , std::string color , std::string clas, std::string clas2) const {
+    std::ostringstream oss117   ;
+    for (size_t i=0 ;i<m_ponderations.size();i++) {
+        oss117 << m_ponderations[i];
+        if (i <m_ponderations.size()-1)
+            oss117<<";";
+    }
+    s.transalte(scaleX ,scaleY);
+    s.addLine(getSommetD()->getCoords().getX(),getSommetD()->getCoords().getY(),getSommetA()->getCoords().getX(), getSommetA()->getCoords().getY(), color , clas);
+    s.addText((getSommetD()->getCoords().getX() + getSommetA()->getCoords().getX())/2, (getSommetD()->getCoords().getY() + getSommetA()->getCoords().getY())/2,oss117.str(), std::stoi(m_id),"black",clas2);
+    s.finG();
+
+}

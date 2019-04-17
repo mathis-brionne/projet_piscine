@@ -44,6 +44,10 @@ public:
 
     //methodes
     void dessiner(Svgfile &s,int scaleX,int scaleY, std::string color = defcolor  ) const;
+
+    void dessiner(Svgfile &s, int scaleX, int scaleY, std::string color, std::string clas,std::string clas2) const;
+
+    void dessiner(Svgfile &s, int scaleX, int scaleY, int nb, std::string color) const;
 };
 
 
