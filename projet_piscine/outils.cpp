@@ -67,8 +67,12 @@ bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::
     while(num_aretes<size_liens) /* utiliser la fonction "continue" */
     {
         //on prend l'arete num_aretes
-        if(b_aretes[num_aretes]==false)
+        if(b_aretes[num_aretes]== false)
+        {
+            num_aretes++;
             continue;
+        }
+
         else
         {
             //tant qu'elle relie 2 sommets connexe on avance num_aretes de 1, et qu'il reste des aretes
