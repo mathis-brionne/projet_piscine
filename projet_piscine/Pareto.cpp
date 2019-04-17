@@ -7,7 +7,8 @@
 //! \return
 
 #include "Pareto.h"
-#include "time.h"
+//#include "time.h"
+#include <ctime>
 
 //constructeur destructeur
 Pareto::Pareto()
@@ -87,7 +88,7 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
          m_tab_somP.push_back(ponds);
 
 
-    // calcul de la somme des pondérations pour chaque sol
+    // calcul de la somme des pondérations pour chaque solution
     std::cout<<"Fin de la recherche des ponderations total : ";
     this->totalPond();
     /*
