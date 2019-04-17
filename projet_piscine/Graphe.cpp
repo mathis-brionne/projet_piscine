@@ -1,35 +1,34 @@
-//
-// Created by Charlotte Sirot on 2019-04-15.
-//
 
-//!
 //! \file Graph.cpp
 //! \brief
 //! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.02
-//! \date 15 avril 2019
+//! \version 0.3
+//! \date 17 avril 2019 8h00
 //! \return
 
 #include "Graphe.h"
 
-// CRÉATION
+/// CONSTRUCTEUR DESTRUCTEUR
 Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
+
+//affichage
+    std::cout<<std::endl<<" Recupèration des données du graphe : ";
+
+    //ouverture des fichier
     std::ifstream donneesGraph(fichierGraph);
     std::ifstream donneesPoidsGraph(fichierPoidsGraph);
-
     // test des fichiers
     if(!donneesGraph)
         throw std::runtime_error( "Erreur lors de l'ouverture du fichier du Graph : \""+fichierGraph+"\"");
     if(!donneesPoidsGraph)
         throw std::runtime_error( "Erreur lors de l'ouverture du fichier des Poids du Graph : \""+fichierPoidsGraph+"\"");
 
+    // Donnees des sommets
     int ordreGraph=0;
     donneesGraph >> ordreGraph;
     if (donneesGraph.fail())
         throw std::runtime_error("Erreur lors de la lecture de l'ordre du graphe");
 
-
-    // Donnees des sommets
     std::string id_sommet;
     int x, y;
 
@@ -56,16 +55,17 @@ Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
         m_sommets.push_back(sommet);
     }
 
-    int tailleGraph=0;
+    //recuperation des aretes
+    int tailleGraph=0;//fichier 1
     donneesGraph >> tailleGraph;
     if (donneesGraph.fail())
         throw std::runtime_error("Erreur lors de la lecture de la taille du graphe fichier 1");
-    int tailleGraph2=0;
+    int tailleGraph2=0;//fichier 2
     donneesPoidsGraph >> tailleGraph2;
     if (donneesPoidsGraph.fail())
         throw std::runtime_error("Erreur lors de la lecture de la taille du graphe fichier 2");
 
-    if(tailleGraph != tailleGraph2)
+    if(tailleGraph != tailleGraph2) //fichier 1 et 2 compatible ?
         throw std::runtime_error("Erreur de compatibilité");
 
 
@@ -80,12 +80,13 @@ Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
     std::string id_sommetA;
     float pond;
     std::vector<float> ponderations;
-
     int poubelle;
 
     // Récupération des aretes
     for(size_t i=0; i < tailleGraph; i++)
     {
+        ponderations.clear();
+
         donneesGraph >> id_arete;
         if(donneesGraph.fail())
             throw std::runtime_error("Probleme lors de la lecture de l id de l arete");
@@ -98,8 +99,6 @@ Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
         if(donneesGraph.fail())
             throw std::runtime_error("Probleme lors de la lecture de l id du sommet d arrivee de l arete");
 
-
-        ponderations.clear();
         //lecture inutile de l'id aretes car même ordre d'organisation de l'id on ne considère que l'id du fichier 1
         donneesPoidsGraph>>poubelle;
         if(donneesPoidsGraph.fail())
@@ -109,10 +108,10 @@ Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
         {
             donneesPoidsGraph >> pond;
             if(donneesPoidsGraph.fail())
-                throw std::runtime_error("Probleme lors de la lecture de la ponderation de l arete");
+                throw std::runtime_error("Probleme lors de la lecture des ponderations de l arete");
             ponderations.push_back(pond);
         }
-        // on met les données dans la cl&ss
+        // on cherche à mettre les données dans la class
         Sommet* sommetD = nullptr;
         Sommet* sommetA = nullptr;
         for(size_t i=0; (sommetD==nullptr||sommetA==nullptr) && (i < m_sommets.size()); i++)
@@ -132,18 +131,22 @@ Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
     }
 }
 
+Graphe::~Graphe()
+{
+    //vider le tableau d'aretes et de sommets
+}
 
+/// Methodes
 // DESSIN
 void Graphe::dessiner(Svgfile &s) const {
 
-    for (auto sta : m_aretes) {
+    for (auto sta : m_aretes)
         sta->dessiner(s, "blue");
-    }
-    for (auto sta : m_sommets) {
+    for (auto sta : m_sommets)
         sta->dessiner(s);
-    }
-
 }
+
+// DESSIN GRAPH PARTIEL
 void Graphe::dessinerKruskal(Svgfile &s , std::vector<std::pair<Arete*,bool>> kk) const {
     s.transalte(400);
     for (auto i  : kk) {
