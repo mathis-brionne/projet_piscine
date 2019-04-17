@@ -5,23 +5,21 @@
 #include <unordered_map>
 #include "Graphe.h"
 
+/*!
+ * \file kruskal.c
+ *  \brief  appartient à la class Graphe
+ * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.3
+ */
 
-//!
-//! \file kruskal.c
-//! \brief  appartient à la class Graphe
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.3
-//! \date 15 avril 2019
-//! \return
-
-
-//! \fn std::vector<std::pair<Arete*,bool>> Graph::kruskal(int)
-//! \brief
-//! \author MARTIN
-//! \version 0.5
-//! \date 15 avril 2019
-//! \return l'ensemble des pointeur sur aretes avec un état d'existance ou non (0 inactif, 1 present)
-
+/*!
+ * \fn kruskal
+ * \brief algo Kruskal
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.5
+ * \date 17 avril 2019
+ * \return l'ensemble des pointeur sur aretes avec un état d'existance ou non (0 inactif, 1 present)
+ */
 std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondéré
 {
     ///declaration et initialisation
@@ -41,6 +39,11 @@ std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondér�
     /// algo kruskal
     //on trie les aretes par ordre du poids (en fonction d'une unique pondération
     //la fonction sort n'accepte pas des variables aux niveaux de sa fonction, nous somme donc obligé de faire un switch
+
+    std::sort(temp_liens.begin(), temp_liens.end(),[num_pond](std::pair<Arete*,bool> a1,std::pair<Arete*,bool> a2)
+    {return (a2.first)->getPond(num_pond) > (a1.first)->getPond(num_pond);} );
+
+    /*
     switch (num_pond)
     {
         case 0 :
@@ -61,7 +64,7 @@ std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondér�
             break;
         default:
             throw std::runtime_error(" kruskal : numéro de pondération incorrecte");
-    }
+    }*/
 
     //tant que c'est pas connexe (car obligatoirement connexe) on regarde chaque aretes next
     //si le numero d'aretes est supèrieur à la taille du tableau

@@ -2,16 +2,23 @@
 // Created by Charlotte Sirot on 2019-04-16.
 //
 
-//!
-//! \file menu.cpp
-//! \brief
-//! \authors SIROT
-//! \version 0.1
-//! \date 15 avril 2019
-//! \return
+/*!
+ * \file menu.cpp
+ * \brief menu pour les choix de graphes / algos et / poids
+ * \authors SIROT Charlotte
+ * \version 0.2
+ */
 
 #include "menu.h"
 
+/*!
+ * \fn choix_graph
+ * \brief permet à l'utilisateur de choisir son graohe
+ * \return les deux fichiers choisi
+ * \authors SIROT Charlotte
+ * \version 0.1
+ * \date 16 avril 2019
+ */
 std::pair<std::string,std::string> choix_graph()
 {
     std::cout << "MENU" << std::endl << std::endl
@@ -69,6 +76,14 @@ std::pair<std::string,std::string> choix_graph()
 
 }
 
+/*!
+ * \fn choix_algo
+ * \brief permet à l'utilisateur de choisir quel algo appliquer à son graohe
+ * \return le num de l'algo choisi
+ * \authors SIROT Charlotte
+ * \version 0.2
+ * \date 17 avril 2019
+ */
 int choix_algo()
 {
     int choix=0;
@@ -93,6 +108,14 @@ int choix_algo()
     }
 }
 
+/*!
+ * \fn choix_algo
+ * \brief permet à l'utilisateur de choisir ponderation il veut prendre en compte pour appliquer Kruskal
+ * \return le num de la ponderation choisi
+ * \authors SIROT Charlotte
+ * \version 0.2
+ * \date 16 avril 2019
+ */
 int choix_ponderation(std::vector<float> pond)
 {
 

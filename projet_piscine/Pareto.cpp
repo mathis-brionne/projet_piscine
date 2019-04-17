@@ -103,7 +103,7 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
     //Affichage des pondérations de toutes les solutions
     for (int k = 0; k < m_tab_bool.size(); ++k)
     {
-        std::cout << "Solution n°" << k << " :" << std::endl
+        std::cout << "Solution n" << k << " :" << std::endl
                   << " (";
         for(size_t i=0; i<m_aretes_tab[0]->getPonderations().size(); i++)
         {

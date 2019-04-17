@@ -4,26 +4,14 @@
 
 //! \file outil.cpp
 //! \brief  reference les fonctions n'appartenant pas à des classes
-//! \authors BRIONNE,MARTIN,SIROT
+//! \authors BRIONNE Mathis, MARTIN Willy ,SIROT Charlotte
 //! \version 0.3
-//! \date 17 avril 2019 8h
-//! \return
 
-
-//! \fn bool connexite_q2(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vector<Sommet*>& m_sommets )
-//! \brief plus optimiser que connexite
-//! \author MARTIN
-//! \version 0.6
-//! \date 17 avril 2019 9h00
-//! \return 1 si le graphe partiel est connexe, 0 sinon
-
-//! \fn std::vector<float> totalPond(std::vector<std::pair<Arete*,bool>> kk)
-//! \brief
-//! \author SIROT
+//! \fn totalPond
+//! \brief calcul de la somme des ponderations
+//! \author SIROT Charlotte
 //! \version 0.1
 //! \date 16 avril 2019
-//! \return
-
 std::vector<float> totalPond(std::vector<std::pair<Arete*,bool>> kk)
 {
     size_t nb_pond = kk[0].first->getPonderations().size();
@@ -49,6 +37,12 @@ std::vector<float> totalPond(std::vector<std::pair<Arete*,bool>> kk)
     return sommes_pond;
 }
 
+//! \fn connexite_q2
+//! \brief plus optimiser que connexite
+//! \author MARTIN Willy
+//! \version 0.6
+//! \date 17 avril 2019
+//! \return 1 si le graphe partiel est connexe, 0 sinon
 bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::vector<Sommet*>& m_sommets )
 {
     //on admet que les tableau aretes et b_aretes sont de même dimension
@@ -174,9 +168,9 @@ bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::
  *
  * */
 
-//! \fn bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vector<Sommet*>& m_sommets )
+//! \fn connexite
 //! \brief permet de determiner la connexité d'un graphe
-//! \author MARTIN
+//! \author MARTIN Willy
 //! \version 0.5
 //! \date 16 avril 2019
 //! \return 1 si le graphe partiel est connexe, 0 sinon
@@ -275,11 +269,10 @@ bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vecto
 //! \deprecated
 //! \fn bool connexite(std::vector<std::pair<Arete*,bool>> liens )
 //! \brief permet de determiner la connexité d'un graphe
-//! \author MARTIN
+//! \author MARTIN Willy
 //! \version 0.4
 //! \date 15 avril 2019
 //! \return 1 si le graphe partiel est connexe, 0 sinon
-
 bool connexite(std::vector<std::pair<Arete*,bool>> liens,std::vector<Sommet*> m_sommets )
 {
     ///1 ere partie de l'algorithme
@@ -368,4 +361,3 @@ bool connexite(std::vector<std::pair<Arete*,bool>> liens,std::vector<Sommet*> m_
 
     return nb_connexe_estimation <= 1;
 }
-

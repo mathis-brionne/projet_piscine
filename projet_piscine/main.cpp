@@ -1,10 +1,12 @@
 
-//! \file main.cpp
-//! \brief
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.02
-//! \date 15 avril 2019
-//! \return
+/*!
+ * \file main.cpp
+ * \brief
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.02
+ * \date 15 avril 2019
+ * \
+ */
 
 #include <iostream>
 #include "Graphe.h"
