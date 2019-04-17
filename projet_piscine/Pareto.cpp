@@ -88,9 +88,9 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
 
 
     // affichage de la somme des pondérations pour chaque sol
-    std::cout<<"Recherche total ponderations pour caque solutions de Pareto :"<<std::endl;
+    std::cout<<"Recherche total ponderations pour chaque solutions de Pareto :"<<std::endl;
     this->totalPond();
-    for (int k = 0; k < m_tab_bool.size(); ++k)
+    /*for (int k = 0; k < m_tab_bool.size(); ++k)
     {
         std::cout << "Solution n°" << k << " :" << std::endl
                   << " (";
@@ -102,7 +102,7 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
         }
         std::cout << ")" << std::endl;
     }
-    std::cout << std::endl;
+    std::cout << std::endl;*/
     std::cout<<" OK "<<std::endl<<std::endl;
 }
 
@@ -126,10 +126,7 @@ void Pareto::totalPond()
                 // k --> n° de la ponderation
                 for(size_t k=0; k < nb_pond; k++)
                 {
-                    //push back
-
                     m_tab_somP[i][k] = m_tab_somP[i][k] + m_aretes_tab[j]->getPond(k);
-                    std::cout<<"test"<<std::endl;
                 }
             }
 
