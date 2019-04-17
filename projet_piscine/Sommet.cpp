@@ -15,9 +15,9 @@
 #include "Svgfile.h"
 
 // DESSIN
-void Sommet::dessiner(Svgfile &s )  {
-    s.addG();
-    s.addDisk(m_coords.getX(), m_coords.getY(), "blue");
-    s.addText(m_coords.getX(),m_coords.getY(),m_id,"black");
+void Sommet::dessiner(Svgfile &s ,int scaleX ,int scaleY )  {
+    s.transalte(scaleX ,scaleY);
+    s.addDisk(m_coords.getX(), m_coords.getY(), "blue", "circleV");
+    s.addText(m_coords.getX(),m_coords.getY(),m_id, std::stoi(m_id),"black", "effetV");
     s.finG();
 }

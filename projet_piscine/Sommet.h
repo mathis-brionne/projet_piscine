@@ -31,7 +31,7 @@ public:
     std::string getID() const {return m_id;}
     Coords getCoords() const {return m_coords;}
 
-    void dessiner(Svgfile &s);
+    void dessiner(Svgfile &s ,int scaleX ,int scaleY);
 
     ~Sommet() = default;
 };
