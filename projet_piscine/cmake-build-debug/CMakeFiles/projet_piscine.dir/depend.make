@@ -53,7 +53,3 @@ CMakeFiles/projet_piscine.dir/outils.cpp.o: ../Svgfile.h
 CMakeFiles/projet_piscine.dir/outils.cpp.o: ../outils.cpp
 CMakeFiles/projet_piscine.dir/outils.cpp.o: ../outils.h
 
-CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o: ../Arete.h
-CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o: ../Svgfile.h
-CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o: ../sommes_pond.cpp
-

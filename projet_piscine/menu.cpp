@@ -80,6 +80,7 @@ int choix_algo()
                   << "  >> 2. Toutes les solutions de Pareto" << std::endl;
 
         std::cin >> choix;
+        std::cout << std::endl;
 
         switch (choix)
         {
@@ -94,13 +95,16 @@ int choix_algo()
 
 int choix_ponderation(std::vector<float> pond)
 {
-    int choix=0;
 
-    while(choix <= 0 && choix > pond.size())
+    int choix=-1;
+
+    while(choix < 0 && choix > pond.size()-1)
     {
-        std::cout << "Avec quelle ponderation voulez-vous appliquer Kruskal ? (0 --> 1ere pond / 1 --> 2e pond... etc)" << std::endl;
+        std::cout << "Avec quelle ponderation voulez-vous appliquer Kruskal ?" << std::endl
+                  << "(0 --> 1ere pond / 1 --> 2e pond... etc)" << std::endl;
 
         std::cin >> choix;
+        std::cout << std::endl;
 
         return (int)choix;
     }

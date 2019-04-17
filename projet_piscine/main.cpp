@@ -32,12 +32,12 @@ int main() {
     std::vector<std::pair<Arete*,bool>> kk;
     if(algo == 1)
     {
-        int choix_pond = -1;
+        int choix_pond;
         choix_pond = choix_ponderation(graph.getAretes()[0]->getPonderations());
 
-        std::cout<<"recherche kruskal en fonction de la pond 0";
+        std::cout<<"Recherche kruskal en fonction de la pond :";
         kk=graph.kruskal(choix_pond);
-        std:: cout<<" OK "<<std::endl<<std::endl;
+        std::cout<<" OK "<<std::endl<<std::endl;
         /*
         std::cout << "Connexite :" << std::endl
                   << connexite(kk,graph.getSommets()) << std::endl << std::endl;
