@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/projet_piscine.dir/sommes_pond.cpp.obj"
   "CMakeFiles/projet_piscine.dir/Graphe.cpp.obj"
   "CMakeFiles/projet_piscine.dir/outils.cpp.obj"
+  "CMakeFiles/projet_piscine.dir/Pareto.cpp.obj"
   "projet_piscine.pdb"
   "projet_piscine.exe"
   "projet_piscine.exe.manifest"

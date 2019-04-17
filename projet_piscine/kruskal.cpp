@@ -1,7 +1,3 @@
-//
-// Created by willy on 15/04/2019.
-//
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -12,7 +8,7 @@
 
 //!
 //! \file kruskal.c
-//! \brief
+//! \brief  appartient à la class Graphe
 //! \authors BRIONNE,MARTIN,SIROT
 //! \version 0.3
 //! \date 15 avril 2019
@@ -25,8 +21,6 @@
 //! \version 0.5
 //! \date 15 avril 2019
 //! \return l'ensemble des pointeur sur aretes avec un état d'existance ou non (0 inactif, 1 present)
-
-//on recupere dans la class graphe les sommets et aretes
 
 std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondéré
 {

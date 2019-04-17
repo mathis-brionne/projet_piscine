@@ -14,8 +14,12 @@ CMakeFiles/projet_piscine.dir/Graphe.cpp.obj: ../Arete.h
 CMakeFiles/projet_piscine.dir/Graphe.cpp.obj: ../Coords.h
 CMakeFiles/projet_piscine.dir/Graphe.cpp.obj: ../Graphe.cpp
 CMakeFiles/projet_piscine.dir/Graphe.cpp.obj: ../Graphe.h
+CMakeFiles/projet_piscine.dir/Graphe.cpp.obj: ../Pareto.h
 CMakeFiles/projet_piscine.dir/Graphe.cpp.obj: ../Sommet.h
 CMakeFiles/projet_piscine.dir/Graphe.cpp.obj: ../Svgfile.h
+
+CMakeFiles/projet_piscine.dir/Pareto.cpp.obj: ../Pareto.cpp
+CMakeFiles/projet_piscine.dir/Pareto.cpp.obj: ../Pareto.h
 
 CMakeFiles/projet_piscine.dir/Sommet.cpp.obj: ../Arete.h
 CMakeFiles/projet_piscine.dir/Sommet.cpp.obj: ../Coords.h
@@ -29,6 +33,7 @@ CMakeFiles/projet_piscine.dir/Svgfile.cpp.obj: ../Svgfile.h
 CMakeFiles/projet_piscine.dir/kruskal.cpp.obj: ../Arete.h
 CMakeFiles/projet_piscine.dir/kruskal.cpp.obj: ../Coords.h
 CMakeFiles/projet_piscine.dir/kruskal.cpp.obj: ../Graphe.h
+CMakeFiles/projet_piscine.dir/kruskal.cpp.obj: ../Pareto.h
 CMakeFiles/projet_piscine.dir/kruskal.cpp.obj: ../Sommet.h
 CMakeFiles/projet_piscine.dir/kruskal.cpp.obj: ../Svgfile.h
 CMakeFiles/projet_piscine.dir/kruskal.cpp.obj: ../kruskal.cpp
@@ -36,6 +41,7 @@ CMakeFiles/projet_piscine.dir/kruskal.cpp.obj: ../kruskal.cpp
 CMakeFiles/projet_piscine.dir/main.cpp.obj: ../Arete.h
 CMakeFiles/projet_piscine.dir/main.cpp.obj: ../Coords.h
 CMakeFiles/projet_piscine.dir/main.cpp.obj: ../Graphe.h
+CMakeFiles/projet_piscine.dir/main.cpp.obj: ../Pareto.h
 CMakeFiles/projet_piscine.dir/main.cpp.obj: ../Sommet.h
 CMakeFiles/projet_piscine.dir/main.cpp.obj: ../Svgfile.h
 CMakeFiles/projet_piscine.dir/main.cpp.obj: ../main.cpp
@@ -44,9 +50,6 @@ CMakeFiles/projet_piscine.dir/main.cpp.obj: ../outils.h
 CMakeFiles/projet_piscine.dir/menu.cpp.obj: ../menu.cpp
 
 CMakeFiles/projet_piscine.dir/outils.cpp.obj: ../Arete.h
-CMakeFiles/projet_piscine.dir/outils.cpp.obj: ../Coords.h
-CMakeFiles/projet_piscine.dir/outils.cpp.obj: ../Graphe.h
-CMakeFiles/projet_piscine.dir/outils.cpp.obj: ../Sommet.h
 CMakeFiles/projet_piscine.dir/outils.cpp.obj: ../Svgfile.h
 CMakeFiles/projet_piscine.dir/outils.cpp.obj: ../outils.cpp
 CMakeFiles/projet_piscine.dir/outils.cpp.obj: ../outils.h

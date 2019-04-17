@@ -1,7 +1,3 @@
-//
-// Created by Charlotte Sirot on 2019-04-15.
-//
-
 //!
 //! \file Arete.cpp
 //! \brief
@@ -17,6 +13,8 @@
 #include "Sommet.h"
 #include "Svgfile.h"
 
+
+/// Methode
 // DESSIN
 void Arete::dessiner(Svgfile &s, std::string color) const {
     std::ostringstream oss117   ;

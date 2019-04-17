@@ -7,6 +7,7 @@
 //! \return
 
 #include "Pareto.h"
+#include "time.h"
 
 //constructeur destructeur
 Pareto::Pareto()
@@ -22,26 +23,31 @@ Pareto::~Pareto()
 ///recherche des solutions admissibles
 void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes)
 {
+    std::cout<<std::endl;
+    clock_t start_t,end_t;
+    start_t =clock();
+    std::cout<<" debut de pareto "<< start_t<<std::endl;
+
     //initialisation des données
     m_sommets_tab =sommets;
     m_aretes_tab = aretes;
 
     std::vector<bool> temp_graph;
     //on créé un vecteur booléen de la taille des aretes
-    for(size_t i=0;i<=m_aretes_tab.size();i++)/** /!\ */
+    for(size_t i=0;i<m_sommets_tab.size()-1;i++)
+        temp_graph.push_back(true);
+    for(size_t i=m_sommets_tab.size()-1;i<=m_aretes_tab.size();i++)/** /!\ */
         temp_graph.push_back(false);
-
-    std::vector<std::vector<bool>> tab_bool;
 
     size_t i=0;
     int somme_aretes_temp=0;
     while(temp_graph[m_aretes_tab.size()]!=true)
     {
-        //test d'affichage de tout les aretes
+        /*//test d'affichage de tout les aretes
         for(size_t i=0;i<temp_graph.size();i++)
             std::cout<<temp_graph[i];
         std::cout<<std::endl;
-        //__________________________
+        //__________________________*/
 
         somme_aretes_temp=0;
         for(auto && j : temp_graph)
@@ -53,10 +59,8 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
         if (somme_aretes_temp==m_sommets_tab.size()-1)
         {
             if( connexite( m_aretes_tab ,temp_graph,m_sommets_tab))
-                tab_bool.push_back(temp_graph);
+                m_tab_bool.push_back(temp_graph);
         }
-
-
 
         /// DEBUT COMPTEUR +1
         i=0;
@@ -69,15 +73,8 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
         ///FIN COMPTEUR
     }
 
-    //mise en place du tableau pair
-
-    for(size_t i=0;i<m_aretes_tab.size();i++)
-    {
-        std::vector<bool> temp;
-        for(size_t j=0;j<tab_bool.size();j++)
-            temp.push_back(tab_bool[j][i]);
-        m_tab.emplace_back(m_aretes_tab[i],temp);
-    }
+    end_t=clock();
+    std::cout<<"fin de pareto "<<end_t;
 }
 
 void Pareto::fn_somP(){}
