@@ -21,6 +21,7 @@ class Sommet;
 
 
 bool connexite(std::vector<std::pair<Arete*,bool>> liens, std::vector<Sommet*> m_sommets );
-bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vector<Sommet*> m_sommets );
+bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vector<Sommet*>& m_sommets );
 
+bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::vector<Sommet*>& m_sommets );
 #endif //PROJET_PISCINE_OUTIL_H

@@ -131,7 +131,7 @@ Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
     }
 }
 
-Graphe::~Graphe() {}
+Graphe::~Graphe()
 {
     //vider le tableau d'aretes et de sommets
 }
