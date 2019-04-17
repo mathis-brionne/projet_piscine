@@ -17,6 +17,38 @@
 //! \date 17 avril 2019 9h00
 //! \return 1 si le graphe partiel est connexe, 0 sinon
 
+//! \fn std::vector<float> totalPond(std::vector<std::pair<Arete*,bool>> kk)
+//! \brief
+//! \author SIROT
+//! \version 0.1
+//! \date 16 avril 2019
+//! \return
+
+std::vector<float> totalPond(std::vector<std::pair<Arete*,bool>> kk)
+{
+    size_t nb_pond = kk[0].first->getPonderations().size();
+
+    std::vector<float> sommes_pond;
+
+    for(size_t i=0; i< nb_pond;i++)
+    {
+        sommes_pond.push_back(0);
+    }
+
+    for(size_t i=0; i < kk.size(); i++)
+    {
+        if(kk[i].second == true)
+        {
+            for(size_t j=0; j < nb_pond; j++)
+            {
+                // si l'arete est à 1 --> l'arete est existante
+                sommes_pond[j] = sommes_pond[j] + kk[i].first->getPond(j);
+            }
+        }
+    }
+    return sommes_pond;
+}
+
 bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::vector<Sommet*>& m_sommets )
 {
     //on admet que les tableau aretes et b_aretes sont de même dimension

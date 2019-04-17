@@ -122,13 +122,13 @@
 		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/menu.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
+		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/menu.h">
+			<Option target="projet_piscine"/>
+		</Unit>
 		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/outils.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
 		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/outils.h">
-			<Option target="projet_piscine"/>
-		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/sommes_pond.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
 		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/CMakeLists.txt">

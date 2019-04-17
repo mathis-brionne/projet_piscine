@@ -5,9 +5,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/projet_piscine.dir/kruskal.cpp.o"
   "CMakeFiles/projet_piscine.dir/Svgfile.cpp.o"
   "CMakeFiles/projet_piscine.dir/menu.cpp.o"
-  "CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o"
   "CMakeFiles/projet_piscine.dir/Graphe.cpp.o"
   "CMakeFiles/projet_piscine.dir/outils.cpp.o"
+  "CMakeFiles/projet_piscine.dir/Pareto.cpp.o"
   "projet_piscine.pdb"
   "projet_piscine"
 )

@@ -15,10 +15,12 @@
 #include <algorithm>
 #include <unordered_set>
 #include <unordered_map>
+#include <iostream>
 
 #include "Arete.h"
 class Sommet;
 
+std::vector<float> totalPond(std::vector<std::pair<Arete*,bool>> kk);
 
 bool connexite(std::vector<std::pair<Arete*,bool>> liens, std::vector<Sommet*> m_sommets );
 bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vector<Sommet*>& m_sommets );

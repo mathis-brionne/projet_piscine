@@ -135,22 +135,9 @@ CMakeFiles/projet_piscine.dir/menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projet_piscine.dir/menu.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/menu.cpp" -o CMakeFiles/projet_piscine.dir/menu.cpp.s
 
-CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o: CMakeFiles/projet_piscine.dir/flags.make
-CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o: ../sommes_pond.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o -c "/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/sommes_pond.cpp"
-
-CMakeFiles/projet_piscine.dir/sommes_pond.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projet_piscine.dir/sommes_pond.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/sommes_pond.cpp" > CMakeFiles/projet_piscine.dir/sommes_pond.cpp.i
-
-CMakeFiles/projet_piscine.dir/sommes_pond.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projet_piscine.dir/sommes_pond.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/sommes_pond.cpp" -o CMakeFiles/projet_piscine.dir/sommes_pond.cpp.s
-
 CMakeFiles/projet_piscine.dir/Graphe.cpp.o: CMakeFiles/projet_piscine.dir/flags.make
 CMakeFiles/projet_piscine.dir/Graphe.cpp.o: ../Graphe.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/projet_piscine.dir/Graphe.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/projet_piscine.dir/Graphe.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/projet_piscine.dir/Graphe.cpp.o -c "/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Graphe.cpp"
 
 CMakeFiles/projet_piscine.dir/Graphe.cpp.i: cmake_force
@@ -163,7 +150,7 @@ CMakeFiles/projet_piscine.dir/Graphe.cpp.s: cmake_force
 
 CMakeFiles/projet_piscine.dir/outils.cpp.o: CMakeFiles/projet_piscine.dir/flags.make
 CMakeFiles/projet_piscine.dir/outils.cpp.o: ../outils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/projet_piscine.dir/outils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/projet_piscine.dir/outils.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/projet_piscine.dir/outils.cpp.o -c "/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/outils.cpp"
 
 CMakeFiles/projet_piscine.dir/outils.cpp.i: cmake_force
@@ -174,6 +161,19 @@ CMakeFiles/projet_piscine.dir/outils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projet_piscine.dir/outils.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/outils.cpp" -o CMakeFiles/projet_piscine.dir/outils.cpp.s
 
+CMakeFiles/projet_piscine.dir/Pareto.cpp.o: CMakeFiles/projet_piscine.dir/flags.make
+CMakeFiles/projet_piscine.dir/Pareto.cpp.o: ../Pareto.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/projet_piscine.dir/Pareto.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/projet_piscine.dir/Pareto.cpp.o -c "/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Pareto.cpp"
+
+CMakeFiles/projet_piscine.dir/Pareto.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projet_piscine.dir/Pareto.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Pareto.cpp" > CMakeFiles/projet_piscine.dir/Pareto.cpp.i
+
+CMakeFiles/projet_piscine.dir/Pareto.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projet_piscine.dir/Pareto.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Pareto.cpp" -o CMakeFiles/projet_piscine.dir/Pareto.cpp.s
+
 # Object files for target projet_piscine
 projet_piscine_OBJECTS = \
 "CMakeFiles/projet_piscine.dir/main.cpp.o" \
@@ -182,9 +182,9 @@ projet_piscine_OBJECTS = \
 "CMakeFiles/projet_piscine.dir/kruskal.cpp.o" \
 "CMakeFiles/projet_piscine.dir/Svgfile.cpp.o" \
 "CMakeFiles/projet_piscine.dir/menu.cpp.o" \
-"CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o" \
 "CMakeFiles/projet_piscine.dir/Graphe.cpp.o" \
-"CMakeFiles/projet_piscine.dir/outils.cpp.o"
+"CMakeFiles/projet_piscine.dir/outils.cpp.o" \
+"CMakeFiles/projet_piscine.dir/Pareto.cpp.o"
 
 # External object files for target projet_piscine
 projet_piscine_EXTERNAL_OBJECTS =
@@ -195,9 +195,9 @@ projet_piscine: CMakeFiles/projet_piscine.dir/Arete.cpp.o
 projet_piscine: CMakeFiles/projet_piscine.dir/kruskal.cpp.o
 projet_piscine: CMakeFiles/projet_piscine.dir/Svgfile.cpp.o
 projet_piscine: CMakeFiles/projet_piscine.dir/menu.cpp.o
-projet_piscine: CMakeFiles/projet_piscine.dir/sommes_pond.cpp.o
 projet_piscine: CMakeFiles/projet_piscine.dir/Graphe.cpp.o
 projet_piscine: CMakeFiles/projet_piscine.dir/outils.cpp.o
+projet_piscine: CMakeFiles/projet_piscine.dir/Pareto.cpp.o
 projet_piscine: CMakeFiles/projet_piscine.dir/build.make
 projet_piscine: CMakeFiles/projet_piscine.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable projet_piscine"
