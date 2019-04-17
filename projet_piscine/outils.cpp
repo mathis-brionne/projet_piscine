@@ -1,23 +1,34 @@
-//
-// Created by Charlotte Sirot on 2019-04-16.
-//
-
-//
-// Created by willy on 16/04/2019.
-//
 
 #include "outils.h"
 
 //! \file outil.cpp
 //! \brief  reference les fonctions n'appartenant pas à des classes
 //! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.2
-//! \date 16 avril 2019 15h00
+//! \version 0.3
+//! \date 17 avril 2019 8h
 //! \return
 
-
+/* OPTIMISATION POSSIBLE :
+ *
+ *  on admet que nos tableaus sont de même dimension donc pas besoin de faire de test
+ *
+ *  on admet que les aretes ont déjà été compté et sont donc supèrieure à ordre-1 (1ere partie de l'algo à virer
+ *
+ *  au lieu de supprimer les aretes qui sont à false on travail avec notre tableau d'aretes
+ *  on ajoute une aretes <=> elle est à 1 dans ce cas on la passe à 0
+ *  tant que toute nos aretes nes sont pas à 0
+ *
+ *  ! si aretes relie 2 connexe aretes= 0 pas besoin du reste
+ *
+ *  les attributs entier pour connaitre le numéro de la compossante connexe d'un sommet peut être stocké à part ?
+ *  ~~ ralenti la recherche d'un sommet mais éviter la copie des pointeur
+ *
+ *
+ * */
 bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vector<Sommet*> m_sommets )
 {
+    //on admet que les tableau aretes et b_aretes sont de même dimension
+
     ///1 ere partie de l'algorithme
     //on recupere une copie de liens, puis on erase les liens =0
     for(size_t i=0;i<aretes.size();i++)
@@ -42,7 +53,7 @@ bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vecto
     //on stocke le numero de CC de notre sommet
     std::unordered_map<Sommet* , int> sommet_connexe; //first sommet //second numero connexe
     for(size_t i=0;i<m_sommets.size();i++)//initialisation
-    sommet_connexe.insert({m_sommets[i],i});
+        sommet_connexe.insert({m_sommets[i],i});
 
     //on stocke nos numero de CC dans cette attribut
     std::unordered_set<int> temp_connexe;
@@ -57,7 +68,7 @@ bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vecto
     // on ajoute chaque aretes suivante
     int num_aretes=0;
 
-    while(nb_connexe_estimation>1&&num_aretes<size_liens)
+    while(nb_connexe_estimation>1&&num_aretes<size_liens) /* utiliser la fonction "continue" */
     {
         //on prend l'arete num_aretes
         //tant qu'elle relie 2 sommets connexe on avance num_aretes de 1, et qu'il reste des aretes
@@ -108,6 +119,8 @@ bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vecto
         return true;
 }
 
+
+//! \deprecated
 //! \fn bool connexite(std::vector<std::pair<Arete*,bool>> liens )
 //! \brief permet de determiner la connexité d'un graphe
 //! \author MARTIN
