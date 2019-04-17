@@ -12,6 +12,8 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
+#include "Svgfile.h"
+#include "Arete.h"
 
 class Arete;
 class Sommet;
@@ -28,7 +30,7 @@ public:
     ~Pareto();
 
     void initialisation_q2(std::vector<Sommet*>&, std::vector<Arete*>&);
-
+    void  dessiner(Svgfile &svg);
     void fn_somP();
 
 private:

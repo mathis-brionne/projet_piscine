@@ -1,4 +1,3 @@
-
 //! \file Graph.cpp
 //! \brief
 //! \authors BRIONNE,MARTIN,SIROT
@@ -142,23 +141,8 @@ Graphe::~Graphe()
 // DESSIN
 void Graphe::dessiner(Svgfile &s) const {
 
-    for (auto sta : m_aretes) {
-        sta->dessiner(s,0,0,"lightgrey");
-    }
-    for (auto sta : m_sommets) {
+    for (auto sta : m_aretes)
+        sta->dessiner(s,0,0, "blue");
+    for (auto sta : m_sommets)
         sta->dessiner(s,0,0);
-    }
-
-// DESSIN GRAPH PARTIEL
-void Graphe::dessinerKruskal(Svgfile &s , std::vector<std::pair<Arete*,bool>> kk) const {
-
-    for (auto i  : kk) {
-        if (i.second) {
-            i.first->dessiner(s, 500 ,0, "green");
-        }
-    }
-    for (auto sta : m_sommets) {
-    sta->dessiner(s, 500 ,0 );
-    }
-
 }

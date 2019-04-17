@@ -88,9 +88,6 @@
 		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Arete.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Coords.cpp">
-			<Option target="projet_piscine"/>
-		</Unit>
 		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Coords.h">
 			<Option target="projet_piscine"/>
 		</Unit>
@@ -98,6 +95,12 @@
 			<Option target="projet_piscine"/>
 		</Unit>
 		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Graphe.h">
+			<Option target="projet_piscine"/>
+		</Unit>
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Pareto.cpp">
+			<Option target="projet_piscine"/>
+		</Unit>
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Pareto.h">
 			<Option target="projet_piscine"/>
 		</Unit>
 		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Sommet.cpp">
@@ -121,13 +124,13 @@
 		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/menu.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/menu.h">
+			<Option target="projet_piscine"/>
+		</Unit>
 		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/outils.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
 		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/outils.h">
-			<Option target="projet_piscine"/>
-		</Unit>
-		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/sommes_pond.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
 		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/CMakeLists.txt">

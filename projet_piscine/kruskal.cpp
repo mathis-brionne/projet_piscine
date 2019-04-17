@@ -114,5 +114,18 @@ std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pond√©r√
     return temp_liens;
 }
 
+void Graphe::dessinerKruskal(Svgfile &s, std::vector<std::pair<Arete *, bool>> kk , int nb) const {
+
+    for (auto i  : kk)
+    {
+        if (i.second)
+        {
+            i.first->dessiner(s, 500 + 500*nb ,0, "green");
+        }
+    }
+    for (auto sta : m_sommets)
+        sta->dessiner(s, 500+ 500*nb ,0 );
+}
+
 
 

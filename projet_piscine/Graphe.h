@@ -45,9 +45,12 @@ public:
     std::vector<std::pair<Arete*,bool>> kruskal(int num_pond);
     void initialiser_pareto()
         {p_pare.initialisation_q2(m_sommets,m_aretes);}
-
+    void dessinerPareto(Svgfile& s)
+    {
+        p_pare.dessiner(s);
+    }
     void dessiner(Svgfile &s) const;
-    void dessinerKruskal(Svgfile &s, std::vector<std::pair<Arete*,bool>> kk) const;
+    void dessinerKruskal (Svgfile &s, std::vector<std::pair<Arete*,bool>> kk ,int nb) const;
 };
 
 

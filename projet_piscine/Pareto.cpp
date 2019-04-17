@@ -78,3 +78,15 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
 }
 
 void Pareto::fn_somP(){}
+
+void Pareto::dessiner(Svgfile &svg) {
+
+    for (auto VecB : m_tab_bool) {
+        svg.addA();
+        for (size_t i =0 ; i < m_aretes_tab.size() ; i++) {
+            if(VecB[i])
+                m_aretes_tab[i]->dessiner(svg,0,500,"red");
+        }
+        svg.finA();
+    }
+}

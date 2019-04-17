@@ -149,33 +149,6 @@ Arete.cpp.s:
 	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Arete.cpp.s
 .PHONY : Arete.cpp.s
 
-Coords.obj: Coords.cpp.obj
-
-.PHONY : Coords.obj
-
-# target to build an object file
-Coords.cpp.obj:
-	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Coords.cpp.obj
-.PHONY : Coords.cpp.obj
-
-Coords.i: Coords.cpp.i
-
-.PHONY : Coords.i
-
-# target to preprocess a source file
-Coords.cpp.i:
-	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Coords.cpp.i
-.PHONY : Coords.cpp.i
-
-Coords.s: Coords.cpp.s
-
-.PHONY : Coords.s
-
-# target to generate assembly for a file
-Coords.cpp.s:
-	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Coords.cpp.s
-.PHONY : Coords.cpp.s
-
 Graphe.obj: Graphe.cpp.obj
 
 .PHONY : Graphe.obj
@@ -202,6 +175,33 @@ Graphe.s: Graphe.cpp.s
 Graphe.cpp.s:
 	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Graphe.cpp.s
 .PHONY : Graphe.cpp.s
+
+Pareto.obj: Pareto.cpp.obj
+
+.PHONY : Pareto.obj
+
+# target to build an object file
+Pareto.cpp.obj:
+	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Pareto.cpp.obj
+.PHONY : Pareto.cpp.obj
+
+Pareto.i: Pareto.cpp.i
+
+.PHONY : Pareto.i
+
+# target to preprocess a source file
+Pareto.cpp.i:
+	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Pareto.cpp.i
+.PHONY : Pareto.cpp.i
+
+Pareto.s: Pareto.cpp.s
+
+.PHONY : Pareto.s
+
+# target to generate assembly for a file
+Pareto.cpp.s:
+	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Pareto.cpp.s
+.PHONY : Pareto.cpp.s
 
 Sommet.obj: Sommet.cpp.obj
 
@@ -365,33 +365,6 @@ outils.cpp.s:
 	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/outils.cpp.s
 .PHONY : outils.cpp.s
 
-sommes_pond.obj: sommes_pond.cpp.obj
-
-.PHONY : sommes_pond.obj
-
-# target to build an object file
-sommes_pond.cpp.obj:
-	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/sommes_pond.cpp.obj
-.PHONY : sommes_pond.cpp.obj
-
-sommes_pond.i: sommes_pond.cpp.i
-
-.PHONY : sommes_pond.i
-
-# target to preprocess a source file
-sommes_pond.cpp.i:
-	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/sommes_pond.cpp.i
-.PHONY : sommes_pond.cpp.i
-
-sommes_pond.s: sommes_pond.cpp.s
-
-.PHONY : sommes_pond.s
-
-# target to generate assembly for a file
-sommes_pond.cpp.s:
-	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/sommes_pond.cpp.s
-.PHONY : sommes_pond.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -404,12 +377,12 @@ help:
 	@echo ... Arete.obj
 	@echo ... Arete.i
 	@echo ... Arete.s
-	@echo ... Coords.obj
-	@echo ... Coords.i
-	@echo ... Coords.s
 	@echo ... Graphe.obj
 	@echo ... Graphe.i
 	@echo ... Graphe.s
+	@echo ... Pareto.obj
+	@echo ... Pareto.i
+	@echo ... Pareto.s
 	@echo ... Sommet.obj
 	@echo ... Sommet.i
 	@echo ... Sommet.s
@@ -428,9 +401,6 @@ help:
 	@echo ... outils.obj
 	@echo ... outils.i
 	@echo ... outils.s
-	@echo ... sommes_pond.obj
-	@echo ... sommes_pond.i
-	@echo ... sommes_pond.s
 .PHONY : help
 
 
