@@ -150,33 +150,6 @@ Arete.cpp.s:
 	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Arete.cpp.s
 .PHONY : Arete.cpp.s
 
-Coords.o: Coords.cpp.o
-
-.PHONY : Coords.o
-
-# target to build an object file
-Coords.cpp.o:
-	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Coords.cpp.o
-.PHONY : Coords.cpp.o
-
-Coords.i: Coords.cpp.i
-
-.PHONY : Coords.i
-
-# target to preprocess a source file
-Coords.cpp.i:
-	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Coords.cpp.i
-.PHONY : Coords.cpp.i
-
-Coords.s: Coords.cpp.s
-
-.PHONY : Coords.s
-
-# target to generate assembly for a file
-Coords.cpp.s:
-	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Coords.cpp.s
-.PHONY : Coords.cpp.s
-
 Graphe.o: Graphe.cpp.o
 
 .PHONY : Graphe.o
@@ -378,9 +351,6 @@ help:
 	@echo "... Arete.o"
 	@echo "... Arete.i"
 	@echo "... Arete.s"
-	@echo "... Coords.o"
-	@echo "... Coords.i"
-	@echo "... Coords.s"
 	@echo "... Graphe.o"
 	@echo "... Graphe.i"
 	@echo "... Graphe.s"

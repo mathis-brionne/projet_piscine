@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/projet_piscine.dir/main.cpp.o"
   "CMakeFiles/projet_piscine.dir/Sommet.cpp.o"
   "CMakeFiles/projet_piscine.dir/Arete.cpp.o"
-  "CMakeFiles/projet_piscine.dir/Coords.cpp.o"
   "CMakeFiles/projet_piscine.dir/kruskal.cpp.o"
   "CMakeFiles/projet_piscine.dir/Svgfile.cpp.o"
   "CMakeFiles/projet_piscine.dir/menu.cpp.o"
