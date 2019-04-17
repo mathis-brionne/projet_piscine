@@ -1,7 +1,3 @@
-//
-// Created by willy on 15/04/2019.
-//
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -11,8 +7,8 @@
 
 
 //!
-//! \file kruskal.cpp
-//! \brief
+//! \file kruskal.c
+//! \brief  appartient à la class Graphe
 //! \authors BRIONNE,MARTIN,SIROT
 //! \version 0.3
 //! \date 15 avril 2019
@@ -25,8 +21,6 @@
 //! \version 0.5
 //! \date 15 avril 2019
 //! \return l'ensemble des pointeur sur aretes avec un état d'existance ou non (0 inactif, 1 present)
-
-//on recupere dans la class graphe les sommets et aretes
 
 std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondéré
 {
@@ -76,8 +70,8 @@ std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondér�
         //on prend l'arete n
         //tant qu'elle relie 2 sommets connexe on avance num_aretes de 1
         while((sommet_connexe.find((temp_liens[num_aretes].first)->getSommetD()))->second ==
-                (sommet_connexe.find((temp_liens[num_aretes].first)->getSommetA()))->second
-                &&num_aretes<temp_liens.size())
+              (sommet_connexe.find((temp_liens[num_aretes].first)->getSommetA()))->second
+              &&num_aretes<temp_liens.size())
             num_aretes++;
 
         if(num_aretes==temp_liens.size())// !!!! si on est or du tableau BUG car pas normal !!!!
@@ -112,7 +106,7 @@ std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondér�
             nb_connexe_estimation=temp_connexe.size();
         }
         else//si on est sur que notre nombre connexe n'est pas de 1
-             nb_connexe_estimation--;
+            nb_connexe_estimation--;
     }
 
 // retourne l'ensemble du graphe ( pointeur sur aretes et booléen d'activation ou non des aretes
@@ -122,66 +116,3 @@ std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondér�
 
 
 
-//! \fn bool connexite(std::vector<std::pair<Arete*,bool>> liens )
-//! \brief permet de determiner la connexité d'un graphe
-//! \author MARTIN
-//! \version 0.1
-//! \date 15 avril 2019
-//! \return 1 si le graphe partiel est connexe, 0 sinon
-/*
-bool Graph::connexite(std::vector<std::pair<Arete*,bool>> liens )
-{
-    ///déclaration et initialisation
-
-    ///algorithme
-    //on recupere une copie de liens, puis on erase les liens =0
-    for(size_t i=0;i<liens.size();i++)
-    {
-        if(!liens[i].second)
-        {
-            liens[i].erase();
-            i--;
-        }
-    }
-    bool connexe=false;
-
-    int nb_aretes =0;
-    for(size_t i=0;i<liens.size();i++)
-    {
-        if(liens[i].second==1)
-            nb_aretes++;
-    }
-    if(m_sommets.size()-1>nb_aretes)
-        return false;
-
-    std::unordered_set<Sommet*> cc;
-
-    std::queue<Sommet*> file;
-    file.push(m_sommets[0]);
-
-    for(int i=0;file.size()!=0;i++)
-    {
-        Sommet* temp =file.front();
-        file.pop();
-        temp->
-    }
-
-    /// debut BFS
-    for( auto it: )
-    {
-        std::string nom=it->getID();
-        if(relation.find(nom)==relation.end()&& nom!=id)
-        {
-            //si il n'est pas dans la liste
-            //alors on l'ajoute à relation et file
-            //std::cout<<m_id<<"  "<<nom << std::endl;
-            file.push(it);
-            relation.insert({nom,m_id});
-        }
-    }
-
-    /// fin BFS
-
-    return true;
-}
-*/
