@@ -15,8 +15,10 @@ CMakeFiles/projet_piscine.dir/Graphe.cpp.o: ../Pareto.h
 CMakeFiles/projet_piscine.dir/Graphe.cpp.o: ../Sommet.h
 CMakeFiles/projet_piscine.dir/Graphe.cpp.o: ../Svgfile.h
 
+CMakeFiles/projet_piscine.dir/Pareto.cpp.o: ../Arete.h
 CMakeFiles/projet_piscine.dir/Pareto.cpp.o: ../Pareto.cpp
 CMakeFiles/projet_piscine.dir/Pareto.cpp.o: ../Pareto.h
+CMakeFiles/projet_piscine.dir/Pareto.cpp.o: ../Svgfile.h
 
 CMakeFiles/projet_piscine.dir/Sommet.cpp.o: ../Arete.h
 CMakeFiles/projet_piscine.dir/Sommet.cpp.o: ../Coords.h

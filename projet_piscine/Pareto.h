@@ -12,8 +12,9 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
+#include "Arete.h"
 
-class Arete;
+//class Arete;
 class Sommet;
 
 bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vector<Sommet*>& m_sommets );
@@ -28,6 +29,8 @@ public:
     ~Pareto();
 
     void initialisation_q2(std::vector<Sommet*>&, std::vector<Arete*>&);
+    void totalPond();
+
 
     void fn_somP();
 
