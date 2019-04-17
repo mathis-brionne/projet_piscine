@@ -12,8 +12,8 @@
 
 //constructeur destructeur
 Pareto::Pareto()
-{
-}
+{}
+
 Pareto::~Pareto()
 {
     //for(m_sommets_tab
@@ -137,4 +137,47 @@ void Pareto::totalPond()
     }
 }
 
-void Pareto::fn_somP(){}
+void Pareto::fn_somP()
+{
+
+}
+/*NOUVEAUTE*/
+
+//! \fn void Pareto::calcul_front_pare()
+//! \brief  non fonctionnel, pas encore tester
+//! \authors BRIONNE,MARTIN,SIROT
+//! \version 0.1
+//! \date 17 avril 2019 15h20
+//! \return
+
+void Pareto::calcul_front_pare()
+{
+    std::vector<std::pair<bool,std::vector<float>>> tab;
+    for(size_t i=0;i<m_tab_bool.size();i++)
+        tab.push_back({true,m_tab_somP[i]});
+
+    size_t nbr_pond;
+    nbr_pond = m_aretes_tab[0]->getPonderations().size();
+
+    bool test;
+    for(size_t i=0;i<tab.size();i++)
+    {
+        if(tab[i].first== false)
+            continue;
+
+        for(size_t x=0;x<tab.size();x++)
+        {
+            if(tab[x].first== false||x==i)
+                continue;
+
+            test= true;
+            for(size_t j=0;j<nbr_pond;j++)
+            {
+                if(tab[i].second[j]>tab[x].second[j])
+                    test=false;
+            }
+            if(test==true)
+                tab[x].first=false;
+        }
+    }
+}
