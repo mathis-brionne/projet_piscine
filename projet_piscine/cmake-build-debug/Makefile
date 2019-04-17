@@ -177,6 +177,33 @@ Graphe.cpp.s:
 	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Graphe.cpp.s
 .PHONY : Graphe.cpp.s
 
+Pareto.o: Pareto.cpp.o
+
+.PHONY : Pareto.o
+
+# target to build an object file
+Pareto.cpp.o:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Pareto.cpp.o
+.PHONY : Pareto.cpp.o
+
+Pareto.i: Pareto.cpp.i
+
+.PHONY : Pareto.i
+
+# target to preprocess a source file
+Pareto.cpp.i:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Pareto.cpp.i
+.PHONY : Pareto.cpp.i
+
+Pareto.s: Pareto.cpp.s
+
+.PHONY : Pareto.s
+
+# target to generate assembly for a file
+Pareto.cpp.s:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/Pareto.cpp.s
+.PHONY : Pareto.cpp.s
+
 Sommet.o: Sommet.cpp.o
 
 .PHONY : Sommet.o
@@ -312,6 +339,33 @@ menu.cpp.s:
 	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/menu.cpp.s
 .PHONY : menu.cpp.s
 
+outils.o: outils.cpp.o
+
+.PHONY : outils.o
+
+# target to build an object file
+outils.cpp.o:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/outils.cpp.o
+.PHONY : outils.cpp.o
+
+outils.i: outils.cpp.i
+
+.PHONY : outils.i
+
+# target to preprocess a source file
+outils.cpp.i:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/outils.cpp.i
+.PHONY : outils.cpp.i
+
+outils.s: outils.cpp.s
+
+.PHONY : outils.s
+
+# target to generate assembly for a file
+outils.cpp.s:
+	$(MAKE) -f CMakeFiles/projet_piscine.dir/build.make CMakeFiles/projet_piscine.dir/outils.cpp.s
+.PHONY : outils.cpp.s
+
 sommes_pond.o: sommes_pond.cpp.o
 
 .PHONY : sommes_pond.o
@@ -354,6 +408,9 @@ help:
 	@echo "... Graphe.o"
 	@echo "... Graphe.i"
 	@echo "... Graphe.s"
+	@echo "... Pareto.o"
+	@echo "... Pareto.i"
+	@echo "... Pareto.s"
 	@echo "... Sommet.o"
 	@echo "... Sommet.i"
 	@echo "... Sommet.s"
@@ -369,6 +426,9 @@ help:
 	@echo "... menu.o"
 	@echo "... menu.i"
 	@echo "... menu.s"
+	@echo "... outils.o"
+	@echo "... outils.i"
+	@echo "... outils.s"
 	@echo "... sommes_pond.o"
 	@echo "... sommes_pond.i"
 	@echo "... sommes_pond.s"
