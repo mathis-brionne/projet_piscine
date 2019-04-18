@@ -115,6 +115,9 @@
 		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/Svgfile.h">
 			<Option target="projet_piscine"/>
 		</Unit>
+		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/dijkstra.cpp">
+			<Option target="projet_piscine"/>
+		</Unit>
 		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/kruskal.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>

@@ -14,8 +14,8 @@
 //! \fn dijkstra(size_t indice_P)
 //! \brief  methodes de pareto qui permet de calculer la somme des distances
 //! \authors BRIONNE, MARTIN, SIROT
-//! \version 0.1
-//! \date 18 avril 2019 10h00
+//! \version 0.2
+//! \date 18 avril 2019 17h00
 //! \return
 
 void Pareto::dijkstra(size_t indice_P)
@@ -72,29 +72,56 @@ void Pareto::dijkstra(size_t indice_P)
        // autrement dit on recherche les solutions de dijkstra en partant de tous les points
        size_t  h;
        size_t t;
+       size_t sommet_voisin;
+       std::pair<size_t ,float> mini;
+
        for(size_t z=0;z<m_sommets_tab.size();z++) /// z-> sommet de départ
        {
-           //on realise disjkstra à partir du sommet de départ ici z
+           ///on realise disjkstra à partir du sommet de départ ici z
            h=z;
 
            //on repete l'action le nombre de fois qu'on a de sommet car tous les sommets doivent être marqué
            for( size_t k=0;k<m_sommets_tab.size();k++)
            {
                //on marque notre sommet commet étant découvert
-               //tab[]
-               //on parcours toutes les aretes adjacente au sommet que l'on regarde
+               tab[z][h].first=true;
+               //on parcour toutes les aretes adjacente au sommet que l'on regarde
                for(size_t y=0;y<adj_sommets->size();y++)
                {
                    t=r_aretes.find(adj_sommets[h][y])->second;
                    if(m_tab_bool[x][t]==false)
                        continue;
+                   ///on cherche le sommet voisin correspondant
+                   // h etant l'indice du sommet que l'on explore
+                   // t l'indice de l'aretes adjacente
+                   if(m_aretes_tab[t]->getSommetA()==m_sommets_tab[h])
+                       sommet_voisin=r_sommets.find(m_aretes_tab[t]->getSommetD())->second;
+                   else if(m_aretes_tab[t]->getSommetD()==m_sommets_tab[h])
+                       sommet_voisin=r_sommets.find(m_aretes_tab[t]->getSommetA())->second;
 
-
+                   if(tab[z][sommet_voisin].first==false)
+                   {
+                      if(tab[z][sommet_voisin].second>tab[z][h].second+m_aretes_tab[t]->getPond(indice_P))
+                      {
+                          tab[z][sommet_voisin].second=tab[z][h].second+m_aretes_tab[t]->getPond(indice_P);
+                      }
+                   }
                }
+
+               ///on recherche notre prochain sommet
+               mini={-1,infini};
+               for(size_t i=0;i<m_aretes_tab.size();i++)
+               {
+                   //attention a la premiere phase ou mini n'est pas acessble
+                   if(tab[z][i].first==false && mini.second > tab[z][i].second)
+                   {
+                       mini.second=tab[z][i].second;
+                       mini.first=i;
+                   }
+               }
+               //if mini.first ==-1 ca veut dire qu'il n'y a plus de sommet à parcourir il y a une erreur
+
            }
-
-
-
        }
        ///Calcul de la pondération de kruskal
        //somme de toutes les pondérations du tableau de kruskal
