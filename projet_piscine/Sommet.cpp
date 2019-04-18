@@ -23,7 +23,7 @@
 // DESSIN
 void Sommet::dessiner(Svgfile &s )  {
     s.addG();
-    s.addDisk(m_coords.getX(), m_coords.getY(), "blue");
-    s.addText(m_coords.getX(),m_coords.getY(),m_id,"black");
+    s.addDisk(m_coords.getX(), m_coords.getY(), "black");
+    s.addText(m_coords.getX(),m_coords.getY(),m_id,"white");
     s.finG();
 }

@@ -190,7 +190,8 @@ void Graphe::dessinerKruskal(Svgfile &s , std::vector<std::pair<Arete*,bool>> kk
     s.transalte(400);
     for (auto i  : kk) {
         if (i.second) {
-            i.first->dessiner(s, "green");
+            //s.addText(400,10,"Kruskal","black");
+            i.first->dessiner(s, "red");
         }
     }
     for (auto sta : m_sommets) {
