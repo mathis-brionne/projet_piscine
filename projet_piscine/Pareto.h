@@ -12,6 +12,7 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
+#include <unordered_map>
 #include "Arete.h"
 #include "Sommet.h"
 
@@ -29,9 +30,11 @@ public:
     //Methodes
     void initialisation_q2(std::vector<Sommet*>&, std::vector<Arete*>&);///DEPRECEATED
 
-    void init_and_search_admis_q2(std::vector<Sommet*>&, std::vector<Arete*>&);
+    void init_and_search_admis_q2();
     void init_and_calcul_pond();
     void show_solution_front_pare();
+
+    void dijkstra(size_t indice_P);
 
     //PRIVER
     void totalPond();

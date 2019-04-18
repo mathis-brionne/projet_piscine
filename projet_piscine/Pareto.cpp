@@ -39,48 +39,7 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
     m_aretes_tab = aretes;
 
     /// RECHERCHE DES SOLUTIONS ADMISSIBLE
-    std::vector<bool> temp_graph;
-    //on créé un vecteur booléen de la taille des aretes
-    for(size_t i=0;i<m_sommets_tab.size()-1;i++)
-        temp_graph.push_back(true);
-    for(size_t i=m_sommets_tab.size()-1;i<=m_aretes_tab.size();i++)/** /!\ */
-        temp_graph.push_back(false);
-
-    size_t i=0;
-    int somme_aretes_temp=0;
-    while(temp_graph[m_aretes_tab.size()]!=true)
-    {
-        /*
-        //test d'affichage de tout les aretes bool
-        for(size_t i=0;i<temp_graph.size();i++)
-            std::cout<<temp_graph[i];
-        std::cout<<std::endl;
-        */
-
-        somme_aretes_temp=0;
-        for(auto && j : temp_graph)
-        {
-            if(j==true)
-                somme_aretes_temp++;
-        }
-
-        if (somme_aretes_temp==m_sommets_tab.size()-1)
-        {
-            if( connexite_q2( m_aretes_tab ,temp_graph,m_sommets_tab))
-                m_tab_bool.push_back(temp_graph);
-        }
-
-        /// DEBUT COMPTEUR +1
-        i=0;
-        while(temp_graph[i]!=false)
-        {
-            temp_graph[i]=false;
-            i++;
-        }
-        temp_graph[i]= true;
-        ///FIN COMPTEUR
-    }
-
+    this->init_and_search_admis_q2();
     end_t=clock();
     std::cout<<"Fin de la recherche des solutions admissible de pareto : "<<end_t<<std::endl;
 
@@ -127,11 +86,59 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
     //affichage des solutions de la frontière de poreto
     this->show_solution_front_pare();
 
+///TEST
+    this->dijkstra(2);
     std::cout<<"Fin de Pareto"<<std::endl<<std::endl;
+
+
 }
-void Pareto::init_and_search_admis_q2(std::vector<Sommet*>&, std::vector<Arete*>&)
+
+void Pareto::init_and_search_admis_q2()
 {
 
+    /// RECHERCHE DES SOLUTIONS ADMISSIBLE
+
+    std::vector<bool> temp_graph;
+    //on créé un vecteur booléen de la taille des aretes
+    for(size_t i=0;i<m_sommets_tab.size()-1;i++)
+        temp_graph.push_back(true);
+    for(size_t i=m_sommets_tab.size()-1;i<=m_aretes_tab.size();i++)/** /!\ */
+        temp_graph.push_back(false);
+
+    size_t i=0;
+    int somme_aretes_temp=0;
+    while(temp_graph[m_aretes_tab.size()]!=true)
+    {
+        /*
+        //test d'affichage de tout les aretes bool
+        for(size_t i=0;i<temp_graph.size();i++)
+            std::cout<<temp_graph[i];
+        std::cout<<std::endl;
+        */
+
+        somme_aretes_temp=0;
+        for(auto && j : temp_graph)
+        {
+            if(j==true)
+                somme_aretes_temp++;
+        }
+
+        if (somme_aretes_temp==m_sommets_tab.size()-1)
+        {
+            if( connexite_q2( m_aretes_tab ,temp_graph,m_sommets_tab))
+                m_tab_bool.push_back(temp_graph);
+        }
+
+        /// DEBUT COMPTEUR +1
+        i=0;
+        while(temp_graph[i]!=false)
+        {
+            temp_graph[i]=false;
+            i++;
+        }
+        temp_graph[i]= true;
+        ///FIN COMPTEUR
+    }
 
 }
 //! \fn init_and_calcul_pond()
