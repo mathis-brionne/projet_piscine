@@ -1,13 +1,22 @@
-//! \file Graph.cpp
-//! \brief
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.3
-//! \date 17 avril 2019 8h00
-//! \return
+/*!
+ * \file Graphe.cpp
+ * \brief methodes de la Classe representant l'objet graphe
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.2
+ */
 
 #include "Graphe.h"
 
-/// CONSTRUCTEUR DESTRUCTEUR
+// CONSTRUCTEUR
+
+/*!
+ * \fn Graphe
+ * \brief
+ * @param fichierGraph
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.2
+ * \date 16 avril 2019
+ */
 Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
 
 //affichage
@@ -132,17 +141,58 @@ Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
     std::cout << " 0K " << std::endl << std::endl;
 }
 
+// DESTRUCTEUR
+
+/*!
+ * \fn Graphe
+ * \brief destructeur
+ * \author
+ * \version 0.1
+ * \date 15 avril 2019
+ */
 Graphe::~Graphe()
 {
     //vider le tableau d'aretes et de sommets
 }
 
-/// Methodes
+
 // DESSIN
+
+/*!
+ * \fn dessiner
+ * \brief dessin du graphe (sommets + aretes (avec les pondérations))
+ * @param s
+ * \author BRIONNE Mathis
+ * \version 0.1
+ * \date 16 avril 2019
+ */
 void Graphe::dessiner(Svgfile &s) const {
 
     for (auto sta : m_aretes)
         sta->dessiner(s,0,0, "blue");
     for (auto sta : m_sommets)
         sta->dessiner(s,0,0);
+}
+
+// DESSIN GRAPH PARTIEL
+/*!
+ * \fn dessinerKruskal
+ * \brief dessin du graphe d'apres l'algo de Kruskal (sommets + aretes necessaires (avec les pondérations))
+ * @param s
+ * @param kk
+ * \author BRIONNE Mathis
+ * \version 0.1
+ * \date 16 avril 2019
+ */
+void Graphe::dessinerKruskal(Svgfile &s , std::vector<std::pair<Arete*,bool>> kk) const {
+    s.transalte(400);
+    for (auto i  : kk) {
+        if (i.second) {
+            i.first->dessiner(s, "green");
+        }
+    }
+    for (auto sta : m_sommets) {
+        sta->dessiner(s);
+    }
+    s.finA();
 }

@@ -1,10 +1,10 @@
-//!
-//! \file Arete.cpp
-//! \brief
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.02
-//! \date 15 avril 2019
-//! \return
+/*!
+ * \file arete.cpp
+ * \brief methodes de la Classe Arete
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.2
+ * \
+ */
 
 #include <fstream>
 #include <ostream>
@@ -16,6 +16,17 @@
 
 /// Methode
 // DESSIN
+
+/*!
+ * \file dessiner
+ * \brief dessiner le graphe
+ * @param s
+ * @param color
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.1
+ * \date
+ */
+void Arete::dessiner(Svgfile &s, std::string color) const {
 void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY ,int nb, std::string color) const {
     std::ostringstream oss117;
     oss117 << m_ponderations[nb];
@@ -53,3 +64,4 @@ void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY , std::string color , s
     s.finG();
 
 }
+

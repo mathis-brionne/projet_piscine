@@ -2,13 +2,14 @@
 // Created by Charlotte Sirot on 2019-04-15.
 //
 
-//!
-//! \file Sommet.h
-//! \brief
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.03
-//! \date 15 avril 2019
-//! \return
+/*!
+ * \file Sommet.h
+ * \class Sommet
+ * \brief Classe representant les objets Sommet
+ * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.3
+ * \date 15 avril 2019
+ */
 
 #ifndef PROJET_PISCINE_SOMMET_H
 #define PROJET_PISCINE_SOMMET_H

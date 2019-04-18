@@ -1,10 +1,12 @@
 
-//! \file main.cpp
-//! \brief
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.02
-//! \date 15 avril 2019
-//! \return
+/*!
+ * \file main.cpp
+ * \brief
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.02
+ * \date 15 avril 2019
+ * \
+ */
 
 #include <iostream>
 #include "Graphe.h"
@@ -13,6 +15,11 @@
 
 int main();
 
+/*!
+ * \fn main
+ * \brief Fonction principale : execution
+ * \return 0 --> fin du programme
+ */
 int main() {
     Svgfile Svg;
     std::cout << "Projet PISCINE" << std::endl
@@ -118,27 +125,9 @@ int main() {
     }
 
 
-    /*
-    int choix;
-
-    while(choix != 1 && choix != 2)
-    {
-        std::cout << "Voulez-vous afficher un autre graphe ?" << std::endl
-                  << "  1. Oui" << std::endl
-                  << "  2. Non" << std::endl << std::endl;
-        std::cin >> choix;
-        std::cout << std::endl;
-
-        switch(choix)
-        {
-            case 1 :
-
-                main();
-                break;
-            case 2:
-                return 0;
-        }
-    }*/
+    Svg.~Svgfile();
+    // Continuer ou Quitter ?
+    choix_fin();
 
     return 0;
 }
