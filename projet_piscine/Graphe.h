@@ -1,10 +1,11 @@
-//!
-//! \file Graph.h
-//! \brief
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.03
-//! \date 15 avril 2019
-//! \return
+/*!
+ * \file Graphe.h
+ * \class Graphe
+ * \brief Classe representant l'objet graphe
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.4
+ * \date 17 avril 2019
+ */
 
 #ifndef PROJET_PISCINE_GRAPH_H
 #define PROJET_PISCINE_GRAPH_H
@@ -18,13 +19,6 @@
 #include "Arete.h"
 #include "Svgfile.h"
 #include "Pareto.h"
-
-//! \struct Graph.h
-//! \brief
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.3
-//! \date 17 avril 2019 8h00
-
 
 class Graphe {
 private:

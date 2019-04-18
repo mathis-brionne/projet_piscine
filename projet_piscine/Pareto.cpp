@@ -1,10 +1,9 @@
-
-//! \file Pareto.cpp
-//! \brief  les graphes admissibles sont present dans m_tab
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.02
-//! \date 16 avril 2019 21h30
-//! \return
+/*!
+ * \file Pareto.cpp
+ * \brief  les graphes admissibles sont present dans m_tab
+ * \authors BRIONNE MAthis, MARTIN Willy, SIROT Charlotte
+ * \version 0.02
+ */
 
 #include "Pareto.h"
 //#include "time.h"
@@ -16,17 +15,16 @@ Pareto::Pareto()
 
 Pareto::~Pareto()
 {
-    //for(m_sommets_tab
+
 }
-//methodes
 
-//! \fn void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes)
-//! \brief  initialisation des attributs + recherche des solutions admissible + calcul des ponderations de ces solutions + recherche des solutions de la frontière de Pareto
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.3
-//! \date 17 avril 2019 15h50
-//! \return
-
+/*!
+ * \fn void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes)
+ * \brief  initialisation des attributs + recherche des solutions admissible + calcul des ponderations de ces solutions + recherche des solutions de la frontière de Pareto
+ * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.3
+ * \date 17 avril 2019
+ */
 ///recherche des solutions admissibles
 void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes)
 {
@@ -102,7 +100,7 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
     //Affichage des pondérations de toutes les solutions
     for (int k = 0; k < m_tab_bool.size(); ++k)
     {
-        std::cout << "Solution n°" << k << " :" << std::endl
+        std::cout << "Solution n" << k << " :" << std::endl
                   << " (";
         for(size_t i=0; i<m_aretes_tab[0]->getPonderations().size(); i++)
         {
@@ -191,15 +189,13 @@ void Pareto::show_solution_front_pare()
     }
 }
 
-//! \fn void Pareto::totalPond()
-//! \brief  calcul des pondérations globales de chaque sous graphe par sommes des pondérations (QUESTION 2)
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.2
-//! \date 17 avril 2019 19h20
-///
-/// ne peut être effectuer que si les étapes suivante on été réalisé :
-/// initialisation, recherche des solution admissible
-///
+/*!
+ * \fn totalPond
+ * \brief Calcul des ponderations totales pour chaque solution
+ * \author SIROT Charlotte
+ * \version 0.2
+ * \date 17 avril 2019
+ */
 void Pareto::totalPond()
 {
     size_t nb_pond = m_aretes_tab[0]->getPonderations().size();
@@ -225,17 +221,13 @@ void Pareto::totalPond()
     }
 }
 
-
-//! \fn void Pareto::calcul_front_pare()
-//! \brief
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.2
-//! \date 17 avril 2019 19h20
-//! \return
-///
-/// ne peut être effectuer que si les étapes suivante on été réalisé :
-/// initialisation, recherche des solution admissible, calcul des ponds
-
+/*!
+ * \fn calcul_front_pare
+ * \brief  pour trouver la frontiere de Pareto
+ * \authors MARTIN Willy, SIROT Charlotte
+ * \version 0.2
+ * \date 17 avril 2019
+ */
 void Pareto::calcul_front_pare()
 {
     std::vector<std::pair<bool,std::vector<float>>> tab;
@@ -270,5 +262,4 @@ void Pareto::calcul_front_pare()
     {
         m_front_pare.push_back(tab[i].first);
     }
-
 }

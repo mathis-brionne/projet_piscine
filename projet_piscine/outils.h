@@ -1,10 +1,10 @@
-
-//! \file outil.h
-//! \brief  reference les fonctions n'appartenant pas à des classes
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.2
-//! \date 16 avril 2019 15h00
-//! \return
+/*!
+ * \file outil.h
+ * \brief  reference les fonctions outils (n'appartenant pas à des classes)
+ * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.2
+ * \date 16 avril 2019
+ */
 
 #ifndef PROJET_PISCINE_OUTIL_H
 #define PROJET_PISCINE_OUTIL_H
