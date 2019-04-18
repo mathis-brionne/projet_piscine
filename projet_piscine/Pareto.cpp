@@ -87,7 +87,7 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
     this->show_solution_front_pare();
 
 ///TEST
-    this->dijkstra(2);
+    this->dijkstra(1);
     std::cout<<"Fin de Pareto"<<std::endl<<std::endl;
 
 
