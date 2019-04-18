@@ -52,6 +52,7 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
+
 					<Build command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 projet_piscine"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
