@@ -14,11 +14,12 @@
 /*!
  * \fn choix_graph
  * \brief permet à l'utilisateur de choisir son graohe
- * \return les deux fichiers choisi
+ * \return pair : les deux fichiers choisi
  * \authors SIROT Charlotte
  * \version 0.1
  * \date 16 avril 2019
  */
+
 std::pair<std::string,std::string> choix_graph()
 {
     std::cout << "MENU" << std::endl << std::endl
@@ -79,7 +80,7 @@ std::pair<std::string,std::string> choix_graph()
 /*!
  * \fn choix_algo
  * \brief permet à l'utilisateur de choisir quel algo appliquer à son graohe
- * \return le num de l'algo choisi
+ * \return int : le num de l'algo choisi
  * \authors SIROT Charlotte
  * \version 0.2
  * \date 17 avril 2019
@@ -108,10 +109,12 @@ int choix_algo()
     }
 }
 
+
 /*!
  * \fn choix_algo
  * \brief permet à l'utilisateur de choisir ponderation il veut prendre en compte pour appliquer Kruskal
- * \return le num de la ponderation choisi
+ * @param pond
+ * \return int : le num de la ponderation choisi
  * \authors SIROT Charlotte
  * \version 0.2
  * \date 16 avril 2019
@@ -119,16 +122,16 @@ int choix_algo()
 int choix_ponderation(std::vector<float> pond)
 {
 
-    int choix=-1;
+   int choix=-1;
 
-    while(choix < 0 && choix > pond.size()-1)
-    {
-        std::cout << "Avec quelle ponderation voulez-vous appliquer Kruskal ?" << std::endl
-                  << "(0 --> 1ere pond / 1 --> 2e pond... etc)" << std::endl;
+   while(choix < 0 && choix > pond.size()-1)
+   {
+       std::cout << "Avec quelle ponderation voulez-vous appliquer Kruskal ?" << std::endl
+                 << "(0 --> 1ere pond / 1 --> 2e pond... etc)" << std::endl;
 
-        std::cin >> choix;
-        std::cout << std::endl;
+       std::cin >> choix;
+       std::cout << std::endl;
 
-        return (int)choix;
-    }
+       return (int)choix;
+   }
 }

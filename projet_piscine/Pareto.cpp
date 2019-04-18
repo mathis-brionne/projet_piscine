@@ -1,10 +1,9 @@
-
-//! \file Pareto.cpp
-//! \brief  les graphes admissibles sont present dans m_tab
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.02
-//! \date 16 avril 2019 21h30
-//! \return
+/*!
+ * \file Pareto.cpp
+ * \brief  les graphes admissibles sont present dans m_tab
+ * \authors BRIONNE MAthis, MARTIN Willy, SIROT Charlotte
+ * \version 0.02
+ */
 
 #include "Pareto.h"
 //#include "time.h"
@@ -16,17 +15,16 @@ Pareto::Pareto()
 
 Pareto::~Pareto()
 {
-    //for(m_sommets_tab
+
 }
-//methodes
 
-//! \fn void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes)
-//! \brief  initialisation des attributs + recherche des solutions admissible + calcul des ponderations de ces solutions + recherche des solutions de la frontière de Pareto
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.3
-//! \date 17 avril 2019 15h50
-//! \return
-
+/*!
+ * \fn void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes)
+ * \brief  initialisation des attributs + recherche des solutions admissible + calcul des ponderations de ces solutions + recherche des solutions de la frontière de Pareto
+ * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.3
+ * \date 17 avril 2019
+ */
 ///recherche des solutions admissibles
 void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes)
 {
@@ -159,6 +157,13 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
     std::cout<<"Fin de Pareto"<<std::endl<<std::endl;
 }
 
+/*!
+ * \fn totalPond
+ * \brief Calcul des ponderations totales pour chaque solution
+ * \author SIROT Charlotte
+ * \version 0.2
+ * \date 17 avril 2019
+ */
 void Pareto::totalPond()
 {
     size_t nb_pond = m_aretes_tab[0]->getPonderations().size();
@@ -185,14 +190,13 @@ void Pareto::totalPond()
     }
 }
 
-
-//! \fn void Pareto::calcul_front_pare()
-//! \brief  non fonctionnel, pas encore tester
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.1
-//! \date 17 avril 2019 15h20
-//! \return
-
+/*!
+ * \fn calcul_front_pare
+ * \brief  pour trouver la frontiere de Pareto
+ * \authors MARTIN Willy, SIROT Charlotte
+ * \version 0.2
+ * \date 17 avril 2019
+ */
 void Pareto::calcul_front_pare()
 {
     std::vector<std::pair<bool,std::vector<float>>> tab;
@@ -227,5 +231,4 @@ void Pareto::calcul_front_pare()
     {
         m_front_pare.push_back(tab[i].first);
     }
-
 }

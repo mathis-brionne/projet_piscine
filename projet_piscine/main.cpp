@@ -15,6 +15,11 @@
 
 int main();
 
+/*!
+ * \fn main
+ * \brief Fonction principale : execution
+ * \return 0 --> fin du programme
+ */
 int main() {
     Svgfile Svg;
     std::cout << "Projet PISCINE" << std::endl

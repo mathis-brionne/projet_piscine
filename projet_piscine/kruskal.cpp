@@ -1,10 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <unordered_set>
-#include <unordered_map>
-#include "Graphe.h"
-
 /*!
  * \file kruskal.c
  *  \brief  appartient à la class Graphe
@@ -12,13 +5,22 @@
  * \version 0.3
  */
 
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <unordered_set>
+#include <unordered_map>
+#include "Graphe.h"
+
+
 /*!
  * \fn kruskal
  * \brief algo Kruskal
+ * @param num_pond
+ * \return vector<pair<>> (l'ensemble des pointeur sur aretes avec un état d'existance ou non (0 inactif, 1 present))
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.5
  * \date 17 avril 2019
- * \return l'ensemble des pointeur sur aretes avec un état d'existance ou non (0 inactif, 1 present)
  */
 std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondéré
 {

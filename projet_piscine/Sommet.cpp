@@ -2,18 +2,24 @@
 // Created by Charlotte Sirot on 2019-04-15.
 //
 
-//!
-//! \file Sommet.cpp
-//! \brief
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.02
-//! \date 15 avril 2019
-//! \return
+/*!
+ * \file Sommet.cpp
+ * \brief methodes de la classe Sommet
+ * \authors BRIONNE Mathis
+ * \version 0.2
+ */
 
 #include "Sommet.h"
 #include "Arete.h"
 #include "Svgfile.h"
 
+/*!
+ * \fn dessiner
+ * \brief dessin des sommets
+ * \author BRIONNE Mathis
+ * \version 0.2
+ * \date 15 avril 2019
+ */
 // DESSIN
 void Sommet::dessiner(Svgfile &s )  {
     s.addG();

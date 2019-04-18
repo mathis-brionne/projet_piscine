@@ -1,10 +1,11 @@
-
-//! \file Pareto.h
-//! \brief  non fonctionnel, l'initialisation n'est pas complete
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.1
-//! \date 17 avril 2019 15h20
-//! \return
+/*!
+ * \file Pareto.h
+ * \class Pareto
+ * \brief  bibliotheque pour les fonctions permettant de faire Pareto
+ * \authors BRIONNE,MARTIN,SIROT
+ * \version 0.1
+ * \date 17 avril 2019
+ */
 
 #ifndef PROJET_PISCINE_PARETO_H
 #define PROJET_PISCINE_PARETO_H

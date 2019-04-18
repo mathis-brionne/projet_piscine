@@ -14,14 +14,17 @@
 #include "Svgfile.h"
 
 
+// DESSIN
+
 /*!
  * \file dessiner
  * \brief dessiner le graphe
+ * @param s
+ * @param color
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \
+ * \date
  */
-// DESSIN
 void Arete::dessiner(Svgfile &s, std::string color) const {
     std::ostringstream oss117   ;
     for (auto i : m_ponderations) {

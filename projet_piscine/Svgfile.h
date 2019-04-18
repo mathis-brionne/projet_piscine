@@ -2,6 +2,14 @@
 // Created by matbr on 15/04/2019.
 //
 
+/*!
+ * \file Svgfile.h
+ * \class Svgfile
+ * \brief Classe pour les objets Svg
+ * \author BRIONNE Mathis
+ * \version 0.2
+ */
+
 #ifndef PROJET_PISCINE_SVGFILE_H
 #define PROJET_PISCINE_SVGFILE_H
 
