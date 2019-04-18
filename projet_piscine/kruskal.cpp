@@ -10,6 +10,7 @@
 #include <algorithm>
 #include <unordered_set>
 #include <unordered_map>
+#include <sstream>
 #include "Graphe.h"
 
 
@@ -120,16 +121,38 @@ std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pond√©r√
 }
 
 void Graphe::dessinerKruskal(Svgfile &s, std::vector<std::pair<Arete *, bool>> kk , int nb) const {
-
+    int minX=1000000,maxX=0,minY=1000000,maxY=0;
+    for(auto j : m_sommets){
+        if(j->getCoords().getX() < minX)
+        {
+            minX = j->getCoords().getX();
+        }
+        if(j->getCoords().getY() < minY)
+        {
+            minY = j->getCoords().getY();
+        }
+        if(j->getCoords().getX() > maxX)
+        {
+            maxX = j->getCoords().getX();
+        }
+        if(j->getCoords().getY() > maxY)
+        {
+            maxY = j->getCoords().getY();
+        }
+    }
+    std::cout<<"max x :" << maxX << " min X :"<<minX << " max y :" << maxY << " min Y :"<<minY;
+    std::ostringstream oss;
+    oss << "Kruskal ponderation :"<<nb+1;
+    s.addencadrer(maxX,minX,maxY,minY, maxX+50 + (maxX+50)*nb ,0 ,oss.str());
     for (auto i  : kk)
     {
         if (i.second)
         {
-            i.first->dessiner(s, 500 + 500*nb ,0,nb, "green");
+            i.first->dessiner(s, maxX+50 + (maxX+50)*nb ,0,nb, "green");
         }
     }
     for (auto sta : m_sommets)
-        sta->dessiner(s, 500+ 500*nb ,0 );
+        sta->dessiner(s,  maxX+50 + (maxX+50)*nb ,0 );
 }
 
 

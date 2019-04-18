@@ -60,7 +60,6 @@ Svgfile::Svgfile(std::string _filename, int _width, int _height) :
 Svgfile::~Svgfile() {
     // Writing the gradients into the SVG file
     m_ostrm << svgBallGradients;
-
     // Removing this file from the list of open files
     s_openfiles.erase(m_filename);
     // No need to explicitly close the ofstream object (automatic upon destruction)
@@ -501,6 +500,23 @@ std::string makeRGB(int r, int g, int b) {
     oss << "rgb(" << r << "," << g << "," << b << ")";
     return oss.str();
 }
+void Svgfile::addrepere(int x , int y )
+{
+    m_ostrm << "<line "
+            << attrib("x1" , x)
+            << attrib("y1" ,y)
+            << attrib("x2" , "2000")
+            << attrib("y2", y )
+            << attrib("stroke","black")
+            << "/>"
+            << "<line "
+            << attrib("x1" , x)
+            << attrib("y1" ,y)
+            << attrib("x2" , x)
+            << attrib("y2", "0" )
+            << attrib("stroke","black")
+            << "/>";
+}
 
 /*!
  * \fn fillBallColor
@@ -526,7 +542,7 @@ std::string fillBallColor(std::string col) {
  * \version 0.1
  * \date
  */
-void Svgfile::transalte(int scale)
+void Svgfile::transalte(int scaleX ,int scaleY)
 {
     m_ostrm << "<g transform=\"translate("<<scaleX<<","<<scaleY<<")\" > \n";
 }
@@ -571,7 +587,16 @@ void Svgfile::addG()
 {
     m_ostrm << "<g>";
 }
-
+void Svgfile::addencadrer(int maxX ,int minX,int maxY,int minY,int scaleX,int scaleY, std::string text)
+{
+    transalte(scaleX,scaleY);
+    addLine(minX-25,minY-25,maxX+25, minY-25,"black","areteV");
+    addLine(maxX+25, minY-25,maxX+25, maxY+25,"black","areteV");
+    addLine(maxX+25, maxY+25,minX-25, maxY+25,"black","areteV");
+    addLine(minX-25, maxY+25,minX-25,minY-25,"black","areteV");
+    addText(minX-25,minY-35,text,"black","effetV");
+    finG();
+};
 
 /// Effets "Boule en relief"
 /// Horrible bricolage : ces données devraient soit être dans un fichier auxiliaire
@@ -601,7 +626,6 @@ extern const std::string svgBallGradients =
         ".arete{\n"
         "stroke-width: 2;\n"
         "        stroke-linecap: round;\n"
-        "transition: .2s;\n"
         "cursor: crosshair;\n"
         " \n"
         " }\n"
@@ -635,13 +659,12 @@ extern const std::string svgBallGradients =
         ".circle {\n"
         "        stroke-width: 30;\n"
         "        stroke-linecap: round;\n"
-        "transition: .2s;\n"
         "cursor: crosshair;\n"
         "stroke-opacity : 0; \n"
         "    }\n"
         "a:hover .circle {\n"
-        "stroke-width: 40;\n"
-        "stroke-opacity : 0.4; \n"
+        "stroke-width: 30;\n"
+        "stroke-opacity : 1; \n"
         "cursor: crosshair;\n"
         "    }\n"
         "    g:hover .circleV {\n"

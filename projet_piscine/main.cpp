@@ -125,6 +125,29 @@ int main() {
     }
 
 
+    /*
+    int choix;
+
+    while(choix != 1 && choix != 2)
+    {
+        std::cout << "Voulez-vous afficher un autre graphe ?" << std::endl
+                  << "  1. Oui" << std::endl
+                  << "  2. Non" << std::endl << std::endl;
+        std::cin >> choix;
+        std::cout << std::endl;
+
+        switch(choix)
+        {
+            case 1 :
+
+                main();
+                break;
+            case 2:
+                return 0;
+        }
+    }*/
+    Svg.~Svgfile();
+    system("output.html");
     Svg.~Svgfile();
     // Continuer ou Quitter ?
     choix_fin();

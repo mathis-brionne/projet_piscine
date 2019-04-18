@@ -16,7 +16,6 @@
 #include <iostream>
 
 #include "Sommet.h"
-#include "Arete.h"
 #include "Svgfile.h"
 #include "Pareto.h"
 
@@ -45,6 +44,8 @@ public:
     }
     void dessiner(Svgfile &s) const;
     void dessinerKruskal (Svgfile &s, std::vector<std::pair<Arete*,bool>> kk ,int nb) const;
+
+    void dessinerKruskal(Svgfile &s, std::vector<std::pair<Arete *, bool>> kk) const;
 };
 
 

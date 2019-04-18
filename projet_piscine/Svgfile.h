@@ -82,6 +82,13 @@ public:
     void addText(double x, double y, std::string text, std::string color, std::string clas);
 
     void addpoint(double x, double y, std::string color);
+
+    void addrepere(int x, int y);
+
+
+    void addencadrer(int maxX, int minX, int maxY, int minY,int scaleX,int scaleY, std::string text);
+
+    void transalte(int scale);
 };
 
 std::string makeRGB(int r, int g, int b);

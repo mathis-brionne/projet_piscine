@@ -26,7 +26,7 @@
  * \version 0.1
  * \date
  */
-void Arete::dessiner(Svgfile &s, std::string color) const {
+
 void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY ,int nb, std::string color) const {
     std::ostringstream oss117;
     oss117 << m_ponderations[nb];

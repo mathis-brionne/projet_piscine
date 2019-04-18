@@ -1,22 +1,14 @@
-/*!
- * \file Graphe.cpp
- * \brief methodes de la Classe representant l'objet graphe
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.2
- */
+//! \file Graph.cpp
+//! \brief
+//! \authors BRIONNE,MARTIN,SIROT
+//! \version 0.3
+//! \date 17 avril 2019 8h00
+//! \return
 
+#include <sstream>
 #include "Graphe.h"
 
-// CONSTRUCTEUR
-
-/*!
- * \fn Graphe
- * \brief
- * @param fichierGraph
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.2
- * \date 16 avril 2019
- */
+/// CONSTRUCTEUR DESTRUCTEUR
 Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
 
 //affichage
@@ -141,58 +133,40 @@ Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
     std::cout << " 0K " << std::endl << std::endl;
 }
 
-// DESTRUCTEUR
-
-/*!
- * \fn Graphe
- * \brief destructeur
- * \author
- * \version 0.1
- * \date 15 avril 2019
- */
 Graphe::~Graphe()
 {
     //vider le tableau d'aretes et de sommets
 }
 
-
+/// Methodes
 // DESSIN
-
-/*!
- * \fn dessiner
- * \brief dessin du graphe (sommets + aretes (avec les pondérations))
- * @param s
- * \author BRIONNE Mathis
- * \version 0.1
- * \date 16 avril 2019
- */
 void Graphe::dessiner(Svgfile &s) const {
 
+    int minX=1000000,maxX=0,minY=1000000,maxY=0;
+    for(auto j : m_sommets){
+        if(j->getCoords().getX() < minX)
+        {
+            minX = j->getCoords().getX();
+        }
+        if(j->getCoords().getY() < minY)
+        {
+            minY = j->getCoords().getY();
+        }
+        if(j->getCoords().getX() > maxX)
+        {
+            maxX = j->getCoords().getX();
+        }
+        if(j->getCoords().getY() > maxY)
+        {
+            maxY = j->getCoords().getY();
+        }
+    }
+    std::cout<<"max x :" << maxX << " min X :"<<minX << " max y :" << maxY << " min Y :"<<minY;
+    std::ostringstream oss;
+    oss << "Graphe original";
+    s.addencadrer(maxX,minX,maxY,minY, 0 ,0 ,oss.str());
     for (auto sta : m_aretes)
         sta->dessiner(s,0,0, "blue");
     for (auto sta : m_sommets)
         sta->dessiner(s,0,0);
-}
-
-// DESSIN GRAPH PARTIEL
-/*!
- * \fn dessinerKruskal
- * \brief dessin du graphe d'apres l'algo de Kruskal (sommets + aretes necessaires (avec les pondérations))
- * @param s
- * @param kk
- * \author BRIONNE Mathis
- * \version 0.1
- * \date 16 avril 2019
- */
-void Graphe::dessinerKruskal(Svgfile &s , std::vector<std::pair<Arete*,bool>> kk) const {
-    s.transalte(400);
-    for (auto i  : kk) {
-        if (i.second) {
-            i.first->dessiner(s, "green");
-        }
-    }
-    for (auto sta : m_sommets) {
-        sta->dessiner(s);
-    }
-    s.finA();
 }

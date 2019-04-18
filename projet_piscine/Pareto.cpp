@@ -6,8 +6,9 @@
  */
 
 #include "Pareto.h"
-//#include "time.h"
+#include "time.h"
 #include <ctime>
+#include <sstream>
 
 //constructeur destructeur
 Pareto::Pareto()
@@ -38,6 +39,7 @@ Pareto::~Pareto()
  */
 void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes)
 {
+    std::cout<<std::endl;
     clock_t start_t,end_t,end_t2,end_t3;
     start_t =clock();
     std::cout<<std::endl<<"Debut de pareto : "<< start_t<<std::endl;
@@ -108,7 +110,7 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
     // calcul de la somme des pondérations pour chaque solution
     std::cout<<"Fin de la recherche des ponderations totales : ";
     this->totalPond();
-    /*
+
     //Affichage des pondérations de toutes les solutions
     for (int k = 0; k < m_tab_bool.size(); ++k)
     {
@@ -122,7 +124,7 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
         }
         std::cout << ")" << std::endl;
     }
-    std::cout << std::endl;*/
+    std::cout << std::endl;
     end_t2=clock();
     std::cout<<end_t2<<std::endl;
 
@@ -243,18 +245,61 @@ void Pareto::fn_somP(){}
 
 void Pareto::dessiner(Svgfile &svg) {
 
+    int minX=1000000,maxX=0,minY=1000000,maxY=0;
+    for(auto j : m_sommets_tab){
+        if(j->getCoords().getX() < minX)
+        {
+            minX = j->getCoords().getX();
+        }
+        if(j->getCoords().getY() < minY)
+        {
+            minY = j->getCoords().getY();
+        }
+        if(j->getCoords().getX() > maxX)
+        {
+            maxX = j->getCoords().getX();
+        }
+        if(j->getCoords().getY() > maxY)
+        {
+            maxY = j->getCoords().getY();
+        }
+    }
+    std::cout<<"max x :" << maxX << " min X :"<<minX << " max y :" << maxY << " min Y :"<<minY;
+    std::ostringstream oss;
+    oss << "Graphe original";
+    float pondmax0 =0 ,pondmax1=0;
+    for (size_t i =0 ; i < m_tab_somP[0].size() ;i++  )
+    {
+        if (pondmax0 < m_tab_somP[0][i])
+            pondmax0 = m_tab_somP[0][i];
+    }
+    for (size_t i =0 ; i < m_tab_somP[0].size() ;i++  )
+    {
+        if (pondmax1 < m_tab_somP[1][i])
+            pondmax1 = m_tab_somP[1][i];
+    }
+    std::cout<<"pondmax0 : "<<pondmax0<<std::endl;
+    std::cout<<"pondmax1 : "<<pondmax1<<std::endl;
+    svg.addrepere( maxX+50,2*(maxY+50));
+    svg.addencadrer(maxX,minX,maxY,minY,0,maxY+50,"pareto");
     for (size_t j =0 ; j < m_tab_bool.size() ; j++) {
         svg.addA();
-        for (size_t i =0 ; i < m_aretes_tab.size() ; i++) {
-            if( m_tab_bool[j][i])
-                m_aretes_tab[i]->dessiner(svg,0,500,"red","arete","effet");
+        for (size_t i = 0; i < m_aretes_tab.size(); i++) {
+            if (m_tab_bool[j][i])
+                m_aretes_tab[i]->dessiner(svg,  0,  maxY+50, "red", "arete", "effet");
         }
-        for (auto Som : m_sommets_tab)
-        {
-            Som->dessiner(svg,0 ,500,"circle","effet");
+        for (auto Som : m_sommets_tab) {
+            Som->dessiner(svg, 0,  maxY+50, "circle", "effet");
         }
-        svg.addpoint(500+10*j, 100 , "green");
-        svg.finA();
+        if (m_tab_somP[j][0] || m_tab_somP[j][1] != 0) {
+            if (m_front_pare[j]) {
+                svg.addpoint( maxX+50 + 10 * m_tab_somP[j][0],  2*(maxY+50) -10* m_tab_somP[j][1], "green");
+            } else {
+                svg.addpoint( maxX+50 + 10 * m_tab_somP[j][0], 2*(maxY+50) -10* m_tab_somP[j][1], "red");
+            }
+        }
+            svg.finA();
+
     }
 }
 
@@ -277,12 +322,12 @@ void Pareto::calcul_front_pare()
     bool test;
     for(size_t i=0;i<tab.size();i++)
     {
-        if(tab[i].first== false)
+        if(!tab[i].first)
             continue;
 
         for(size_t x=0;x<tab.size();x++)
         {
-            if(tab[x].first== false||x==i)
+            if(!tab[x].first || x == i)
                 continue;
 
             test= true;

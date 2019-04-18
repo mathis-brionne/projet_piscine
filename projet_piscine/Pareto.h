@@ -45,6 +45,8 @@ public:
 
     void fn_somP();
 
+    void dessiner(Svgfile &svg);
+
 private:
 
     std::vector<Sommet*> m_sommets_tab;//liste de nos sommets repris de notre graphe
@@ -56,6 +58,7 @@ private:
 
 
     std::vector<bool> m_front_pare;
+
 
 };
 
