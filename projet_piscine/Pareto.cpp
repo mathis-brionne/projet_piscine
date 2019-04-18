@@ -113,6 +113,7 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
         std::cout << ")" << std::endl;
     }
     std::cout << std::endl;*/
+
     end_t2=clock();
     std::cout<<end_t2<<std::endl;
 
@@ -131,7 +132,17 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
 void Pareto::init_and_search_admis_q2(std::vector<Sommet*>&, std::vector<Arete*>&)
 {
 
+
 }
+//! \fn init_and_calcul_pond()
+//! \brief
+//! \authors BRIONNE,MARTIN,SIROT
+//! \version 0.1
+//! \date 17 avril 2019 23h20
+///
+/// ne peut être effectuer que si les étapes suivante on été réalisé :
+/// initialisation, recherche des solution admissible,
+///
 void Pareto::init_and_calcul_pond()
 {
 
@@ -144,7 +155,7 @@ void Pareto::init_and_calcul_pond()
 //! \date 17 avril 2019 19h20
 ///
 /// ne peut être effectuer que si les étapes suivante on été réalisé :
-/// initialisation, recherche des solution admissible, et recherche des solutions de paretos
+/// initialisation, recherche des solution admissible, calcul des ponds et recherche des solutions de paretos
 ///
 void Pareto::show_solution_front_pare()
 {
@@ -221,6 +232,9 @@ void Pareto::totalPond()
 //! \version 0.2
 //! \date 17 avril 2019 19h20
 //! \return
+///
+/// ne peut être effectuer que si les étapes suivante on été réalisé :
+/// initialisation, recherche des solution admissible, calcul des ponds
 
 void Pareto::calcul_front_pare()
 {
