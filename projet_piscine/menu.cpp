@@ -89,24 +89,17 @@ int choix_algo()
 {
     int choix=0;
 
-    while(choix != 1 && choix != 2)
+    while(choix != 1 && choix != 2 && choix != 3)
     {
         std::cout << "Que voulez-vous afficher ?" << std::endl
                   << "  >> 1. Solution selon Kruskal" << std::endl
-                  << "  >> 2. Toutes les solutions de Pareto" << std::endl;
+                  << "  >> 2. Toutes les solutions de Pareto" << std::endl
+                  << "  >> 3. Solution de Dijktra" << std::endl;
 
         std::cin >> choix;
         std::cout << std::endl;
-
-        switch (choix)
-        {
-            case 1 :
-                return 1;
-            case 2 :
-                return 2;
-        }
-
     }
+    return (int)choix;
 }
 
 
@@ -131,7 +124,28 @@ int choix_ponderation(std::vector<float> pond)
 
        std::cin >> choix;
        std::cout << std::endl;
-
-       return (int)choix;
    }
+   return (int)choix;
+}
+
+/*!
+ * \fn choix_sommetD
+ * \brief permet à l'utilisateur de choisir le sommet de départ pour faire l'algo de Dikjtra
+ * \return int : le num du sommet choisi
+ * \authors SIROT Charlotte
+ * \version 0.1
+ * \date 18 avril 2019
+ */
+int choix_sommetD(std::vector<Sommet*> sommets)
+{
+    int choix=-1;
+
+    while(choix < 0 && choix > sommets.size())
+    {
+        std::cout << "Quel est le sommet de depart pour derouler l'algorithme de Dikjtra ?" << std::endl;
+
+        std::cin >> choix;
+        std::cout << std::endl;
+    }
+    return (int)choix;
 }

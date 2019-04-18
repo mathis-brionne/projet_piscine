@@ -83,7 +83,8 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
     }
 
     end_t=clock();
-    std::cout<<"Fin de la recherche des solutions admissible de pareto : "<<end_t<<std::endl;
+    std::cout<<"Fin de la recherche des solutions admissibles de pareto : "<<end_t
+             <<"  (temps ecoule : "<<end_t - start_t<<")"<<std::endl;
 
     /// initialisation de m_somP
     size_t nbr_pond= m_aretes_tab[0]->getPonderations().size();
@@ -97,7 +98,7 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
          m_tab_somP.push_back(ponds);
 
     // calcul de la somme des pondérations pour chaque solution
-    std::cout<<"Fin de la recherche des ponderations total : ";
+    std::cout<<"Fin de la recherche des ponderations totales : ";
     this->totalPond();
     /*
     //Affichage des pondérations de toutes les solutions
@@ -116,14 +117,17 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
     std::cout << std::endl;*/
 
     end_t2=clock();
-    std::cout<<end_t2<<std::endl;
+    std::cout<<end_t2
+             <<"  (temps ecoule : "<<end_t2 - end_t<<")"<<std::endl;
 
     ///RECHERCHE DES SOLUTIONS DE LA FRONTIERE DE PORETO
 
     std::cout<<"Fin de la recherche des solutions de la frontiere de Pareto : ";
     this->calcul_front_pare();
     end_t3=clock();
-    std::cout<<end_t3<<std::endl;
+    std::cout<<end_t3
+             <<"  (temps ecoule : "<<end_t3 - end_t2<<")"<<std::endl
+             <<"  (Temps total ecoule : "<<end_t3 - start_t<<")"<<std::endl;
 
     //affichage des solutions de la frontière de poreto
     this->show_solution_front_pare();
