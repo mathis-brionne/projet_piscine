@@ -18,14 +18,17 @@ Pareto::~Pareto()
 
 }
 
+
+//recherche des solutions admissibles
 /*!
- * \fn void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes)
+ * \fn initialisation_q2
  * \brief  initialisation des attributs + recherche des solutions admissible + calcul des ponderations de ces solutions + recherche des solutions de la frontière de Pareto
+ * @param sommets
+ * @param aretes
  * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.3
  * \date 17 avril 2019
  */
-///recherche des solutions admissibles
 void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes)
 {
     clock_t start_t,end_t,end_t2,end_t3;
@@ -132,29 +135,32 @@ void Pareto::init_and_search_admis_q2(std::vector<Sommet*>&, std::vector<Arete*>
 
 
 }
-//! \fn init_and_calcul_pond()
-//! \brief
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.1
-//! \date 17 avril 2019 23h20
-///
-/// ne peut être effectuer que si les étapes suivante on été réalisé :
-/// initialisation, recherche des solution admissible,
-///
+
+/*!
+ * \fn init_and_calcul_pond
+ * \brief
+ * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ *
+ * ne peut être effectuer que si les étapes suivante on été réalisé :
+ * initialisation, recherche des solution admissible,
+ *
+ */
 void Pareto::init_and_calcul_pond()
 {
 
 }
 
-//! \fn void Pareto::show_solution_front_pare()
-//! \brief  affichage des solutions de la frontière de Pareto
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.1
-//! \date 17 avril 2019 19h20
-///
-/// ne peut être effectuer que si les étapes suivante on été réalisé :
-/// initialisation, recherche des solution admissible, calcul des ponds et recherche des solutions de paretos
-///
+/*!
+ * \fn show_solution_front_pare
+ * \brief  affichage des solutions de la frontière de Pareto
+ * \authors BRIONNE,MARTIN,SIROT
+ * \version 0.1
+ * \date 17 avril 2019 19h20
+ *
+ * ne peut être effectuer que si les étapes suivante on été réalisé :
+ * initialisation, recherche des solution admissible, calcul des ponds et recherche des solutions de Pareto
+ *
+ */
 void Pareto::show_solution_front_pare()
 {
     size_t nbr_pond= m_aretes_tab[0]->getPonderations().size();
