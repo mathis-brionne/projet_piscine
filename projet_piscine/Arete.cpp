@@ -33,15 +33,6 @@ void Arete::dessiner(Svgfile &s, std::string color) const {
     s.addG();
     s.addLine(getSommetD()->getCoords().getX(),getSommetD()->getCoords().getY(),getSommetA()->getCoords().getX(), getSommetA()->getCoords().getY(), color);
     s.addText((getSommetD()->getCoords().getX() + getSommetA()->getCoords().getX())/2, (getSommetD()->getCoords().getY() + getSommetA()->getCoords().getY())/2,oss117.str(),"black");
-    /*std::string text="(";
-    for(size_t i=0; i<m_ponderations.size(); i++)
-    {
-        text = text + m_ponderations[i];
-        if(i<m_ponderations.size()-1)
-            text = text + ";";
-    }
-    text = text + ")";
-    s.addText((getSommetD()->getCoords().getX() + getSommetA()->getCoords().getX())/2, (getSommetD()->getCoords().getY() + getSommetA()->getCoords().getY())/2,text,"black");*/
     s.finG();
 
 }

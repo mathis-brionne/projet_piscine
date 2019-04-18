@@ -21,5 +21,6 @@ std::pair<std::string,std::string> choix_graph();
 int choix_algo();
 int choix_ponderation(std::vector<float> pond);
 int choix_sommetD(std::vector<Sommet*> sommets);
+void choix_fin();
 
 #endif //PROJET_PISCINE_MENU_H
