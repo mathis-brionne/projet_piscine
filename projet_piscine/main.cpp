@@ -110,7 +110,11 @@ int main() {
     }
     if(algo==3)
     {
-        graph.initialiser_pareto_q3();
+        size_t indice_P = 0;//indice de la ponderation de kruskal
+        std::cout<<"Quel ponderation considerez-vous comme une distance ?"<<std::endl;
+
+        std::cin>>indice_P;
+        graph.initialiser_pareto_q3(indice_P);
 
         std::cout<<" Voulez-vous afficher les graphes obtenue ?"<<std::endl
                  <<" 0. NON"<<std::endl
@@ -121,7 +125,6 @@ int main() {
 
         if(choix==1)
         {
-
             //DESSIN
             graph.dessinerPareto(Svg);
             graph.dessiner(Svg);

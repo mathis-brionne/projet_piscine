@@ -155,7 +155,7 @@ void Pareto::dijkstra(size_t indice_P)
         * !!!!!      ATTENTION PEUT ETRE DANGEUREUX!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         */
-      m_tab_somP[x].push_back(plus_long_chemin);
+     // m_tab_somP[x].push_back(plus_long_chemin);
 
       /*
       //affichage

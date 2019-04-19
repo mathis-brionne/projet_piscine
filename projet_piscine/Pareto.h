@@ -33,7 +33,7 @@ public:
     //Methodes
     void initialisation_q2(std::vector<Sommet*>&, std::vector<Arete*>&);///DEPRECEATED
 
-    void initialisation_q3(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes);
+    void initialisation_q3(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes,size_t indice_P);
 
     void init_and_search_admis_q2();
     void init_and_search_admis_q3();

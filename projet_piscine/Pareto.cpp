@@ -100,7 +100,7 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
     std::cout<<"Fin de Pareto"<<std::endl<<std::endl;
 }
 
-void Pareto::initialisation_q3(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes)
+void Pareto::initialisation_q3(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes,size_t indice_P)
 {
     clock_t start_t,end_t,end_t2,end_t3;
     start_t =clock();
@@ -135,7 +135,7 @@ void Pareto::initialisation_q3(std::vector<Sommet*>& sommets,std::vector<Arete*>
     /// calcul de la somme des pondérations pour chaque solution
     std::cout<<"Fin de la recherche des ponderations total : ";
     this->totalPond();  //on calcul un temps en plus inutilement
-    this->dijkstra(0);
+    this->dijkstra(indice_P);
 
     /*
     //Affichage des pondérations de toutes les solutions
