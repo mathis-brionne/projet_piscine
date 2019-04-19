@@ -187,12 +187,19 @@ bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::
  * \brief permet de determiner la connexité d'un graphe
  * \return 1 si le graphe partiel est connexe, 0 sinon
  * \author MARTIN Willy
- * \version 0.5
- * \date 16 avril 2019
+ * \version 0.7
+ * \date 19 avril 2019 14h00
  */
 bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vector<Sommet*>& m_sommets )
 {
+    //aretes est le tableau d'aretes principale
+    //b_aretes est le tableau de booleen permettant de determiner le sous graphe
+    //m_sommets correspond aux sommets du graphe initiale
+
     //on admet que les tableau aretes et b_aretes sont de même dimension
+    /*affirmation precedente fausse la taille de b_aretes = taille aretes +1
+     * afin de parcourir toute les étapes et reperer quand on s'arrete dans le sous prog précèdent*/
+
 
     ///1 ere partie de l'algorithme
     //on recupere une copie de liens, puis on erase les liens =0
@@ -205,8 +212,9 @@ bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vecto
             i--;
         }
     }
+
     //si le nombre d'arete est infèrieur à l'ordre du graphe, alors il n'est pas connexe
-    if(m_sommets.size()-1<aretes.size())
+    if(aretes.size() < m_sommets.size() - 1)
         return false;
 
 

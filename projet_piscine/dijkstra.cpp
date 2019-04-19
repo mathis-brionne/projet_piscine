@@ -107,7 +107,7 @@ void Pareto::dijkstra(size_t indice_P)
                    else if(m_aretes_tab[t]->getSommetD()==m_sommets_tab[h])
                        sommet_voisin=r_sommets.find(m_aretes_tab[t]->getSommetA())->second;
                    else
-                       std::cout<<"probleme dikjstra"<<std::endl;
+                       throw std::runtime_error("probleme dikjstra");
 
                    if(tab[z][sommet_voisin].first==false)
                       if(tab[z][sommet_voisin].second > tab[z][h].second+m_aretes_tab[t]->getPond(indice_P))
@@ -155,7 +155,7 @@ void Pareto::dijkstra(size_t indice_P)
         * !!!!!      ATTENTION PEUT ETRE DANGEUREUX!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         */
-      // m_tab_somP[x].push_back(plus_long_chemin);
+      m_tab_somP[x].push_back(plus_long_chemin);
 
       /*
       //affichage

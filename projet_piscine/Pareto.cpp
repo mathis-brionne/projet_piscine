@@ -115,8 +115,8 @@ void Pareto::initialisation_q3(std::vector<Sommet*>& sommets,std::vector<Arete*>
      *
      * */
     /// RECHERCHE DES SOLUTIONS ADMISSIBLE
-    std::cout<<"Fin de la recherche des solutions admissible de pareto : ";
-    this->init_and_search_admis_q2();
+    std::cout<<"Fin de la recherche des solutions admissible de pareto (pour la recherche de distance) : ";
+    this->init_and_search_admis_q3();
     end_t=clock();
     std::cout<<end_t<<std::endl;
 
@@ -212,6 +212,52 @@ void Pareto::init_and_search_admis_q2()
         ///FIN COMPTEUR
     }
 }
+/*!
+ * \fn init_and_search_admis_q3()
+ * \brief  recherche des solutions admissible dans le cadre de la question 3
+ * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.4
+ * \date 19 avril 2019 14h00
+ */
+void Pareto::init_and_search_admis_q3()
+{
+    /// RECHERCHE DES SOLUTIONS ADMISSIBLE
+    std::vector<bool> temp_graph;
+    //on créé un vecteur booléen de la taille des aretes
+    for(size_t i=0;i<m_sommets_tab.size()-1;i++)
+        temp_graph.push_back(true);
+    for(size_t i=m_sommets_tab.size()-1;i<=m_aretes_tab.size();i++)/** /!\ */
+        temp_graph.push_back(false);
+
+    size_t i=0;
+    int somme_aretes_temp=0;
+    while(temp_graph[m_aretes_tab.size()]!=true)
+    {
+        somme_aretes_temp=0;
+        for(auto && j : temp_graph)
+        {
+            if(j==true)
+                somme_aretes_temp++;
+        }
+
+        if (somme_aretes_temp>=m_sommets_tab.size()-1)
+        {
+            if( connexite( m_aretes_tab ,temp_graph,m_sommets_tab))
+                m_tab_bool.push_back(temp_graph);
+        }
+
+        /// DEBUT COMPTEUR +1
+        i=0;
+        while(temp_graph[i]!=false)
+        {
+            temp_graph[i]=false;
+            i++;
+        }
+        temp_graph[i]= true;
+        ///FIN COMPTEUR
+    }
+
+}
 
 /*!
  * \fn init_and_calcul_pond
@@ -242,9 +288,6 @@ void Pareto::init_and_calcul_pond()
  */
 void Pareto::show_solution_front_pare()
 {
-    /*
-     * AJOUTER LA PONDERATION TOTAL DE CE GRAPHE
-     * */
     size_t nbr_pond= m_aretes_tab[0]->getPonderations().size();
     //affichage des solutions de la frontière de Pareto
     std::cout<<std::endl<<"Les solutions de la frontiere de Pareto sont : "<<std::endl;
@@ -340,7 +383,7 @@ void Pareto::dessiner(Svgfile &svg) {
             maxY = j->getCoords().getY();
         }
     }
-    std::cout<<"max x :" << maxX << " min X :"<<minX << " max y :" << maxY << " min Y :"<<minY;
+  //  std::cout<<"max x :" << maxX << " min X :"<<minX << " max y :" << maxY << " min Y :"<<minY;
     std::ostringstream oss;
     oss << "Graphe original";
     float pondmax0 =0 ,pondmax1=0;
@@ -354,8 +397,8 @@ void Pareto::dessiner(Svgfile &svg) {
         if (pondmax1 < m_tab_somP[1][i])
             pondmax1 = m_tab_somP[1][i];
     }
-    std::cout<<"pondmax0 : "<<pondmax0<<std::endl;
-    std::cout<<"pondmax1 : "<<pondmax1<<std::endl;
+    //std::cout<<"pondmax0 : "<<pondmax0<<std::endl;
+    //std::cout<<"pondmax1 : "<<pondmax1<<std::endl;
     svg.addrepere( maxX+50,2*(maxY+50));
     svg.addencadrer(maxX,minX,maxY,minY,0,maxY+50,"pareto");
     for (size_t j =0 ; j < m_tab_bool.size() ; j++) {
@@ -414,7 +457,7 @@ void Pareto::calcul_front_pare()
                 if(tab[i].second[j]>tab[x].second[j])
                     test=false;
             }
-            if(test==true)
+            if(test)
                 tab[x].first=false;
         }
     }
