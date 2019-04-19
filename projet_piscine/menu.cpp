@@ -110,6 +110,7 @@ std::pair<std::string,std::string> choix_graph()
                         throw std::runtime_error("Erreur");
                 }
                 break;
+
             default:
                 throw std::runtime_error("Erreur");
         }
@@ -261,16 +262,17 @@ void choix_fin()
                   << "  2. Non" << std::endl << std::endl;
         std::cin >> choix;
         std::cout << std::endl;
+    }
 
-        switch(choix)
-        {
-            case 1 :
-                main();
-                break;
-            case 2:
-                system("exit");
-            default:
-                throw std::runtime_error("erreur");
-        }
+    switch(choix)
+    {
+        case 1 :
+            main();
+            break;
+        case 2:
+            system("exit");
+            break;
+        default:
+            throw std::runtime_error("erreur sortie");
     }
 }
