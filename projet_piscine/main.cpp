@@ -1,10 +1,12 @@
 
-//! \file main.cpp
-//! \brief
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.02
-//! \date 15 avril 2019
-//! \return
+/*!
+ * \file main.cpp
+ * \brief
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.02
+ * \date 15 avril 2019
+ * \
+ */
 
 #include <iostream>
 #include "Graphe.h"
@@ -13,6 +15,11 @@
 
 int main();
 
+/*!
+ * \fn main
+ * \brief Fonction principale : execution
+ * \return 0 --> fin du programme
+ */
 int main() {
     Svgfile Svg;
     std::cout << "Projet PISCINE" << std::endl
@@ -28,28 +35,26 @@ int main() {
 
     int algo = 0;
     algo = choix_algo();
-
+    std::vector<std::vector<std::pair<Arete*,bool>>> kks;
     std::vector<std::pair<Arete*,bool>> kk;
     if(algo == 1)
     {
-        int choix_pond;
-        choix_pond = choix_ponderation(graph.getAretes()[0]->getPonderations());
-
-        std::cout<<"Recherche kruskal en fonction de la pond :";
-        kk=graph.kruskal(choix_pond);
-        std::cout<<" OK "<<std::endl<<std::endl;
-
-        std::vector<float> totalPondGraph;
-        totalPondGraph = totalPond(kk);
-        std::cout << "Total des ponderations du graphe :" << std::endl
-                  << " (";
-        for(size_t i=0; i<totalPondGraph.size(); i++)
-        {
-            std::cout << totalPondGraph[i];
-            if(i < totalPondGraph.size()-1)
-                std::cout << ";";
+        //choix_pond = choix_ponderation(graph.getAretes()[0]->getPonderations());
+        for(size_t i = 0 ; i < graph.getAretes()[0]->getPonderations().size();i++){
+            std::cout<<"Recherche kruskal en fonction de la pond :";
+           kks.push_back(kk=graph.kruskal(i));
         }
-        std::cout << ")" << std::endl << std::endl;
+
+        for(size_t i = 0 ; i < kks.size()-1;i++) {
+
+            std::cout<<"Recherche kruskal en fonction de la pond :"<< i<<std::endl;
+            for (auto kk : kks[i])
+            {
+                if(kk.first)
+                    kk.first->getID();
+            }
+            std::cout<<" OK "<<std::endl<<std::endl;
+        }
         /*
         std::cout << "Connexite :" << std::endl
                   << connexite(kk,graph.getSommets()) << std::endl << std::endl;
@@ -69,6 +74,7 @@ int main() {
     if(algo==2)
     {
         graph.initialiser_pareto();
+        graph.dessinerPareto(Svg);
     }
 
     /*if(algo==2)
@@ -111,7 +117,13 @@ int main() {
     graph.dessiner(Svg);
 
     if(algo == 1)
-        graph.dessinerKruskal(Svg ,kk);
+    {
+        for(size_t i = 0 ; i < graph.getAretes()[0]->getPonderations().size();i++)
+        {
+            graph.dessinerKruskal(Svg ,kks[i] , i );
+        }
+    }
+
 
     /*
     int choix;
@@ -134,6 +146,11 @@ int main() {
                 return 0;
         }
     }*/
+    Svg.~Svgfile();
+    system("output.html");
+    Svg.~Svgfile();
+    // Continuer ou Quitter ?
+    choix_fin();
 
     return 0;
 }

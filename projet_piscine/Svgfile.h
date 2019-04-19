@@ -2,6 +2,14 @@
 // Created by matbr on 15/04/2019.
 //
 
+/*!
+ * \file Svgfile.h
+ * \class Svgfile
+ * \brief Classe pour les objets Svg
+ * \author BRIONNE Mathis
+ * \version 0.2
+ */
+
 #ifndef PROJET_PISCINE_SVGFILE_H
 #define PROJET_PISCINE_SVGFILE_H
 
@@ -53,13 +61,34 @@ public:
 
     void endli();
 
-    void transalte(int scale);
+    void transalte(int scaleX ,int scaleY);
 
     void finG();
 
     void addG();
 
+    void addA();
+
     void finA();
+
+    void addLine(double x1, double y1, double x2, double y2, std::string color ,std::string clas);
+
+    void addText(double x, double y, std::string text,int nbcarac, std::string color, std::string clas);
+
+    void addDisk(double x, double y, std::string color, std::string clas);
+
+    void addText(double x, double y, double val, std::string color, std::string clas);
+
+    void addText(double x, double y, std::string text, std::string color, std::string clas);
+
+    void addpoint(double x, double y, std::string color);
+
+    void addrepere(int x, int y);
+
+
+    void addencadrer(int maxX, int minX, int maxY, int minY,int scaleX,int scaleY, std::string text);
+
+    void transalte(int scale);
 };
 
 std::string makeRGB(int r, int g, int b);

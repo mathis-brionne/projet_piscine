@@ -1,13 +1,14 @@
+/*!
+ * \file Coords.h
+ * \class Coords
+ * \brief Classe representant les objets coordonnees
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.1
+ * \date 15 avril 2019
+ */
+
 #ifndef PROJET_PISCINE_COORDS_H
 #define PROJET_PISCINE_COORDS_H
-
-
-//! \file Coords.h
-//! \brief
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.02
-//! \date 15 avril 2019
-//! \return
 
 class Coords {
 private:

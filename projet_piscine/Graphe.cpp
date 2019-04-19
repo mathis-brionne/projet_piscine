@@ -1,4 +1,3 @@
-
 //! \file Graph.cpp
 //! \brief
 //! \authors BRIONNE,MARTIN,SIROT
@@ -6,6 +5,7 @@
 //! \date 17 avril 2019 8h00
 //! \return
 
+#include <sstream>
 #include "Graphe.h"
 
 /// CONSTRUCTEUR DESTRUCTEUR
@@ -142,22 +142,31 @@ Graphe::~Graphe()
 // DESSIN
 void Graphe::dessiner(Svgfile &s) const {
 
-    for (auto sta : m_aretes)
-        sta->dessiner(s, "blue");
-    for (auto sta : m_sommets)
-        sta->dessiner(s);
-}
-
-// DESSIN GRAPH PARTIEL
-void Graphe::dessinerKruskal(Svgfile &s , std::vector<std::pair<Arete*,bool>> kk) const {
-    s.transalte(400);
-    for (auto i  : kk) {
-        if (i.second) {
-            i.first->dessiner(s, "green");
+    int minX=1000000,maxX=0,minY=1000000,maxY=0;
+    for(auto j : m_sommets){
+        if(j->getCoords().getX() < minX)
+        {
+            minX = j->getCoords().getX();
+        }
+        if(j->getCoords().getY() < minY)
+        {
+            minY = j->getCoords().getY();
+        }
+        if(j->getCoords().getX() > maxX)
+        {
+            maxX = j->getCoords().getX();
+        }
+        if(j->getCoords().getY() > maxY)
+        {
+            maxY = j->getCoords().getY();
         }
     }
-    for (auto sta : m_sommets) {
-        sta->dessiner(s);
-    }
-    s.finA();
+    std::cout<<"max x :" << maxX << " min X :"<<minX << " max y :" << maxY << " min Y :"<<minY;
+    std::ostringstream oss;
+    oss << "Graphe original";
+    s.addencadrer(maxX,minX,maxY,minY, 0 ,0 ,oss.str());
+    for (auto sta : m_aretes)
+        sta->dessiner(s,0,0, "blue");
+    for (auto sta : m_sommets)
+        sta->dessiner(s,0,0);
 }

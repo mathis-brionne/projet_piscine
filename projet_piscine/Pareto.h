@@ -1,10 +1,11 @@
-
-//! \file Pareto.h
-//! \brief
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.2
-//! \date 17 avril 2019 19h20
-//! \return
+/*!
+ * \file Pareto.h
+ * \class Pareto
+ * \brief  bibliotheque pour les fonctions permettant de faire Pareto
+ * \authors BRIONNE,MARTIN,SIROT
+ * \version 0.1
+ * \date 17 avril 2019
+ */
 
 #ifndef PROJET_PISCINE_PARETO_H
 #define PROJET_PISCINE_PARETO_H
@@ -12,12 +13,14 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
+#include "Svgfile.h"
 #include <unordered_map>
 #include "Arete.h"
 #include "Sommet.h"
 
 bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vector<Sommet*>& m_sommets );
 bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::vector<Sommet*>& m_sommets );
+
 
 
 class Pareto
@@ -40,8 +43,10 @@ public:
 
     //PRIVER
     void totalPond();
+
     void calcul_front_pare();
 
+    void dessiner(Svgfile &svg);
 
 private:
 

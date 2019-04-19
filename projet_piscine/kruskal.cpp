@@ -1,27 +1,28 @@
+/*!
+ * \file kruskal.c
+ *  \brief  appartient à la class Graphe
+ * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.3
+ */
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
 #include <unordered_set>
 #include <unordered_map>
+#include <sstream>
 #include "Graphe.h"
 
 
-//!
-//! \file kruskal.c
-//! \brief  appartient à la class Graphe
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.3
-//! \date 15 avril 2019
-//! \return
-
-
-//! \fn std::vector<std::pair<Arete*,bool>> Graph::kruskal(int)
-//! \brief
-//! \author MARTIN
-//! \version 0.5
-//! \date 15 avril 2019
-//! \return l'ensemble des pointeur sur aretes avec un état d'existance ou non (0 inactif, 1 present)
-
+/*!
+ * \fn kruskal
+ * \brief algo Kruskal
+ * @param num_pond
+ * \return vector<pair<>> (l'ensemble des pointeur sur aretes avec un état d'existance ou non (0 inactif, 1 present))
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.5
+ * \date 17 avril 2019
+ */
 std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondéré
 {
     ///declaration et initialisation
@@ -41,6 +42,11 @@ std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondér�
     /// algo kruskal
     //on trie les aretes par ordre du poids (en fonction d'une unique pondération
     //la fonction sort n'accepte pas des variables aux niveaux de sa fonction, nous somme donc obligé de faire un switch
+
+    std::sort(temp_liens.begin(), temp_liens.end(),[num_pond](std::pair<Arete*,bool> a1,std::pair<Arete*,bool> a2)
+    {return (a2.first)->getPond(num_pond) > (a1.first)->getPond(num_pond);} );
+
+    /*
     switch (num_pond)
     {
         case 0 :
@@ -61,7 +67,7 @@ std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondér�
             break;
         default:
             throw std::runtime_error(" kruskal : numéro de pondération incorrecte");
-    }
+    }*/
 
     //tant que c'est pas connexe (car obligatoirement connexe) on regarde chaque aretes next
     //si le numero d'aretes est supèrieur à la taille du tableau
@@ -112,6 +118,41 @@ std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondér�
 // retourne l'ensemble du graphe ( pointeur sur aretes et booléen d'activation ou non des aretes
 /// attention -> passage en copie => poids important (possibilité de le déclarer en pointeur avec passage du pointeur)
     return temp_liens;
+}
+
+void Graphe::dessinerKruskal(Svgfile &s, std::vector<std::pair<Arete *, bool>> kk , int nb) const {
+    int minX=1000000,maxX=0,minY=1000000,maxY=0;
+    for(auto j : m_sommets){
+        if(j->getCoords().getX() < minX)
+        {
+            minX = j->getCoords().getX();
+        }
+        if(j->getCoords().getY() < minY)
+        {
+            minY = j->getCoords().getY();
+        }
+        if(j->getCoords().getX() > maxX)
+        {
+            maxX = j->getCoords().getX();
+        }
+        if(j->getCoords().getY() > maxY)
+        {
+            maxY = j->getCoords().getY();
+        }
+    }
+    std::cout<<"max x :" << maxX << " min X :"<<minX << " max y :" << maxY << " min Y :"<<minY;
+    std::ostringstream oss;
+    oss << "Kruskal ponderation :"<<nb+1;
+    s.addencadrer(maxX,minX,maxY,minY, maxX+50 + (maxX+50)*nb ,0 ,oss.str());
+    for (auto i  : kk)
+    {
+        if (i.second)
+        {
+            i.first->dessiner(s, maxX+50 + (maxX+50)*nb ,0,nb, "green");
+        }
+    }
+    for (auto sta : m_sommets)
+        sta->dessiner(s,  maxX+50 + (maxX+50)*nb ,0 );
 }
 
 
