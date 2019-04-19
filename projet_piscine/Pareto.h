@@ -30,6 +30,8 @@ public:
     //Methodes
     void initialisation_q2(std::vector<Sommet*>&, std::vector<Arete*>&);///DEPRECEATED
 
+    void initialisation_q3(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes);
+
     void init_and_search_admis_q2();
     void init_and_calcul_pond();
     void show_solution_front_pare();

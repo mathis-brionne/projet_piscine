@@ -93,11 +93,77 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
 
 }
 
+void Pareto::initialisation_q3(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes)
+{
+    clock_t start_t,end_t,end_t2,end_t3;
+    start_t =clock();
+    std::cout<<std::endl<<"Debut de pareto avec calcul de meilleur distance: "<< start_t<<std::endl;
+
+    //initialisation des données
+    m_sommets_tab =sommets;
+    m_aretes_tab = aretes;
+
+    /*
+     *
+     * faire idem mais pour question 3 ( prend plus de solution partiel
+     *
+     * */
+    /// RECHERCHE DES SOLUTIONS ADMISSIBLE
+    this->init_and_search_admis_q2();
+    end_t=clock();
+    std::cout<<"Fin de la recherche des solutions admissible de pareto : "<<end_t<<std::endl;
+
+    ///RECHERCHE DES POIDS DE CHAQUE SOUS GRAPHE
+
+    /// initialisation de m_somP
+    size_t nbr_pond= m_aretes_tab[0]->getPonderations().size();
+    std::vector<float> ponds;
+    for(size_t j=0;j<nbr_pond;j++)
+        ponds.push_back(0);
+    size_t nbr_sol=m_tab_bool.size();
+    for(size_t i=0;i<nbr_sol;i++)
+        m_tab_somP.push_back(ponds);
+
+    /// calcul de la somme des pondérations pour chaque solution
+    std::cout<<"Fin de la recherche des ponderations total : ";
+    this->totalPond();
+
+    this->dijkstra(1);
+
+    /*
+    //Affichage des pondérations de toutes les solutions
+    for (int k = 0; k < m_tab_bool.size(); ++k)
+    {
+        std::cout << "Solution n°" << k << " :" << std::endl
+                  << " (";
+        for(size_t i=0; i<m_aretes_tab[0]->getPonderations().size(); i++)
+        {
+            std::cout << m_tab_somP[k][i];
+            if(i < nbr_pond-1)
+                std::cout << ";";
+        }
+        std::cout << ")" << std::endl;
+    }
+    std::cout << std::endl;*/
+
+    end_t2=clock();
+    std::cout<<end_t2<<std::endl;
+
+    ///RECHERCHE DES SOLUTIONS DE LA FRONTIERE DE PORETO
+    std::cout<<"Fin de la recherche des solutions de la frontiere de Pareto : ";
+    this->calcul_front_pare();
+    end_t3=clock();
+    std::cout<<end_t3<<std::endl;
+
+    //affichage des solutions de la frontière de pareto
+    this->show_solution_front_pare();
+
+    std::cout<<"Fin de Pareto"<<std::endl<<std::endl;
+}
+
 void Pareto::init_and_search_admis_q2()
 {
-
     /// RECHERCHE DES SOLUTIONS ADMISSIBLE
-
     std::vector<bool> temp_graph;
     //on créé un vecteur booléen de la taille des aretes
     for(size_t i=0;i<m_sommets_tab.size()-1;i++)
@@ -139,8 +205,9 @@ void Pareto::init_and_search_admis_q2()
         temp_graph[i]= true;
         ///FIN COMPTEUR
     }
-
 }
+
+
 //! \fn init_and_calcul_pond()
 //! \brief
 //! \authors BRIONNE,MARTIN,SIROT
@@ -210,7 +277,7 @@ void Pareto::show_solution_front_pare()
 void Pareto::totalPond()
 {
     size_t nb_pond = m_aretes_tab[0]->getPonderations().size();
-    size_t nb_sol=m_tab_bool.size();
+    size_t nb_sol = m_tab_bool.size();
 
     std::vector<float> temp_pond;
 
@@ -226,7 +293,7 @@ void Pareto::totalPond()
             {
                 // k --> n° de la ponderation
                 for(size_t k=0; k < nb_pond; k++)
-                    m_tab_somP[i][k] = m_tab_somP[i][k] + m_aretes_tab[j]->getPond(k);
+                    m_tab_somP[i][k] = m_tab_somP[i][k] + temp_pond[k];
             }
         }
     }

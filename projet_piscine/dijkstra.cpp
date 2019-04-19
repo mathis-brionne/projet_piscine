@@ -18,6 +18,12 @@
 //! \date 18 avril 2019 17h00
 //! \return
 
+/// ce sous prog recoit en paramètre l'indice de pondérations utiliser
+/// il realise un dijkstra particulier en ce basant sur l'indice donnée (indice P est l'indice où est stockés les distance entre deux points
+/// ce sous programme permet de calculer les distances totals (sommes) de chaque sous graphe et de mettre cette somme dans m_somP (indice_P)
+/// !!! il ajoute également à m_somP une valeur en mode push_back qui est la distance maximal !!!
+
+
 void Pareto::dijkstra(size_t indice_P)
 {
     ///IDENTIFICATION DES SOMMETS ET DES ARETES
@@ -37,8 +43,9 @@ void Pareto::dijkstra(size_t indice_P)
         adj_sommets[ r_sommets.find (m_aretes_tab[i]->getSommetD())->second ].push_back(m_aretes_tab[i]);
     }
 
+/*
     //test d'affichage des ids des aretes adjacentes
-   /*
+
     for(size_t i=0;i<m_sommets_tab.size();i++)
     {
         std::cout<< "le sommet "<<i<<" est adjacent a : ";
@@ -52,7 +59,7 @@ void Pareto::dijkstra(size_t indice_P)
    float  infini = 30000;
 
    ///declaration du tableau de kruskal
-    std::pair<bool,float> tab[m_sommets_tab.size()][m_sommets_tab.size()];
+   std::pair<bool,float> tab[m_sommets_tab.size()][m_sommets_tab.size()];
 
 
 
@@ -67,9 +74,9 @@ void Pareto::dijkstra(size_t indice_P)
        for(size_t i=0;i<m_sommets_tab.size();i++)
            tab[i][i]={true,0};
 
-       ///boucle permettant de réaliser tout
-       //on parcour notre tableau de dijkstra en hauteur
-       // autrement dit on recherche les solutions de dijkstra en partant de tous les points
+       ///boucle permettant de réaliser tout pour un sous graphe donnée
+       // On parcourt notre tableau de dijkstra en hauteur
+       // Autrement dit on recherche les solutions de dijkstra en partant de tous les points
        size_t  h;
        size_t t;
        size_t sommet_voisin;
@@ -99,6 +106,8 @@ void Pareto::dijkstra(size_t indice_P)
                        sommet_voisin=r_sommets.find(m_aretes_tab[t]->getSommetD())->second;
                    else if(m_aretes_tab[t]->getSommetD()==m_sommets_tab[h])
                        sommet_voisin=r_sommets.find(m_aretes_tab[t]->getSommetA())->second;
+                   else
+                       std::cout<<"probleme dikjstra"<<std::endl;
 
                    if(tab[z][sommet_voisin].first==false)
                       if(tab[z][sommet_voisin].second > tab[z][h].second+m_aretes_tab[t]->getPond(indice_P))
@@ -120,27 +129,34 @@ void Pareto::dijkstra(size_t indice_P)
            }
        }
 
-       ///Calcul de la pondération de kruskal
+       ///Calcul de la pondération de kruskal et du plus long chemin
        //somme de toutes les pondérations du tableau de kruskal
        // ( ??on divise pour avoir une distance moyenne ??)
 
        float distance=0;
+       float plus_long_chemin=tab[0][0].second;
        ///affichage de notre tableau
        for(size_t i=0;i<m_sommets_tab.size();i++)
        {
-           std::cout << i <<" : ";
+          // std::cout << i <<" : ";
            for(size_t j=0;j<m_sommets_tab.size();j++)
            {
-               std::cout << tab[i][j].second  << "  ";
+              // std::cout << tab[i][j].second  << "  ";
+               if(tab[i][j].second > plus_long_chemin)
+                   plus_long_chemin=tab[i][j].second;
                distance+=tab[i][j].second;
            }
-           std::cout << std::endl;
+          // std::cout << std::endl;
        }
-       std::cout<<" distance = "<<distance<<std::endl;
+       m_tab_somP[x][indice_P] = distance;
 
-
-       /* option
-        * ///RECHERCHE ET ENREGISTREMENT DU PLUS LONG CHEMIN
+       /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        * !!!!!      ATTENTION PEUT ETRE DANGEUREUX!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         */
+       m_tab_somP[x].push_back(plus_long_chemin);
+       // std::cout<<" distance = "<<distance<<std::endl;
+       // std::cout<<" plus long chemin = "<<plus_long_chemin<<std::endl;
    }
+
 }

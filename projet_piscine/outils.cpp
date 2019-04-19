@@ -10,12 +10,7 @@
 //! \return
 
 
-//! \fn bool connexite_q2(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vector<Sommet*>& m_sommets )
-//! \brief plus optimiser que connexite
-//! \author MARTIN
-//! \version 0.6
-//! \date 17 avril 2019 9h00
-//! \return 1 si le graphe partiel est connexe, 0 sinon
+
 
 //! \fn std::vector<float> totalPond(std::vector<std::pair<Arete*,bool>> kk)
 //! \brief
@@ -49,6 +44,12 @@ std::vector<float> totalPond(std::vector<std::pair<Arete*,bool>> kk)
     return sommes_pond;
 }
 
+//! \fn bool connexite_q2(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vector<Sommet*>& m_sommets )
+//! \brief plus optimiser que connexite
+//! \author MARTIN
+//! \version 0.6
+//! \date 17 avril 2019 9h00
+//! \return 1 si le graphe partiel est connexe, 0 sinon
 bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::vector<Sommet*>& m_sommets )
 {
     //on admet que les tableau aretes et b_aretes sont de même dimension
@@ -119,18 +120,18 @@ bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::
             // on la met à 1 et on met à jour le numero connexe correspondant
                /* b_aretes[num_aretes]=false;                                              inutile*/
 
-                int temp_num_connexe_A=(sommet_connexe.find(aretes[num_aretes]->getSommetA())->second);
-                int temp_num_connexe_D=(sommet_connexe.find(aretes[num_aretes]->getSommetD())->second);
-                for(auto & it :sommet_connexe)
-                {
-                    if(temp_num_connexe_A == it.second)
-                        it.second=temp_num_connexe_D;
-                }
+            int temp_num_connexe_A=(sommet_connexe.find(aretes[num_aretes]->getSommetA())->second);
+            int temp_num_connexe_D=(sommet_connexe.find(aretes[num_aretes]->getSommetD())->second);
+            for(auto & it :sommet_connexe)
+            {
+                if(temp_num_connexe_A == it.second)
+                    it.second=temp_num_connexe_D;
+            }
 
-                //on passe à l'arete suivante
-                num_aretes++;
+            //on passe à l'arete suivante
+            num_aretes++;
 
-                //mise en place d'une estimation afin de gagner en rapidité
+            //mise en place d'une estimation afin de gagner en rapidité
                 /* Afin d'éviter de refaire à chaque fois le calcul de composante connexe,
                  * On ne le refait que si on avait une estimation de 2 et que l'on a ajouté une arete ( possiblement supprimer une compossante)
                  * après cet algo l'estimation est mise à jour au nombre réel de Composantes connexe*/
@@ -230,7 +231,7 @@ bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vecto
         while(sommet_connexe.find(aretes[num_aretes]->getSommetD())->second ==
         (sommet_connexe.find((aretes[num_aretes])->getSommetA()))->second
                 &&num_aretes<size_liens)
-        num_aretes++;
+            num_aretes++;
 
         if(num_aretes<size_liens)
         {
