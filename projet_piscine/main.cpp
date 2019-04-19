@@ -87,11 +87,9 @@ int main() {
     {
         graph.initialiser_pareto_q2();
 
-
         /*
          * Proposer à l'utilisateur de dessiner ou d'afficher à la console les graphes obtenues avec leur pondération total
          * */
-
         std::cout<<" Voulez-vous afficher les graphes obtenue ?"<<std::endl
                 <<" 0. NON"<<std::endl
                 <<" 1. OUI en mode graphique"<<std::endl
@@ -113,12 +111,25 @@ int main() {
     if(algo==3)
     {
         graph.initialiser_pareto_q3();
-        graph.dessinerPareto(Svg);
-        //DESSIN
-        graph.dessiner(Svg);
 
-        Svg.~Svgfile();
-        system("output.html");
+        std::cout<<" Voulez-vous afficher les graphes obtenue ?"<<std::endl
+                 <<" 0. NON"<<std::endl
+                 <<" 1. OUI en mode graphique"<<std::endl
+                 <<" 2. OUI en mode console"<<std::endl;
+        int choix=0;
+        std::cin>>choix;
+
+        if(choix==1)
+        {
+
+            //DESSIN
+            graph.dessinerPareto(Svg);
+            graph.dessiner(Svg);
+            Svg.~Svgfile();
+            system("output.html");
+        }
+        if(choix==2)
+            graph.afficher_Console_Pareto();
 
     }
 

@@ -148,15 +148,19 @@ void Pareto::dijkstra(size_t indice_P)
            }
           // std::cout << std::endl;
        }
+
        m_tab_somP[x][indice_P] = distance;
 
        /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         * !!!!!      ATTENTION PEUT ETRE DANGEUREUX!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         */
-       m_tab_somP[x].push_back(plus_long_chemin);
+      // m_tab_somP[x].push_back(plus_long_chemin);
+
+      /*
+      //affichage
        // std::cout<<" distance = "<<distance<<std::endl;
-       // std::cout<<" plus long chemin = "<<plus_long_chemin<<std::endl;
+       // std::cout<<" plus long chemin = "<<plus_long_chemin<<std::endl;*/
    }
 
 }

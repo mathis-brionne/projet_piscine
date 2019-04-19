@@ -112,11 +112,13 @@ void Pareto::initialisation_q3(std::vector<Sommet*>& sommets,std::vector<Arete*>
 
     /*
      * faire idem mais pour question 3 ( prend plus de solution partiel
+     *
      * */
     /// RECHERCHE DES SOLUTIONS ADMISSIBLE
+    std::cout<<"Fin de la recherche des solutions admissible de pareto : ";
     this->init_and_search_admis_q2();
     end_t=clock();
-    std::cout<<"Fin de la recherche des solutions admissible de pareto : "<<end_t<<std::endl;
+    std::cout<<end_t<<std::endl;
 
     ///RECHERCHE DES POIDS DE CHAQUE SOUS GRAPHE
 
@@ -132,9 +134,8 @@ void Pareto::initialisation_q3(std::vector<Sommet*>& sommets,std::vector<Arete*>
 
     /// calcul de la somme des pondérations pour chaque solution
     std::cout<<"Fin de la recherche des ponderations total : ";
-    this->totalPond();
-
-    this->dijkstra(1);
+    this->totalPond();  //on calcul un temps en plus inutilement
+    this->dijkstra(0);
 
     /*
     //Affichage des pondérations de toutes les solutions
@@ -155,14 +156,13 @@ void Pareto::initialisation_q3(std::vector<Sommet*>& sommets,std::vector<Arete*>
     end_t2=clock();
     std::cout<<end_t2<<std::endl;
 
+    /* LA FRONTIERE DE PARETO VA SE FAIRE EN FONCTION DE 3 ELEMENTS DE PONDERATION J'aime pas ca ...*/
     ///RECHERCHE DES SOLUTIONS DE LA FRONTIERE DE PORETO
     std::cout<<"Fin de la recherche des solutions de la frontiere de Pareto : ";
     this->calcul_front_pare();
     end_t3=clock();
     std::cout<<end_t3<<std::endl;
 
-    //affichage des solutions de la frontière de pareto
-    this->show_solution_front_pare();
 
     std::cout<<"Fin de Pareto"<<std::endl<<std::endl;
 }
@@ -253,7 +253,14 @@ void Pareto::show_solution_front_pare()
     {
         if(m_front_pare[i]==true)
         {
-            std::cout<<" Le graphe admissible numero "<<i<<" appartient a1 la frontiere de pareto:"<<std::endl;
+            std::cout<<" Le graphe admissible numero "<<i<<" appartient a la frontiere de pareto:"<<std::endl
+                    <<" les ponderations total du graphe sont : (";
+            std::cout<<m_tab_somP[i][0];
+            for(size_t k=1;k<m_tab_somP[i].size();k++)
+            {
+                std::cout<<";"<<m_tab_somP[i][k];
+            }
+            std::cout<<")"<<std::endl;
             for(size_t j=0;j<m_tab_bool[i].size();j++)
             {
                 if(m_tab_bool[i][j]==true)
