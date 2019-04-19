@@ -8,131 +8,132 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug"/>
+				<Option working_dir="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug"/>
+				<Option working_dir="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="projet_piscine">
-				<Option output="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug/projet_piscine" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug"/>
+				<Option output="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/projet_piscine.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 projet_piscine"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 projet_piscine"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="projet_piscine/fast">
-				<Option output="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug/projet_piscine" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/cmake-build-debug"/>
+				<Option output="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/projet_piscine.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 projet_piscine/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/charlottesirot/Desktop/ING2/Théorie\ des\ graphes/projet_piscine/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 projet_piscine/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Arete.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Arete.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Arete.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Arete.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Coords.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Coords.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Graphe.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Graphe.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Graphe.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Graphe.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Pareto.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Pareto.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Pareto.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Pareto.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Sommet.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Sommet.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Sommet.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Sommet.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Svgfile.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Svgfile.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/Svgfile.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Svgfile.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/kruskal.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/kruskal.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/main.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/main.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/menu.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/menu.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/menu.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/menu.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/outils.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/outils.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/outils.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/outils.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="/Users/charlottesirot/Desktop/ING2/Théorie des graphes/projet_piscine/projet_piscine/CMakeLists.txt">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

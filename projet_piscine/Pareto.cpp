@@ -114,17 +114,17 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
     //Affichage des pondérations de toutes les solutions
     for (int k = 0; k < m_tab_bool.size(); ++k)
     {
-        std::cout << "Solution n°" << k << " :" << std::endl
-                  << " (";
+        //std::cout << "Solution n°" << k << " :" << std::endl
+          //        << " (";
         for(size_t i=0; i<m_aretes_tab[0]->getPonderations().size(); i++)
         {
-            std::cout << m_tab_somP[k][i];
-            if(i < nbr_pond-1)
-                std::cout << ";";
+            //std::cout << m_tab_somP[k][i];
+          //  if(i < nbr_pond-1)
+          //      std::cout << ";";
         }
-        std::cout << ")" << std::endl;
+       // std::cout << ")" << std::endl;
     }
-    std::cout << std::endl;
+    //std::cout << std::endl;
     end_t2=clock();
     std::cout<<end_t2<<std::endl;
 
@@ -137,7 +137,7 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
              <<"  (Temps total ecoule : "<<end_t3 - start_t<<")"<<std::endl;
 
     //affichage des solutions de la frontière de poreto
-    this->show_solution_front_pare();
+    //this->show_solution_front_pare();
 
     std::cout<<"Fin de Pareto"<<std::endl<<std::endl;
 }
@@ -280,27 +280,68 @@ void Pareto::dessiner(Svgfile &svg) {
     }
     std::cout<<"pondmax0 : "<<pondmax0<<std::endl;
     std::cout<<"pondmax1 : "<<pondmax1<<std::endl;
+    int cpt =0 ;
     svg.addrepere( maxX+50,2*(maxY+50));
     svg.addencadrer(maxX,minX,maxY,minY,0,maxY+50,"pareto");
-    for (size_t j =0 ; j < m_tab_bool.size() ; j++) {
-        svg.addA();
-        for (size_t i = 0; i < m_aretes_tab.size(); i++) {
-            if (m_tab_bool[j][i])
-                m_aretes_tab[i]->dessiner(svg,  0,  maxY+50, "red", "arete", "effet");
-        }
-        for (auto Som : m_sommets_tab) {
-            Som->dessiner(svg, 0,  maxY+50, "circle", "effet");
-        }
-        if (m_tab_somP[j][0] || m_tab_somP[j][1] != 0) {
-            if (m_front_pare[j]) {
-                svg.addpoint( maxX+50 + 10 * m_tab_somP[j][0],  2*(maxY+50) -10* m_tab_somP[j][1], "green");
-            } else {
-                svg.addpoint( maxX+50 + 10 * m_tab_somP[j][0], 2*(maxY+50) -10* m_tab_somP[j][1], "red");
+    if (m_tab_bool.size() > 1500 )
+    {
+        for (size_t j =0 ; j < m_tab_bool.size() ; j++) {
+            if (m_front_pare[j]  || cpt  <1000) {
+                cpt++;
+                svg.addA();
+                for (size_t i = 0; i < m_aretes_tab.size(); i++) {
+                    if (m_front_pare[j]) {
+                        if (m_tab_bool[j][i])
+                            m_aretes_tab[i]->dessiner(svg, 0, maxY + 50, "green", "arete", "effet");
+                    } else {
+                        if (m_tab_bool[j][i])
+                            m_aretes_tab[i]->dessiner(svg, 0, maxY + 50, "red", "arete", "effet");
+                    }
+
+                }
+                for (auto Som : m_sommets_tab) {
+                    Som->dessiner(svg, 0, maxY + 50, "circle", "effet");
+                }
+                if (m_tab_somP[j][0]  !=0|| m_tab_somP[j][1] !=0) {
+                    if (m_front_pare[j]) {
+                        svg.addpoint(maxX + 50 + 10 * m_tab_somP[j][0], 2 * (maxY + 50) - 10 * m_tab_somP[j][1], "green");
+                    } else {
+                        svg.addpoint(maxX + 50 + 10 * m_tab_somP[j][0], 2 * (maxY + 50) - 10 * m_tab_somP[j][1], "red");
+                    }
+                }
+
+                svg.finA();
             }
         }
-            svg.finA();
-
     }
+    else
+    {
+        for (size_t j =0 ; j < m_tab_bool.size() ; j++) {
+            svg.addA();
+            for (size_t i = 0; i < m_aretes_tab.size(); i++) {
+                if (m_front_pare[j]) {
+                    if (m_tab_bool[j][i])
+                        m_aretes_tab[i]->dessiner(svg, 0, maxY + 50, "green", "arete", "effet");
+                } else {
+                    if (m_tab_bool[j][i])
+                        m_aretes_tab[i]->dessiner(svg, 0, maxY + 50, "red", "arete", "effet");
+                }
+
+            }
+            for (auto Som : m_sommets_tab) {
+                Som->dessiner(svg, 0, maxY + 50, "circle", "effet");
+            }
+            if (m_tab_somP[j][0]  !=0|| m_tab_somP[j][1] !=0) {
+                if (m_front_pare[j]) {
+                    svg.addpoint(maxX + 50 + 10 * m_tab_somP[j][0], 2 * (maxY + 50) - 10 * m_tab_somP[j][1], "green");
+                } else {
+                    svg.addpoint(maxX + 50 + 10 * m_tab_somP[j][0], 2 * (maxY + 50) - 10 * m_tab_somP[j][1], "red");
+                }
+            }
+            svg.finA();
+        }
+    }
+    std::cout<<m_tab_bool.size()<<std::endl;
 }
 
 //! \fn void Pareto::calcul_front_pare()

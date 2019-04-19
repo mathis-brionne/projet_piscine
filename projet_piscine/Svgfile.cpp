@@ -697,7 +697,6 @@ extern const std::string svgBallGradients =
         ".arete{\n"
         "stroke-width: 2;\n"
         "stroke-linecap: round;\n"
-        "transition: .2s;\n"
         "cursor: crosshair;\n"
         "stroke-opacity : 0; \n"
         " \n"
@@ -705,6 +704,6 @@ extern const std::string svgBallGradients =
         "a:hover  .arete{\n"
         " stroke-opacity : 1; \n"
         " }"
-        "<style>\n";
+        "</style>\n";
 
 

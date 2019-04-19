@@ -57,7 +57,7 @@ private:
     std::vector<std::vector<float>> m_tab_somP;//liste de nos pondérations pour chaque sous graphe
 
 
-    std::vector<bool> m_front_pare;
+    std::vector<bool> m_front_pare;//pareto
 
 
 };
