@@ -363,7 +363,6 @@ void Pareto::totalPond()
 
 void Pareto::dessiner(Svgfile &svg) {
 
-
     int minX=1000000,maxX=0,minY=1000000,maxY=0;
     for(auto j : m_sommets_tab){
         if(j->getCoords().getX() < minX)
@@ -383,42 +382,93 @@ void Pareto::dessiner(Svgfile &svg) {
             maxY = j->getCoords().getY();
         }
     }
-  //  std::cout<<"max x :" << maxX << " min X :"<<minX << " max y :" << maxY << " min Y :"<<minY;
+    std::cout<<"max x :" << maxX << " min X :"<<minX << " max y :" << maxY << " min Y :"<<minY;
     std::ostringstream oss;
     oss << "Graphe original";
     float pondmax0 =0 ,pondmax1=0;
     for (size_t i =0 ; i < m_tab_somP[0].size() ;i++  )
     {
-        if (pondmax0 < m_tab_somP[0][i])
-            pondmax0 = m_tab_somP[0][i];
+        if (pondmax0 < m_tab_somP[i][0])
+            pondmax0 = m_tab_somP[i][0];
     }
     for (size_t i =0 ; i < m_tab_somP[0].size() ;i++  )
     {
-        if (pondmax1 < m_tab_somP[1][i])
-            pondmax1 = m_tab_somP[1][i];
+        if (pondmax1 < m_tab_somP[i][1])
+            pondmax1 = m_tab_somP[i][1];
     }
-    //std::cout<<"pondmax0 : "<<pondmax0<<std::endl;
-    //std::cout<<"pondmax1 : "<<pondmax1<<std::endl;
+    std::cout<<"pondmax0 : "<<pondmax0<<std::endl;
+    std::cout<<"pondmax1 : "<<pondmax1<<std::endl;
+    float ass0=10,ass1=10;
+    if (pondmax0 > 200 && pondmax0 < 1000)
+        ass0 = 1;
+    if (pondmax1 >1000)
+        ass1 =0.1 ;
+    if (pondmax1 >50 && pondmax1 < 1000)
+        ass1 =1 ;
+    if (pondmax0 > 1000)
+        ass0 =0.1;
+    int cpt =0 ;
     svg.addrepere( maxX+50,2*(maxY+50));
     svg.addencadrer(maxX,minX,maxY,minY,0,maxY+50,"pareto");
-    for (size_t j =0 ; j < m_tab_bool.size() ; j++) {
-        svg.addA();
-        for (size_t i = 0; i < m_aretes_tab.size(); i++) {
-            if (m_tab_bool[j][i])
-                m_aretes_tab[i]->dessiner(svg,  0,  maxY+50, "red", "arete", "effet");
-        }
-        for (auto Som : m_sommets_tab) {
-            Som->dessiner(svg, 0,  maxY+50, "circle", "effet");
-        }
-        if (m_tab_somP[j][0] || m_tab_somP[j][1] != 0) {
-            if (m_front_pare[j]) {
-                svg.addpoint( maxX+50 + 10 * m_tab_somP[j][0],  2*(maxY+50) -10* m_tab_somP[j][1], "green");
-            } else {
-                svg.addpoint( maxX+50 + 10 * m_tab_somP[j][0], 2*(maxY+50) -10* m_tab_somP[j][1], "red");
+    if (m_tab_bool.size() > 1500 )
+    {
+        for (size_t j =0 ; j < m_tab_bool.size() ; j++) {
+            if (m_front_pare[j]  || cpt  <1000) {
+                cpt++;
+                svg.addA();
+                for (size_t i = 0; i < m_aretes_tab.size(); i++) {
+                    if (m_front_pare[j]) {
+                        if (m_tab_bool[j][i])
+                            m_aretes_tab[i]->dessiner(svg, 0, maxY + 50, "green", "arete", "effet");
+                    } else {
+                        if (m_tab_bool[j][i])
+                            m_aretes_tab[i]->dessiner(svg, 0, maxY + 50, "red", "arete", "effet");
+                    }
+
+                }
+                for (auto Som : m_sommets_tab) {
+                    Som->dessiner(svg, 0, maxY + 50, "circle", "effet");
+                }
+                if (m_tab_somP[j][0]  !=0|| m_tab_somP[j][1] !=0) {
+                    if (m_front_pare[j]) {
+                        svg.addpoint(maxX + 50 + ass0 * m_tab_somP[j][0], 2 * (maxY + 50) - ass1 * m_tab_somP[j][1], "green");
+                    } else {
+                        svg.addpoint(maxX + 50 + ass0 * m_tab_somP[j][0], 2 * (maxY + 50) - ass1 * m_tab_somP[j][1], "red");
+                    }
+                }
+
+                svg.finA();
             }
         }
-            svg.finA();
     }
+    else
+    {
+        for (size_t j =0 ; j < m_tab_bool.size() ; j++) {
+            svg.addA();
+            for (size_t i = 0; i < m_aretes_tab.size(); i++) {
+                if (m_front_pare[j]) {
+                    if (m_tab_bool[j][i])
+                        m_aretes_tab[i]->dessiner(svg, 0, maxY + 50, "green", "arete", "effet");
+                } else {
+                    if (m_tab_bool[j][i])
+                        m_aretes_tab[i]->dessiner(svg, 0, maxY + 50, "red", "arete", "effet");
+                }
+
+            }
+            for (auto Som : m_sommets_tab) {
+                Som->dessiner(svg, 0, maxY + 50, "circle", "effet");
+            }
+            if (m_tab_somP[j][0]  !=0|| m_tab_somP[j][1] !=0) {
+                if (m_front_pare[j]) {
+                    svg.addpoint(maxX + 50 + ass0 * m_tab_somP[j][0], 2 * (maxY + 50) - ass1 * m_tab_somP[j][1], "green");
+                } else {
+                    svg.addpoint(maxX + 50 + ass0 * m_tab_somP[j][0], 2 * (maxY + 50) - ass1 * m_tab_somP[j][1], "red");
+                }
+            }
+            svg.finA();
+        }
+    }
+    //std::cout<<m_tab_bool.size()<<std::endl;
 }
 
 //! \fn void Pareto::calcul_front_pare()
