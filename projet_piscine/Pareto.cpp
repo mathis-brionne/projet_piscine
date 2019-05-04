@@ -2,7 +2,7 @@
  * \file Pareto.cpp
  * \brief  les graphes admissibles sont present dans m_tab
  * \authors BRIONNE MAthis, MARTIN Willy, SIROT Charlotte
- * \version 0.02
+ * \version 0.2
  */
 
 #include "Pareto.h"
@@ -11,9 +11,24 @@
 #include <sstream>
 
 //constructeur destructeur
+
+/*!
+ * \fn Pareto
+ * \brief Création de pareto
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.1
+ * \date
+ */
 Pareto::Pareto()
 {}
 
+/*!
+ * \fn ~Pareto
+ * \brief Déstruction de pareto
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.1
+ * \date
+ */
 Pareto::~Pareto()
 {
 
@@ -29,14 +44,14 @@ Pareto::~Pareto()
 
 //recherche des solutions admissibles
 /*!
- * \fn initialisation_q2
- * \brief  initialisation des attributs + recherche des solutions admissible + calcul des ponderations de ces solutions + recherche des solutions de la frontière de Pareto
- * @param sommets
- * @param aretes
- * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.3
- * \date 17 avril 2019
- */
+* \fn initialisation_q2
+* \brief  initialisation des attributs + recherche des solutions admissible + calcul des ponderations de ces solutions + recherche des solutions de la frontière de Pareto
+* @param sommets
+* @param aretes
+* \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+* \version 0.3
+* \date 17 avril 2019
+*/
 void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes)
 {
     std::cout<<std::endl;
@@ -141,9 +156,16 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
 
     std::cout<<"Fin de Pareto"<<std::endl<<std::endl;
 }
+
+/*!
+ * \fn init_and_search_admis_q2
+ * \brief
+ * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0
+ * \date
+ */
 void Pareto::init_and_search_admis_q2(std::vector<Sommet*>&, std::vector<Arete*>&)
 {
-
 
 }
 
@@ -151,6 +173,8 @@ void Pareto::init_and_search_admis_q2(std::vector<Sommet*>&, std::vector<Arete*>
  * \fn init_and_calcul_pond
  * \brief
  * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0
+ * \date
  *
  * ne peut être effectuer que si les étapes suivante on été réalisé :
  * initialisation, recherche des solution admissible,
@@ -164,7 +188,7 @@ void Pareto::init_and_calcul_pond()
 /*!
  * \fn show_solution_front_pare
  * \brief  affichage des solutions de la frontière de Pareto
- * \authors BRIONNE,MARTIN,SIROT
+ * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date 17 avril 2019 19h20
  *
@@ -211,7 +235,7 @@ void Pareto::show_solution_front_pare()
 /*!
  * \fn totalPond
  * \brief Calcul des ponderations totales pour chaque solution
- * \author SIROT Charlotte
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.2
  * \date 17 avril 2019
  */
@@ -241,6 +265,13 @@ void Pareto::totalPond()
     }
 }
 
+/*!
+ * \fn fn_somP
+ * \brief
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0
+ * \date
+ */
 void Pareto::fn_somP(){}
 
 void Pareto::dessiner(Svgfile &svg) {
@@ -344,13 +375,13 @@ void Pareto::dessiner(Svgfile &svg) {
     std::cout<<m_tab_bool.size()<<std::endl;
 }
 
-//! \fn void Pareto::calcul_front_pare()
-//! \brief  non fonctionnel, pas encore tester
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.1
-//! \date 17 avril 2019 15h20
-//! \return
-
+/*!
+ * \fn calcul_front_pare
+ * \brief  non fonctionnel, pas encore tester
+ * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.1
+ * \date 17 avril 2019
+ */
 void Pareto::calcul_front_pare()
 {
     std::vector<std::pair<bool,std::vector<float>>> tab;

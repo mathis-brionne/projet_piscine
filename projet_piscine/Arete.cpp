@@ -1,5 +1,5 @@
 /*!
- * \file arete.cpp
+ * \file Arete.cpp
  * \brief methodes de la Classe Arete
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.2
@@ -18,15 +18,14 @@
 // DESSIN
 
 /*!
- * \file dessiner
+ * \fn dessiner
  * \brief dessiner le graphe
  * @param s
  * @param color
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \author BRIONNE Mathis
  * \version 0.1
  * \date
  */
-
 void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY ,int nb, std::string color) const {
     std::ostringstream oss117;
     oss117 << m_ponderations[nb];
@@ -36,6 +35,18 @@ void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY ,int nb, std::string co
     s.finG();
 
 }
+
+/*!
+ * \fn dessiner
+ * \brief dessiner le graphe
+ * @param s
+ * @param scaleX
+ * @param scaleY
+ * @param color
+ * \author BRIONNE Mathis
+ * \version 0.1
+ * \date
+ */
 void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY , std::string color) const {
     std::ostringstream oss117   ;
     for (size_t i=0 ;i<m_ponderations.size();i++) {
@@ -50,7 +61,19 @@ void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY , std::string color) co
 
 }
 
-
+/*!
+ * \fn dessiner
+ * \brief dessiner le graphe
+ * @param s
+ * @param scaleX
+ * @param scaleY
+ * @param color
+ * @param clas
+ * @param clas2
+ * \author BRIONNE Mathis
+ * \version 0.1
+ * \date
+ */
 void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY , std::string color , std::string clas, std::string clas2) const {
     std::ostringstream oss117   ;
     for (size_t i=0 ;i<m_ponderations.size();i++) {
@@ -64,4 +87,3 @@ void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY , std::string color , s
     s.finG();
 
 }
-

@@ -1,14 +1,24 @@
-//! \file Graph.cpp
-//! \brief
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.3
-//! \date 17 avril 2019 8h00
-//! \return
+/*!
+ * \file Graphe.cpp
+ * \brief methodes de la Classe Arete
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.3
+ */
 
 #include <sstream>
 #include "Graphe.h"
 
 /// CONSTRUCTEUR DESTRUCTEUR
+
+/*!
+ * \fn Graphe
+ * \brief Création d'un graphe
+ * @param fichierGraph
+ * @param fichierPoidsGraph
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.1
+ * \date
+ */
 Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
 
 //affichage
@@ -133,6 +143,13 @@ Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
     std::cout << " 0K " << std::endl << std::endl;
 }
 
+/*!
+ * \fn ~Graphe
+ * \brief Déstruction d'un graphe
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.1
+ * \date
+ */
 Graphe::~Graphe()
 {
     //vider le tableau d'aretes et de sommets
@@ -140,6 +157,15 @@ Graphe::~Graphe()
 
 /// Methodes
 // DESSIN
+
+/*!
+ * \fn dessiner
+ * \brief dessiner un graphe
+ * @param s
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.1
+ * \date
+ */
 void Graphe::dessiner(Svgfile &s) const {
 
     int minX=1000000,maxX=0,minY=1000000,maxY=0;

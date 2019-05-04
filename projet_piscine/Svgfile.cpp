@@ -73,7 +73,7 @@ Svgfile::~Svgfile() {
  * @param val
  * \return string
  * \author BRIONNE Mathis
- * \version 0.1
+ * \version
  * \date
  */
 // Helper templated function
@@ -91,7 +91,7 @@ std::string attrib(std::string name, T val) {
  * @param commande
  * \return string
  * \author BRIONNE Mathis
- * \version 0.1
+ * \version
  * \date
  */
 std::string attrib(std::string name, std::string commande) {
@@ -101,11 +101,14 @@ std::string attrib(std::string name, std::string commande) {
 }
 
 /*!
- *
+ *\fn attrib
  * @param name
  * @param champs
  * @param champs2
- *
+ * \return string
+ * \author BRIONNE Mathis
+ * \version
+ * \date
  */
 std::string attrib(std::string name, std::string champs ,double champs2) {
     std::ostringstream oss;
@@ -262,6 +265,18 @@ void Svgfile::addDisk(double x, double y,std::string color) {
             << attrib("class","circle")
             << "/>\n";
 }
+
+/*!
+ * \fn addDisk
+ * \brief Ajouter un disque (cercle plein --> pour les sommets)
+ * @param x
+ * @param y
+ * @param color
+ * @param clas
+ * \author BRIONNE Mathis
+ * \version 0.1
+ * \date
+ */
 void Svgfile::addDisk(double x, double y,std::string color,std::string clas) {
     m_ostrm << "<line "
             << attrib("x1", x)
@@ -349,6 +364,20 @@ void Svgfile::addLine(double x1, double y1, double x2, double y2, std::string co
             << attrib("stroke", color)
             << "/>\n";
 }
+
+/*!
+ * \fn addLine
+ * \brief Ajouter une ligne
+ * @param x1
+ * @param y1
+ * @param x2
+ * @param y2
+ * @param color
+ * @param clas
+ * \author BRIONNE Mathis
+ * \version 0.1
+ * \date
+ */
 void Svgfile::addLine(double x1, double y1, double x2, double y2, std::string color ,std::string clas) {
     m_ostrm << "<line "
             << attrib("x1", x1)
@@ -398,6 +427,18 @@ void Svgfile::addpoint(double x, double y, std::string color ) {
             << attrib("class","point")
             <<"/>\n";
 }
+
+/*!
+ * \fn addText
+ * \brief Ajouter un texte
+ * @param x
+ * @param y
+ * @param text
+ * @param color
+ * \author BRIONNE Mathis
+ * \version 0.1
+ * \date
+ */
 void Svgfile::addText(double x, double y, std::string text, std::string color) {
     /// <text x="180" y="60">Un texte</text>
     m_ostrm << "<text "
@@ -409,6 +450,20 @@ void Svgfile::addText(double x, double y, std::string text, std::string color) {
             << "transform=\"translate(" << -5 << "," << 5 << ")\""
             << ">" << text << "</text>\n";
 }
+
+/*!
+ * \fn addText
+ * \brief Ajouter un texte
+ * @param x
+ * @param y
+ * @param text
+ * @param nb
+ * @param color
+ * @param clas
+ * \author BRIONNE Mathis
+ * \version 0.1
+ * \date
+ */
 void Svgfile::addText(double x, double y, std::string text,int nb ,std::string color ,std::string clas) {
     /// <text x="180" y="60">Un texte</text>
     int nbcarac;
@@ -429,6 +484,19 @@ void Svgfile::addText(double x, double y, std::string text,int nb ,std::string c
             << "transform=\"translate(" << -5*nbcarac -2<< "," << 8 << ")\""
             << ">" << text << "</text>\n";
 }
+
+/*!
+ * \fn addText
+ * \brief Ajouter un texte
+ * @param x
+ * @param y
+ * @param text
+ * @param color
+ * @param clas
+ * \author BRIONNE Mathis
+ * \version 0.1
+ * \date
+ */
 void Svgfile::addText(double x, double y, std::string text,std::string color ,std::string clas) {
     /// <text x="180" y="60">Un texte</text>
     m_ostrm << "<text "
@@ -500,6 +568,16 @@ std::string makeRGB(int r, int g, int b) {
     oss << "rgb(" << r << "," << g << "," << b << ")";
     return oss.str();
 }
+
+/*!
+ * \fn addrepere
+ * \brief Dessiner un repère
+ * @param x
+ * @param y
+ * \author BRIONNE Mathis
+ * \version 0.1
+ * \date
+ */
 void Svgfile::addrepere(int x , int y )
 {
     m_ostrm << "<line "
@@ -546,6 +624,14 @@ void Svgfile::transalte(int scaleX ,int scaleY)
 {
     m_ostrm << "<g transform=\"translate("<<scaleX<<","<<scaleY<<")\" > \n";
 }
+
+/*!
+ * \fn addA
+ * \brief
+ * \author BRIONNE Mathis
+ * \version 0.1
+ * \date
+ */
 void Svgfile::addA()
 {
     m_ostrm << "<a>\n";
@@ -587,6 +673,21 @@ void Svgfile::addG()
 {
     m_ostrm << "<g>";
 }
+
+/*!
+ * \fn addencadrer
+ * \brief Dessiner l'encadrement des graphes
+ * @param maxX
+ * @param minX
+ * @param maxY
+ * @param minY
+ * @param scaleX
+ * @param scaleY
+ * @param text
+ * \author BRIONNE Mathis
+ * \version 0.1
+ * \date
+ */
 void Svgfile::addencadrer(int maxX ,int minX,int maxY,int minY,int scaleX,int scaleY, std::string text)
 {
     transalte(scaleX,scaleY);

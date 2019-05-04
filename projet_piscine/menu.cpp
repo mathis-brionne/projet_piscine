@@ -11,7 +11,11 @@
 
 #include "menu.h"
 
-/*!
+
+
+int main();
+
+ /*!
  * \fn choix_graph
  * \brief permet à l'utilisateur de choisir son graohe
  * \return pair : les deux fichiers choisi
@@ -19,9 +23,6 @@
  * \version 0.1
  * \date 16 avril 2019
  */
-
-int main();
-
 std::pair<std::string,std::string> choix_graph()
 {
     std::string fichier1;

@@ -1,6 +1,6 @@
 /*!
  * \file kruskal.c
- *  \brief  appartient à la class Graphe
+ * \brief  appartient à la class Graphe
  * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.3
  */
@@ -120,6 +120,17 @@ std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pondér�
     return temp_liens;
 }
 
+
+/*!
+ * \fn dessinerKruskal
+ * \brief dessiner les solutions de Kruskal
+ * @param s
+ * @param kk
+ * @param nb
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.1
+ * \date 17 avril 2019
+ */
 void Graphe::dessinerKruskal(Svgfile &s, std::vector<std::pair<Arete *, bool>> kk , int nb) const {
     int minX=1000000,maxX=0,minY=1000000,maxY=0;
     for(auto j : m_sommets){
@@ -154,6 +165,3 @@ void Graphe::dessinerKruskal(Svgfile &s, std::vector<std::pair<Arete *, bool>> k
     for (auto sta : m_sommets)
         sta->dessiner(s,  maxX+50 + (maxX+50)*nb ,0 );
 }
-
-
-
