@@ -187,7 +187,7 @@ void Graphe::dessiner(Svgfile &s) const {
             maxY = j->getCoords().getY();
         }
     }
-    std::cout<<"max x :" << maxX << " min X :"<<minX << " max y :" << maxY << " min Y :"<<minY;
+   // std::cout<<"max x :" << maxX << " min X :"<<minX << " max y :" << maxY << " min Y :"<<minY;
     std::ostringstream oss;
     oss << "Graphe original";
     s.addencadrer(maxX,minX,maxY,minY, 0 ,0 ,oss.str());
