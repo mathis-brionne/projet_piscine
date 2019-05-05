@@ -60,6 +60,8 @@ std::pair<std::string,std::string> choix_graph()
                         return {fichier1,"files/broadway_weights_1.txt"};
                     case 2:
                         return {fichier1,"files/broadway_weights_2.txt"};
+                    default:
+                        throw std::runtime_error("Erreur");
                 }
                 break;
 
@@ -83,6 +85,8 @@ std::pair<std::string,std::string> choix_graph()
                         return {fichier1,"files/manhattan_weights_1.txt"};
                     case 2:
                         return {fichier1,"files/manhattan_weights_2.txt"};
+                    default:
+                        throw std::runtime_error("Erreur");
                 }
                 break;
 
@@ -103,8 +107,13 @@ std::pair<std::string,std::string> choix_graph()
                         return {fichier1, "files/triville_weights_1.txt"};
                     case 2:
                         return {fichier1, "files/triville_weights_2.txt"};
+                    default:
+                        throw std::runtime_error("Erreur");
                 }
                 break;
+
+            default:
+                throw std::runtime_error("Erreur");
         }
     }
 
@@ -165,8 +174,8 @@ std::pair<std::string,std::string> choix_graph()
  * \brief permet à l'utilisateur de choisir quel algo appliquer à son graohe
  * \return int : le num de l'algo choisi
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.2
- * \date 17 avril 2019
+ * \version 0.4
+ * \date 19 avril 2019 11h
  */
 int choix_algo()
 {
@@ -176,8 +185,8 @@ int choix_algo()
     {
         std::cout << "Que voulez-vous afficher ?" << std::endl
                   << "  >> 1. Solution selon Kruskal" << std::endl
-                  << "  >> 2. Toutes les solutions de Pareto" << std::endl
-                  << "  >> 3. Solution de Dijktra" << std::endl;
+                  << "  >> 2. Solutions de Pareto en considerant les ponderations comme des couts" << std::endl
+                  << "  >> 3. Solutions de Pareto en considerant l une des ponderations comme une distance" << std::endl;
 
         std::cin >> choix;
         std::cout << std::endl;
@@ -195,6 +204,7 @@ int choix_algo()
  * \version 0.2
  * \date 16 avril 2019
  */
+ /* ponderation le mettre en    &    */
 int choix_ponderation(std::vector<float> pond)
 {
 
@@ -219,6 +229,7 @@ int choix_ponderation(std::vector<float> pond)
  * \version 0.1
  * \date 18 avril 2019
  */
+ /* ajouter un & à sommet*/
 int choix_sommetD(std::vector<Sommet*> sommets)
 {
     int choix=-1;
@@ -243,7 +254,7 @@ int choix_sommetD(std::vector<Sommet*> sommets)
  */
 void choix_fin()
 {
-    int choix;
+    int choix=0;
 
     while(choix != 1 && choix != 2)
     {
@@ -252,14 +263,17 @@ void choix_fin()
                   << "  2. Non" << std::endl << std::endl;
         std::cin >> choix;
         std::cout << std::endl;
+    }
 
-        switch(choix)
-        {
-            case 1 :
-                main();
-                break;
-            case 2:
-                system("exit");
-        }
+    switch(choix)
+    {
+        case 1 :
+            main();
+            break;
+        case 2:
+            system("exit");
+            break;
+        default:
+            throw std::runtime_error("erreur sortie");
     }
 }

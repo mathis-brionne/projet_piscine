@@ -1,12 +1,11 @@
-
-#include "outils.h"
-
 /*!
  * \file outil.cpp
  * \brief  reference les fonctions n'appartenant pas à des classes
  * \authors BRIONNE Mathis, MARTIN Willy ,SIROT Charlotte
  * \version 0.3
  */
+
+#include "outils.h"
 
 /*!
  * \fn totalPond
@@ -44,7 +43,7 @@ std::vector<float> totalPond(std::vector<std::pair<Arete*,bool>> kk)
  * \fn connexite_q2
  * \brief plus optimiser que la fonction connexite
  * \return 1 si le graphe partiel est connexe, 0 sinon
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \author MARTIN Willy
  * \version 0.6
  * \date 17 avril 2019
  */
@@ -118,18 +117,18 @@ bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::
             // on la met à 1 et on met à jour le numero connexe correspondant
                /* b_aretes[num_aretes]=false;                                              inutile*/
 
-                int temp_num_connexe_A=(sommet_connexe.find(aretes[num_aretes]->getSommetA())->second);
-                int temp_num_connexe_D=(sommet_connexe.find(aretes[num_aretes]->getSommetD())->second);
-                for(auto & it :sommet_connexe)
-                {
-                    if(temp_num_connexe_A == it.second)
-                        it.second=temp_num_connexe_D;
-                }
+            int temp_num_connexe_A=(sommet_connexe.find(aretes[num_aretes]->getSommetA())->second);
+            int temp_num_connexe_D=(sommet_connexe.find(aretes[num_aretes]->getSommetD())->second);
+            for(auto & it :sommet_connexe)
+            {
+                if(temp_num_connexe_A == it.second)
+                    it.second=temp_num_connexe_D;
+            }
 
-                //on passe à l'arete suivante
-                num_aretes++;
+            //on passe à l'arete suivante
+            num_aretes++;
 
-                //mise en place d'une estimation afin de gagner en rapidité
+            //mise en place d'une estimation afin de gagner en rapidité
                 /* Afin d'éviter de refaire à chaque fois le calcul de composante connexe,
                  * On ne le refait que si on avait une estimation de 2 et que l'on a ajouté une arete ( possiblement supprimer une compossante)
                  * après cet algo l'estimation est mise à jour au nombre réel de Composantes connexe*/
@@ -178,12 +177,19 @@ bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::
  * \brief permet de determiner la connexité d'un graphe
  * \return 1 si le graphe partiel est connexe, 0 sinon
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.5
- * \date 16 avril 2019
+ * \version 0.7
+ * \date 19 avril 2019 14h00
  */
 bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vector<Sommet*>& m_sommets )
 {
+    //aretes est le tableau d'aretes principale
+    //b_aretes est le tableau de booleen permettant de determiner le sous graphe
+    //m_sommets correspond aux sommets du graphe initiale
+
     //on admet que les tableau aretes et b_aretes sont de même dimension
+    /*affirmation precedente fausse la taille de b_aretes = taille aretes +1
+     * afin de parcourir toute les étapes et reperer quand on s'arrete dans le sous prog précèdent*/
+
 
     ///1 ere partie de l'algorithme
     //on recupere une copie de liens, puis on erase les liens =0

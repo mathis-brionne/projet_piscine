@@ -36,19 +36,39 @@ int main() {
     int algo = 0;
     algo = choix_algo();
     std::vector<std::vector<std::pair<Arete*,bool>>> kks;
+
     if(algo == 1)
     {
-        //choix_pond = choix_ponderation(graph.getAretes()[0]->getPonderations());
-        for(size_t i = 0 ; i < graph.getAretes()[0]->getPonderations().size();i++){
-            std::cout<<"Recherche kruskal en fonction de la pond :";
-           kks.push_back(graph.kruskal(i));
+        for(size_t i = 0 ; i < graph.getAretes()[0]->getPonderations().size();i++)
+        {
+            std::cout<<"Recherche kruskal en fonction de la pond "<<i<<" : ";
+            kks.push_back(graph.kruskal(i));
+            std::cout<<"OK"<<std::endl;
+        }
+        std::cout<<"Fin de la recherche des sous graphe de kruskal"<<std::endl<<std::endl;
+
+        /*
+         * Proposer à l'utilisateur de dessiner ou d'afficher à la console les graphes obtenues avec leur pondération total
+         * */
+
+        std::cout<<"Voulez-vous dessiner les sous-graphes obtenues ? "
+                <<std::endl<<"   0. NON"
+                <<std::endl<<"   1. OUI"<<std::endl;
+
+        int choix=0;
+        std::cin>>choix;
+
+        if(choix==1)
+        {
+            //DESSIN
+            graph.dessiner(Svg);
+            for(size_t i = 0 ; i < graph.getAretes()[0]->getPonderations().size();i++)
+                graph.dessinerKruskal(Svg ,kks[i] , i );
+            Svg.~Svgfile();
+            system("output.html");
+
         }
 
-    }
-        /*
-        std::cout << "Connexite :" << std::endl
-                  << connexite(kk,graph.getSommets()) << std::endl << std::endl;
-        */
         /*
         //affichage de toutes les aretes de kruskal
         for(auto tp:kk)
@@ -60,7 +80,60 @@ int main() {
                      <<" pond="<<tp.first->getPond(0)<<std::endl;
 
         }*/
+    }
 
+    if(algo==2)
+    {
+        graph.initialiser_pareto_q2();
+
+        /*
+         * Proposer à l'utilisateur de dessiner ou d'afficher à la console les graphes obtenues avec leur pondération total
+         * */
+        std::cout<<" Voulez-vous afficher les graphes obtenue ?"<<std::endl
+                <<" 0. NON"<<std::endl
+                <<" 1. OUI en mode graphique"<<std::endl
+                <<" 2. OUI en mode console"<<std::endl;
+        int choix=0;
+        std::cin>>choix;
+        if(choix==1)
+        {
+            //DESSIN
+            graph.dessinerPareto(Svg);
+            graph.dessiner(Svg);
+            Svg.~Svgfile();
+            system("output.html");
+        }
+        if(choix==2)
+            graph.afficher_Console_Pareto();
+
+    }
+    if(algo==3)
+    {
+        size_t indice_P = 0;//indice de la ponderation de kruskal
+        std::cout<<"Quel ponderation considerez-vous comme une distance ?"<<std::endl;
+
+        std::cin>>indice_P;
+        graph.initialiser_pareto_q3(indice_P);
+
+        std::cout<<" Voulez-vous afficher les graphes obtenue ?"<<std::endl
+                 <<" 0. NON"<<std::endl
+                 <<" 1. OUI en mode graphique"<<std::endl
+                 <<" 2. OUI en mode console"<<std::endl;
+        int choix=0;
+        std::cin>>choix;
+
+        if(choix==1)
+        {
+            //DESSIN
+            graph.dessinerPareto(Svg);
+            graph.dessiner(Svg);
+            Svg.~Svgfile();
+            system("output.html");
+        }
+        if(choix==2)
+            graph.afficher_Console_Pareto();
+
+    }
 
     /*if(algo==2)
     {}*/
@@ -98,23 +171,8 @@ int main() {
 
 
 
-    //DESSIN
 
-    if(algo==2)
-    {
-        graph.dessiner(Svg);
-        graph.initialiser_pareto();
-        graph.dessinerPareto(Svg);
-    }
 
-    if(algo == 1)
-    {
-        graph.dessiner(Svg);
-        for(size_t i = 0 ; i < graph.getAretes()[0]->getPonderations().size();i++)
-        {
-            graph.dessinerKruskal(Svg ,kks[i] , i );
-        }
-    }
 
 
     /*
@@ -138,8 +196,8 @@ int main() {
                 return 0;
         }
     }*/
-    Svg.~Svgfile();
-    system("output.html");
+
+
     Svg.~Svgfile();
     // Continuer ou Quitter ?
     choix_fin();
