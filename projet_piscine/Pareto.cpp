@@ -296,7 +296,7 @@ void Pareto::init_and_calcul_pond()
  * \brief  affichage console des solutions de la frontière de Pareto
  * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date 17 avril 2019 19h20
+ * \date 17 avril 2019
  *
  * ne peut être effectuer que si les étapes suivante on été réalisé :
  * initialisation, recherche des solution admissible, calcul des ponds et recherche des solutions de Pareto
@@ -501,17 +501,7 @@ void Pareto::dessiner(Svgfile &svg) {
     //std::cout<<m_tab_bool.size()<<std::endl;
 }
 
-/*!
- * \fn calcul_front_pare
- * \brief  trouver les solutions appartenant à la frontière de Pareto (pour n pondérations)
- * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.2
- * \date 17 avril 2019
- *
- * ne peut être effectuer que si les étapes suivante on été réalisé :
- * initialisation, recherche des solutions admissibles, calcul des ponds
- *
- */
+
 void Pareto::calcul_front_pare()
 {
     std::vector<std::pair<bool,std::vector<float>>> tab;

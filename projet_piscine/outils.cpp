@@ -175,7 +175,9 @@ bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::
 /*!
  * \fn connexite
  * \brief permet de determiner la connexité d'un graphe
- * \return 1 si le graphe partiel est connexe, 0 sinon
+ * @param liens 
+ * @param m_sommets 
+ * @return 1 si le graphe partiel est connexe, 0 sinon
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.7
  * \date 19 avril 2019
@@ -278,12 +280,13 @@ bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vecto
     return nb_connexe_estimation <= 1;
 }
 
-
 /*!
  * \deprecated
  * \fn connexite
  * \brief permet de determiner la connexité d'un graphe
- * \return 1 si le graphe partiel est connexe, 0 sinon
+ * @param liens 
+ * @param m_sommets 
+ * @return 1 si le graphe partiel est connexe, 0 sinon
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.4
  * \date 15 avril 2019
