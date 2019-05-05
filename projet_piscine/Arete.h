@@ -7,8 +7,8 @@
  * \class Arete
  * \brief Classe representant les objets aretes
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.2
- * \date 15 avril 2019
+ * \version 0.3
+ * \date 20 avril 2019
  */
 
 #ifndef PROJET_PISCINE_ARETE_H

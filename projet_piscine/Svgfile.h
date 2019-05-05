@@ -7,7 +7,8 @@
  * \class Svgfile
  * \brief Classe pour les objets Svg
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.2
+ * \version 0.5
+ * \date 21 avril2019
  */
 
 #ifndef PROJET_PISCINE_SVGFILE_H

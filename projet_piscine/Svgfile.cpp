@@ -67,13 +67,13 @@ Svgfile::~Svgfile() {
 
 /*!
  * \fn attrib
- * \brief
+ * \brief ecrit dans le svg (concasser les valeurs en straing)
  * @tparam T
  * @param name
  * @param val
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version
- * \date
+ * \author M. Fercoq
+ * \version 0
+ * \date 15 avil 2019
  */
 // Helper templated function
 template<typename T>
@@ -85,13 +85,14 @@ std::string attrib(std::string name, T val) {
 
 /*!
  * \fn attrib
- * \brief
+ *\fn attrib
+ * \brief ecrit dans le svg (concasser les valeurs en straing)
  * @param name
  * @param commande
  * \return string
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version
- * \date
+ * \version 0.1
+ * \date 15 avril 2019
  */
 std::string attrib(std::string name, std::string commande) {
     std::ostringstream oss;
@@ -101,13 +102,14 @@ std::string attrib(std::string name, std::string commande) {
 
 /*!
  *\fn attrib
+ * \brief ecrit dans le svg (concasser les valeurs en straing)
  * @param name
  * @param champs
  * @param champs2
  * \return string
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version
- * \date
+ * \version 0.1
+ * \date 15 avril 2019
  */
 std::string attrib(std::string name, std::string champs ,double champs2) {
     std::ostringstream oss;
@@ -117,7 +119,7 @@ std::string attrib(std::string name, std::string champs ,double champs2) {
 
 /*!
  * \fn attrib
- * \brief
+ * \brief ecrit dans le svg (concasser les valeurs en straing)
  * @param name
  * @param x
  * @param y
@@ -126,7 +128,7 @@ std::string attrib(std::string name, std::string champs ,double champs2) {
  * \return string
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 15 avril 2019
  */
 std::string attrib(std::string name, double x, double y, double tourne, double xSatelite) {
     int rayon = (x - xSatelite);
@@ -141,7 +143,7 @@ std::string attrib(std::string name, double x, double y, double tourne, double x
 
 /*!
  * \fn attrib
- * \brief
+ * \brief ecrit dans le svg (concasser les valeurs en straing)
  * @param name
  * @param champs
  * @param nom
@@ -149,7 +151,7 @@ std::string attrib(std::string name, double x, double y, double tourne, double x
  * \return string
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 15 avril 2019
  */
 std::string attrib(std::string name, std::string champs, std::string nom, std::string champs2) {
     std::ostringstream oss;
@@ -159,14 +161,14 @@ std::string attrib(std::string name, std::string champs, std::string nom, std::s
 
 /*!
  * \fn attrib
- * \brief
+ * \brief ecrit dans le svg (concasser les valeurs en straing)
  * @param name
  * @param nom
  * @param champs
  * \return string
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 15 avril 2019
  */
 std::string attrib(std::string name, std::string nom, std::string champs) {
     std::ostringstream oss;
@@ -176,7 +178,7 @@ std::string attrib(std::string name, std::string nom, std::string champs) {
 
 /*!
  * \fn attrib
- * \brief
+ * \brief ecrit dans le svg (concasser les valeurs en straing)
  * @param name
  * @param champs
  * @param x
@@ -185,7 +187,7 @@ std::string attrib(std::string name, std::string nom, std::string champs) {
  * \return string
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 15 avril 2019
  */
 std::string attrib(std::string name, std::string champs, double x, double y, std::string champs2) {
     std::ostringstream oss;
@@ -195,14 +197,14 @@ std::string attrib(std::string name, std::string champs, double x, double y, std
 
 /*!
  * \fn attrib
- * \brief
+ * \brief ecrit dans le svg (concasser les valeurs en straing)
  * @param name
  * @param scaleN
  * @param scaleB
  * \return string
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 15 avril 2019
  */
 std::string attrib(std::string name, int scaleN, int scaleB) {
     std::ostringstream oss;
@@ -212,12 +214,12 @@ std::string attrib(std::string name, int scaleN, int scaleB) {
 
 /*!
  * \fn addSoleil
- * \brief
+ * \brief Ajouter un soleil (mouvement)
  * @param r
  * @param color
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 15 avril 2019
  */
 void Svgfile::addSoleil(double r, std::string color) {
     m_ostrm << "<path "
@@ -250,9 +252,9 @@ void Svgfile::addSoleil(double r, std::string color) {
  * @param x
  * @param y
  * @param color
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \author M. Fercoq, BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 16 avril 2019
  */
 void Svgfile::addDisk(double x, double y,std::string color) {
     m_ostrm << "<line "
@@ -272,9 +274,9 @@ void Svgfile::addDisk(double x, double y,std::string color) {
  * @param y
  * @param color
  * @param clas
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \author M. Fercoq, BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 19 avril 2019
  */
 void Svgfile::addDisk(double x, double y,std::string color,std::string clas) {
     m_ostrm << "<line "
@@ -298,7 +300,7 @@ void Svgfile::addDisk(double x, double y,std::string color,std::string clas) {
  * @param text
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 16 avril 2019
  */
 void Svgfile::addlegende(double x1, double x2, double y1, double y2, std::string color, std::string text) {
     m_ostrm << "<line "
@@ -323,9 +325,9 @@ void Svgfile::addlegende(double x1, double x2, double y1, double y2, std::string
  * @param y
  * @param r
  * @param color
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \author M. Fercoq, BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 15 avril 2019
  */
 void Svgfile::addcircle(double x, double y, double r, std::string color) {
     m_ostrm << "<circle "
@@ -349,9 +351,9 @@ void Svgfile::addcircle(double x, double y, double r, std::string color) {
  * @param x2
  * @param y2
  * @param color
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \author M. Fercoq, BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 16 avril 2019
  */
 void Svgfile::addLine(double x1, double y1, double x2, double y2, std::string color) {
     m_ostrm << "<line "
@@ -373,9 +375,9 @@ void Svgfile::addLine(double x1, double y1, double x2, double y2, std::string co
  * @param y2
  * @param color
  * @param clas
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \author M. Fercoq, BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 20 avril 2019
  */
 void Svgfile::addLine(double x1, double y1, double x2, double y2, std::string color ,std::string clas) {
     m_ostrm << "<line "
@@ -395,9 +397,9 @@ void Svgfile::addLine(double x1, double y1, double x2, double y2, std::string co
  * @param y
  * @param span
  * @param color
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date
+ * \author M. Fercoq
+ * \version 0
+ * \date 15 avril 2019
  */
 void Svgfile::addCross(double x, double y, double span, std::string color) {
     addLine(x - span, y - span, x + span, y + span, color);
@@ -405,15 +407,14 @@ void Svgfile::addCross(double x, double y, double span, std::string color) {
 }
 
 /*!
- * \fn addText
- * \brief Ajouter un texte
+ * \fn addpoint
+ * \brief Ajouter un point
  * @param x
  * @param y
- * @param text
  * @param color
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 18 avril 2019
  */
 void Svgfile::addpoint(double x, double y, std::string color ) {
     m_ostrm << "<line "
@@ -434,9 +435,9 @@ void Svgfile::addpoint(double x, double y, std::string color ) {
  * @param y
  * @param text
  * @param color
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date
+ * \author M. Fercoq, BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0
+ * \date 15 avril 2019
  */
 void Svgfile::addText(double x, double y, std::string text, std::string color) {
     /// <text x="180" y="60">Un texte</text>
@@ -459,9 +460,9 @@ void Svgfile::addText(double x, double y, std::string text, std::string color) {
  * @param nb
  * @param color
  * @param clas
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \author M. Fercoq, BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 18 avril 2019
  */
 void Svgfile::addText(double x, double y, std::string text,int nb ,std::string color ,std::string clas) {
     /// <text x="180" y="60">Un texte</text>
@@ -492,9 +493,9 @@ void Svgfile::addText(double x, double y, std::string text,int nb ,std::string c
  * @param text
  * @param color
  * @param clas
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date
+ * \author M. Fercoq, BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.2
+ * \date 18 avril 2019
  */
 void Svgfile::addText(double x, double y, std::string text,std::string color ,std::string clas) {
     /// <text x="180" y="60">Un texte</text>
@@ -515,9 +516,9 @@ void Svgfile::addText(double x, double y, std::string text,std::string color ,st
  * @param y
  * @param val
  * @param color
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date
+ * \author M. Fercoq
+ * \version 0
+ * \date 15 avril 2019
  */
 void Svgfile::addText(double x, double y, double val,std::string color) {
     std::ostringstream oss;
@@ -531,9 +532,9 @@ void Svgfile::addText(double x, double y, double val,std::string color) {
  * @param span
  * @param numbering
  * @param color
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date
+ * \author M. Fercoq
+ * \version 0
+ * \date 15 avril 2019
  */
 void Svgfile::addGrid(double span, bool numbering, std::string color) {
     double y = 0;
@@ -558,9 +559,9 @@ void Svgfile::addGrid(double span, bool numbering, std::string color) {
  * @param g
  * @param b
  * \return string
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date
+ * \author M. Fercoq
+ * \version 0
+ * \date 15 avril 2019
  */
 std::string makeRGB(int r, int g, int b) {
     std::ostringstream oss;
@@ -574,8 +575,8 @@ std::string makeRGB(int r, int g, int b) {
  * @param x
  * @param y
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date
+ * \version 0.2
+ * \date 21 avril 2019
  */
 void Svgfile::addrepere(int x , int y )
 {
@@ -597,12 +598,12 @@ void Svgfile::addrepere(int x , int y )
 
 /*!
  * \fn fillBallColor
- * \brief
+ * \brief effet 3D sur des cercles
  * @param col
  * \return string
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date
+ * \author M. Fercoq
+ * \version 0
+ * \date 15 avril 2019
  */
 std::string fillBallColor(std::string col) {
     if (col.size() > 4 && col.substr(col.size() - 4) == "ball")
@@ -613,11 +614,11 @@ std::string fillBallColor(std::string col) {
 
 /*!
  * \fn translate
- * \brief
+ * \brief creer un groupe G qui décale les coordonnées en x et en y (effet de translation)
  * @param scale
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 16 avril 2019
  */
 void Svgfile::transalte(int scaleX ,int scaleY)
 {
@@ -626,10 +627,10 @@ void Svgfile::transalte(int scaleX ,int scaleY)
 
 /*!
  * \fn addA
- * \brief
+ * \brief ecrit le début d'un groupe A dans le svg
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 16 avril 2019
  */
 void Svgfile::addA()
 {
@@ -638,10 +639,10 @@ void Svgfile::addA()
 
 /*!
  * \fn finG
- * \brief
+ * \brief ecrit la fin d'un groupe G dans le svg
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 16 avril 2019
  */
 void Svgfile::finG()
 {
@@ -651,10 +652,10 @@ void Svgfile::finG()
 
 /*!
  * \fn finA
- * \brief
+ * \brief ecrit la fin d'un groupe A dans le svg
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 16 avril 2019
  */
 void Svgfile::finA()
 {
@@ -663,10 +664,10 @@ void Svgfile::finA()
 
 /*!
  * \fn addG
- * \brief
+ * \brief ecrit le début d'un groupe G dans le svg
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 16 avril 2019
  */
 void Svgfile::addG()
 {
@@ -684,8 +685,8 @@ void Svgfile::addG()
  * @param scaleY
  * @param text
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date
+ * \version 0.2
+ * \date 18 avril 2019
  */
 void Svgfile::addencadrer(int maxX ,int minX,int maxY,int minY,int scaleX,int scaleY, std::string text)
 {

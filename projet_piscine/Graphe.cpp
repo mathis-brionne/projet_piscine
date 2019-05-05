@@ -163,8 +163,8 @@ Graphe::~Graphe()
  * \brief dessiner un graphe
  * @param s
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date
+ * \version 0.2
+ * \date 17 avril 2019
  */
 void Graphe::dessiner(Svgfile &s) const {
 

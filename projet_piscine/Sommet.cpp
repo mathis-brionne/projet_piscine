@@ -24,7 +24,7 @@
  * @param scaleY
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.2
- * \date 15 avril 2019
+ * \date 18 avril 2019
  */
 void Sommet::dessiner(Svgfile &s ,int scaleX ,int scaleY )  {
     s.transalte(scaleX ,scaleY);
@@ -42,8 +42,8 @@ void Sommet::dessiner(Svgfile &s ,int scaleX ,int scaleY )  {
  * @param clas
  * @param clas2
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version
- * \date
+ * \version 0.1
+ * \date 18 avril 2019
  */
 void Sommet::dessiner(Svgfile &s ,int scaleX ,int scaleY ,std::string clas ,std::string clas2)  {
     s.transalte(scaleX ,scaleY);

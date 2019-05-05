@@ -7,8 +7,8 @@
  * \class Sommet
  * \brief Classe representant les objets Sommet
  * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.3
- * \date 15 avril 2019
+ * \version 0.4
+ * \date 18 avril 2019
  */
 
 #ifndef PROJET_PISCINE_SOMMET_H

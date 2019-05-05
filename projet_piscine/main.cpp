@@ -3,8 +3,8 @@
  * \file main.cpp
  * \brief
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.02
- * \date 15 avril 2019
+ * \version 0.5
+ * \date 20 avril 2019
  * \
  */
 

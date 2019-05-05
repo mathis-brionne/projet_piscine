@@ -249,8 +249,8 @@ int choix_sommetD(std::vector<Sommet*> sommets)
  * \brief permet à l'utilisateur de choisir s'il quitte le programme ou s'il veut continuer
  * \return int : le num dfinu sommet choisi
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date 18 avril 2019
+ * \version 0.2
+ * \date 21 avril 2019
  */
 void choix_fin()
 {

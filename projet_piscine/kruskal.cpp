@@ -128,8 +128,8 @@ std::vector<std::pair<Arete*,bool>> Graphe::kruskal(int num_pond) //non pond√©r√
  * @param kk
  * @param nb
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date 17 avril 2019
+ * \version 0.3
+ * \date 20 avril 2019
  */
 void Graphe::dessinerKruskal(Svgfile &s, std::vector<std::pair<Arete *, bool>> kk , int nb) const {
     int minX=1000000,maxX=0,minY=1000000,maxY=0;

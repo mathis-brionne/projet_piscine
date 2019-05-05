@@ -23,8 +23,8 @@
  * @param s
  * @param color
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date
+ * \version 0.3
+ * \date 18 avril 2019
  */
 void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY ,int nb, std::string color) const {
     std::ostringstream oss117;
@@ -45,7 +45,7 @@ void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY ,int nb, std::string co
  * @param color
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 18 avril 2019
  */
 void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY , std::string color) const {
     std::ostringstream oss117   ;
@@ -71,8 +71,8 @@ void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY , std::string color) co
  * @param clas
  * @param clas2
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date
+ * \version 0.2
+ * \date 20 avril 2019
  */
 void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY , std::string color , std::string clas, std::string clas2) const {
     std::ostringstream oss117   ;

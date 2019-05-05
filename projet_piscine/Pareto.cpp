@@ -388,15 +388,16 @@ void Pareto::totalPond()
     }
 }
 
-/*!
- * \fn fn_somP
- * \brief
- * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0
- * \date
- */
 //1void Pareto::fn_somP(){}
 
+/*!
+ * \fn dessiner
+ * \brief dessiner les solutions de Pareto
+ * @param svg
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
+ * \version 0.4
+ * \date 21 avril 2019
+ */
 void Pareto::dessiner(Svgfile &svg) {
 
     int minX=1000000,maxX=0,minY=1000000,maxY=0;
