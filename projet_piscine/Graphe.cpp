@@ -16,8 +16,8 @@
  * @param fichierGraph
  * @param fichierPoidsGraph
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date
+ * \version 0.2
+ * \date 16 avril 2019
  */
 Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
 
@@ -147,8 +147,8 @@ Graphe::Graphe(std::string& fichierGraph, std::string& fichierPoidsGraph) {
  * \fn ~Graphe
  * \brief Déstruction d'un graphe
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date
+ * \version 0
+ * \date 15 avril 2019
  */
 Graphe::~Graphe()
 {
