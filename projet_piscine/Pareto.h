@@ -3,8 +3,8 @@
  * \class Pareto
  * \brief  bibliotheque pour les fonctions permettant de faire Pareto
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
- * \date 17 avril 2019
+ * \version 0.3
+ * \date 19 avril 2019
  */
 
 #ifndef PROJET_PISCINE_PARETO_H

@@ -1,8 +1,5 @@
-
-
 /*!
  * \file dijkstra.cpp
- * \brief
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.2
  * \date 16 avril 2019

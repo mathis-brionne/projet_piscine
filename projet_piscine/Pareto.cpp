@@ -16,7 +16,7 @@
  * \brief Création de pareto
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 17 avril 2019
  */
 Pareto::Pareto()
 {}
@@ -26,7 +26,7 @@ Pareto::Pareto()
  * \brief Déstruction de pareto
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
- * \date
+ * \date 17 avril 2019
  */
 Pareto::~Pareto()
 {
@@ -38,7 +38,7 @@ Pareto::~Pareto()
 
 /*!
  * \fn initialisation_q2
- * \brief  initialisation des attributs + recherche des solutions admissible + calcul des ponderations de ces solutions + recherche des solutions de la frontière de Pareto
+ * \brief  initialisation des attributs + recherche des solutions admissibles q2 + calcul des ponderations de ces solutions + recherche des solutions de la frontière de Pareto
  * @param sommets
  * @param aretes
  * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
@@ -111,13 +111,13 @@ void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>
 
 /*!
  * \fn initialisation_q3
- * \brief
+ * \brief initialisation des attributs + recherche des solutions admissibles q3 + calcul des ponderations de ces solutions (Dikjitra) + recherche des solutions de la frontière de Pareto
  * @param sommets
  * @param aretes
  * @param indice_P
  * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version
- * \date
+ * \version 0.2
+ * \date 19 avril 2019
  */
 void Pareto::initialisation_q3(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes,size_t indice_P)
 {
@@ -188,10 +188,10 @@ void Pareto::initialisation_q3(std::vector<Sommet*>& sommets,std::vector<Arete*>
 
 /*!
  * \fn init_and_search_admis_q2
- * \brief
+ * \brief recherche des solutions admissible dans le cadre de la question 2
  * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0
- * \date
+ * \version 0.1
+ * \date 17 avril 2019
  */
 void Pareto::init_and_search_admis_q2()
 {
@@ -244,7 +244,7 @@ void Pareto::init_and_search_admis_q2()
  * \brief  recherche des solutions admissible dans le cadre de la question 3
  * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.4
- * \date 19 avril 2019 14h00
+ * \date 19 avril 2019
  */
 void Pareto::init_and_search_admis_q3()
 {
@@ -286,17 +286,6 @@ void Pareto::init_and_search_admis_q3()
 
 }
 
-/*!
- * \fn init_and_calcul_pond
- * \brief
- * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0
- * \date
- *
- * ne peut être effectuer que si les étapes suivante on été réalisé :
- * initialisation, recherche des solution admissible,
- *
- */
 void Pareto::init_and_calcul_pond()
 {
 
@@ -304,7 +293,7 @@ void Pareto::init_and_calcul_pond()
 
 /*!
  * \fn show_solution_front_pare
- * \brief  affichage des solutions de la frontière de Pareto
+ * \brief  affichage console des solutions de la frontière de Pareto
  * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date 17 avril 2019 19h20
@@ -362,6 +351,10 @@ void Pareto::show_solution_front_pare()
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.2
  * \date 17 avril 2019
+ *
+ * ne peut être effectuer que si les étapes suivante on été réalisé :
+ * initialisation, recherche des solution admissible,
+ *
  */
 void Pareto::totalPond()
 {
@@ -510,13 +503,13 @@ void Pareto::dessiner(Svgfile &svg) {
 
 /*!
  * \fn calcul_front_pare
- * \brief  non fonctionnel, pas encore tester
+ * \brief  trouver les solutions appartenant à la frontière de Pareto (pour n pondérations)
  * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.1
+ * \version 0.2
  * \date 17 avril 2019
  *
  * ne peut être effectuer que si les étapes suivante on été réalisé :
- * initialisation, recherche des solution admissible, calcul des ponds
+ * initialisation, recherche des solutions admissibles, calcul des ponds
  *
  */
 void Pareto::calcul_front_pare()

@@ -2,7 +2,7 @@
  * \file kruskal.c
  * \brief  appartient à la class Graphe
  * \authors BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
- * \version 0.3
+ * \version 0.5
  */
 
 #include <iostream>

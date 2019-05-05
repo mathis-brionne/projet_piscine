@@ -175,7 +175,7 @@ std::pair<std::string,std::string> choix_graph()
  * \return int : le num de l'algo choisi
  * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.4
- * \date 19 avril 2019 11h
+ * \date 19 avril 2019
  */
 int choix_algo()
 {
@@ -196,7 +196,7 @@ int choix_algo()
 
 
 /*!
- * \fn choix_algo
+ * \fn choix_ponderation
  * \brief permet à l'utilisateur de choisir ponderation il veut prendre en compte pour appliquer Kruskal
  * @param pond
  * \return int : le num de la ponderation choisi
