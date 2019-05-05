@@ -257,6 +257,33 @@ Svgfile.cpp.s:
 	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/Svgfile.cpp.s
 .PHONY : Svgfile.cpp.s
 
+dijkstra.obj: dijkstra.cpp.obj
+
+.PHONY : dijkstra.obj
+
+# target to build an object file
+dijkstra.cpp.obj:
+	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/dijkstra.cpp.obj
+.PHONY : dijkstra.cpp.obj
+
+dijkstra.i: dijkstra.cpp.i
+
+.PHONY : dijkstra.i
+
+# target to preprocess a source file
+dijkstra.cpp.i:
+	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/dijkstra.cpp.i
+.PHONY : dijkstra.cpp.i
+
+dijkstra.s: dijkstra.cpp.s
+
+.PHONY : dijkstra.s
+
+# target to generate assembly for a file
+dijkstra.cpp.s:
+	$(MAKE) -f CMakeFiles\projet_piscine.dir\build.make CMakeFiles/projet_piscine.dir/dijkstra.cpp.s
+.PHONY : dijkstra.cpp.s
+
 kruskal.obj: kruskal.cpp.obj
 
 .PHONY : kruskal.obj
@@ -389,6 +416,9 @@ help:
 	@echo ... Svgfile.obj
 	@echo ... Svgfile.i
 	@echo ... Svgfile.s
+	@echo ... dijkstra.obj
+	@echo ... dijkstra.i
+	@echo ... dijkstra.s
 	@echo ... kruskal.obj
 	@echo ... kruskal.i
 	@echo ... kruskal.s

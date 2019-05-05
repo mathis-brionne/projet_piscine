@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug"/>
+				<Option working_dir="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug"/>
+				<Option working_dir="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="projet_piscine">
-				<Option output="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/projet_piscine.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug"/>
+				<Option output="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/projet_piscine.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -43,15 +43,15 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 projet_piscine"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 projet_piscine"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="projet_piscine/fast">
-				<Option output="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/projet_piscine.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug"/>
+				<Option output="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/projet_piscine.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -65,78 +65,78 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 projet_piscine/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 projet_piscine/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug"/>
+				<Option working_dir="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/willy/Documents/1. informatique/projet/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/Arete.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Arete.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/Arete.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Arete.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/Coords.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Coords.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/Graphe.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Graphe.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/Graphe.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Graphe.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/Pareto.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Pareto.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/Pareto.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Pareto.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/Sommet.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Sommet.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/Sommet.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Sommet.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/Svgfile.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Svgfile.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/Svgfile.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/Svgfile.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/dijkstra.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/dijkstra.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/kruskal.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/kruskal.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/main.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/main.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/menu.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/menu.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/menu.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/menu.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/outils.cpp">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/outils.cpp">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/outils.h">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/outils.h">
 			<Option target="projet_piscine"/>
 		</Unit>
-		<Unit filename="C:/Users/willy/Documents/1. informatique/projet/projet_piscine/CMakeLists.txt">
+		<Unit filename="C:/Users/matbr/Desktop/infocpp/projetP/projet_piscine/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -149,19 +149,18 @@ void Pareto::initialisation_q3(std::vector<Sommet*>& sommets,std::vector<Arete*>
     //Affichage des pondérations de toutes les solutions
     for (int k = 0; k < m_tab_bool.size(); ++k)
     {
-        //std::cout << "Solution n°" << k << " :" << std::endl
-          //        << " (";
+        std::cout << "Solution n°" << k << " :" << std::endl
+                  << " (";
         for(size_t i=0; i<m_aretes_tab[0]->getPonderations().size(); i++)
         {
-            //std::cout << m_tab_somP[k][i];
-          //  if(i < nbr_pond-1)
-          //      std::cout << ";";
+            std::cout << m_tab_somP[k][i];
+            if(i < nbr_pond-1)
+                std::cout << ";";
         }
-       // std::cout << ")" << std::endl;
+        std::cout << ")" << std::endl;
     }
     std::cout << std::endl;*/
 
-    //std::cout << std::endl;
     end_t2=clock();
     std::cout<<end_t2<<std::endl;
 
@@ -172,8 +171,6 @@ void Pareto::initialisation_q3(std::vector<Sommet*>& sommets,std::vector<Arete*>
     end_t3=clock();
     std::cout<<end_t3<<std::endl;
 
-    //affichage des solutions de la frontière de poreto
-    //this->show_solution_front_pare();
 
     std::cout<<"Fin de Pareto"<<std::endl<<std::endl;
 }
@@ -263,9 +260,18 @@ void Pareto::init_and_search_admis_q3()
                 m_tab_bool.push_back(temp_graph);
         }
 
+        /// DEBUT COMPTEUR +1
+        i=0;
+        while(temp_graph[i]!=false)
+        {
+            temp_graph[i]=false;
+            i++;
+        }
+        temp_graph[i]= true;
+        ///FIN COMPTEUR
+    }
 
 }
-
 /*!
  * \fn init_and_calcul_pond
  * \brief
@@ -375,7 +381,7 @@ void Pareto::totalPond()
  * \version 0
  * \date
  */
-void Pareto::fn_somP(){}
+//1void Pareto::fn_somP(){}
 
 void Pareto::dessiner(Svgfile &svg) {
 
