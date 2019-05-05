@@ -2,7 +2,7 @@
  * \file Pareto.h
  * \class Pareto
  * \brief  bibliotheque pour les fonctions permettant de faire Pareto
- * \authors BRIONNE,MARTIN,SIROT
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date 17 avril 2019
  */

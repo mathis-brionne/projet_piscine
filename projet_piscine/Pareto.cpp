@@ -35,13 +35,6 @@ Pareto::~Pareto()
 }
 //methodes
 
-//! \fn void Pareto::initialisation_q2(std::vector<Sommet*>& sommets,std::vector<Arete*>& aretes)
-//! \brief  initialisation des attributs + recherche des solutions admissible + calcul des ponderations de ces solutions + recherche des solutions de la frontière de Pareto
-//! \authors BRIONNE,MARTIN,SIROT
-//! \version 0.3
-//! \date 17 avril 2019 15h50
-//! \return
-
 //recherche des solutions admissibles
 /*!
 * \fn initialisation_q2

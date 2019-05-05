@@ -22,7 +22,7 @@
  * \brief dessiner le graphe
  * @param s
  * @param color
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -43,7 +43,7 @@ void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY ,int nb, std::string co
  * @param scaleX
  * @param scaleY
  * @param color
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -70,7 +70,7 @@ void Arete::dessiner(Svgfile &s , int scaleX ,int scaleY , std::string color) co
  * @param color
  * @param clas
  * @param clas2
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */

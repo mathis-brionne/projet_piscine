@@ -1,7 +1,7 @@
 /*!
  * \file Svgfile.cpp
  * \brief ensemble des methodes Svg
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.2
  */
 
@@ -21,7 +21,7 @@ std::set<std::string> Svgfile::s_openfiles;
 /*!
  * \fn Svgfile
  * \brief Creation du Svg
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date 15 avril 2019
  */
@@ -53,7 +53,7 @@ Svgfile::Svgfile(std::string _filename, int _width, int _height) :
 /*!
  * \fn ~Svgfile
  * \brief destructeur de Svg
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date 16 avril 2019
  */
@@ -71,8 +71,7 @@ Svgfile::~Svgfile() {
  * @tparam T
  * @param name
  * @param val
- * \return string
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version
  * \date
  */
@@ -90,7 +89,7 @@ std::string attrib(std::string name, T val) {
  * @param name
  * @param commande
  * \return string
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version
  * \date
  */
@@ -106,7 +105,7 @@ std::string attrib(std::string name, std::string commande) {
  * @param champs
  * @param champs2
  * \return string
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version
  * \date
  */
@@ -125,7 +124,7 @@ std::string attrib(std::string name, std::string champs ,double champs2) {
  * @param tourne
  * @param xSatelite
  * \return string
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -148,7 +147,7 @@ std::string attrib(std::string name, double x, double y, double tourne, double x
  * @param nom
  * @param champs2
  * \return string
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -165,7 +164,7 @@ std::string attrib(std::string name, std::string champs, std::string nom, std::s
  * @param nom
  * @param champs
  * \return string
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -184,7 +183,7 @@ std::string attrib(std::string name, std::string nom, std::string champs) {
  * @param y
  * @param champs2
  * \return string
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -201,7 +200,7 @@ std::string attrib(std::string name, std::string champs, double x, double y, std
  * @param scaleN
  * @param scaleB
  * \return string
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -216,7 +215,7 @@ std::string attrib(std::string name, int scaleN, int scaleB) {
  * \brief
  * @param r
  * @param color
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -251,7 +250,7 @@ void Svgfile::addSoleil(double r, std::string color) {
  * @param x
  * @param y
  * @param color
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -273,7 +272,7 @@ void Svgfile::addDisk(double x, double y,std::string color) {
  * @param y
  * @param color
  * @param clas
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -297,7 +296,7 @@ void Svgfile::addDisk(double x, double y,std::string color,std::string clas) {
  * @param y2
  * @param color
  * @param text
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -324,7 +323,7 @@ void Svgfile::addlegende(double x1, double x2, double y1, double y2, std::string
  * @param y
  * @param r
  * @param color
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -350,7 +349,7 @@ void Svgfile::addcircle(double x, double y, double r, std::string color) {
  * @param x2
  * @param y2
  * @param color
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -374,7 +373,7 @@ void Svgfile::addLine(double x1, double y1, double x2, double y2, std::string co
  * @param y2
  * @param color
  * @param clas
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -396,7 +395,7 @@ void Svgfile::addLine(double x1, double y1, double x2, double y2, std::string co
  * @param y
  * @param span
  * @param color
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -412,7 +411,7 @@ void Svgfile::addCross(double x, double y, double span, std::string color) {
  * @param y
  * @param text
  * @param color
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -435,7 +434,7 @@ void Svgfile::addpoint(double x, double y, std::string color ) {
  * @param y
  * @param text
  * @param color
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -460,7 +459,7 @@ void Svgfile::addText(double x, double y, std::string text, std::string color) {
  * @param nb
  * @param color
  * @param clas
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -493,7 +492,7 @@ void Svgfile::addText(double x, double y, std::string text,int nb ,std::string c
  * @param text
  * @param color
  * @param clas
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -516,7 +515,7 @@ void Svgfile::addText(double x, double y, std::string text,std::string color ,st
  * @param y
  * @param val
  * @param color
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -532,7 +531,7 @@ void Svgfile::addText(double x, double y, double val,std::string color) {
  * @param span
  * @param numbering
  * @param color
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -559,7 +558,7 @@ void Svgfile::addGrid(double span, bool numbering, std::string color) {
  * @param g
  * @param b
  * \return string
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -574,7 +573,7 @@ std::string makeRGB(int r, int g, int b) {
  * \brief Dessiner un repère
  * @param x
  * @param y
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -601,7 +600,7 @@ void Svgfile::addrepere(int x , int y )
  * \brief
  * @param col
  * \return string
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -616,7 +615,7 @@ std::string fillBallColor(std::string col) {
  * \fn translate
  * \brief
  * @param scale
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -628,7 +627,7 @@ void Svgfile::transalte(int scaleX ,int scaleY)
 /*!
  * \fn addA
  * \brief
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -640,7 +639,7 @@ void Svgfile::addA()
 /*!
  * \fn finG
  * \brief
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -653,7 +652,7 @@ void Svgfile::finG()
 /*!
  * \fn finA
  * \brief
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -665,7 +664,7 @@ void Svgfile::finA()
 /*!
  * \fn addG
  * \brief
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */
@@ -684,7 +683,7 @@ void Svgfile::addG()
  * @param scaleX
  * @param scaleY
  * @param text
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date
  */

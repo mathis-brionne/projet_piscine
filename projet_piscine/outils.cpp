@@ -11,7 +11,7 @@
 /*!
  * \fn totalPond
  * \brief calcul de la somme des ponderations
- * \author SIROT Charlotte
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.1
  * \date 16 avril 2019
  */
@@ -44,7 +44,7 @@ std::vector<float> totalPond(std::vector<std::pair<Arete*,bool>> kk)
  * \fn connexite_q2
  * \brief plus optimiser que la fonction connexite
  * \return 1 si le graphe partiel est connexe, 0 sinon
- * \author MARTIN Willy
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.6
  * \date 17 avril 2019
  */
@@ -177,7 +177,7 @@ bool connexite_q2(std::vector<Arete*>& aretes,std::vector<bool>& b_aretes, std::
  * \fn connexite
  * \brief permet de determiner la connexité d'un graphe
  * \return 1 si le graphe partiel est connexe, 0 sinon
- * \author MARTIN Willy
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.5
  * \date 16 avril 2019
  */
@@ -277,7 +277,7 @@ bool connexite(std::vector<Arete*> aretes,std::vector<bool> b_aretes, std::vecto
  * \fn connexite
  * \brief permet de determiner la connexité d'un graphe
  * \return 1 si le graphe partiel est connexe, 0 sinon
- * \author MARTIN Willy
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.4
  * \date 15 avril 2019
  */

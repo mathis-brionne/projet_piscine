@@ -5,7 +5,7 @@
 /*!
  * \file Sommet.cpp
  * \brief methodes de la classe Sommet
- * \authors BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.2
  */
 
@@ -22,7 +22,7 @@
  * @param s
  * @param scaleX
  * @param scaleY
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.2
  * \date 15 avril 2019
  */
@@ -41,7 +41,7 @@ void Sommet::dessiner(Svgfile &s ,int scaleX ,int scaleY )  {
  * @param scaleY
  * @param clas
  * @param clas2
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version
  * \date
  */

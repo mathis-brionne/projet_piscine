@@ -6,7 +6,7 @@
  * \file Svgfile.h
  * \class Svgfile
  * \brief Classe pour les objets Svg
- * \author BRIONNE Mathis
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.2
  */
 

@@ -5,7 +5,7 @@
 /*!
  * \file menu.h
  * \brief bibliotheque pour les fonctions du menu
- * \authors SIROT Charlotte
+ * \author BRIONNE Mathis, MARTIN Willy, SIROT Charlotte
  * \version 0.3
  * \date 18 avril 2019
  */
